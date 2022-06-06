@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  {% if cart %}
+    window.pn.cart = {};
+  	window.pn.cart = {{cart | json}}
+    window.pn.cart.items = [];
+
+    {% for item in cart.items %}
+      var cart_item = {{item | json}};
+      cart_item["collection_ids"] = [];
+      {% for c in item.product.collections %}
+        cart_item["collection_ids"].push({{c.id}})
+        {% endfor %}
+      window.pn.cart.items.push(cart_item);
+    {% endfor %}
+
+    if (typeof window.pn.cart.items == "object") {
+      for (var i=0; i<window.pn.cart.items.length; i++) {
+        ["sku", "vendor", "url", "image", "handle", "product_type", "product_description"].map(function(a) {
+          delete window.pn.cart.items[i][a]
+        })
+      }
+    }
+  {% endif %}
+</script>
+
+{% raw %}
+<script>
+if(typeof pn === "undefined"){
+  pn = {};
+}
+if(typeof pn.settings === "undefined"){
+  pn.settings = {};
+}
+pn.settings.defaultSetting={"id":16662564,"a":"Preorder Now","b":true,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Deliveries Start July 20th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"default","n":null,"o":true,"handle":null,"p":null,"y":null,"q":false,"r":true,"s":null,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":null,"z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"};
+pn.settings.singleProductSettings=[{"id":18324226,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts Nov. 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"40446916427945","o":false,"handle":"low-porosity-hair-bundle-limited-edition","p":"6982815088809","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/image0.jpg?v=1620754160","q":false,"r":false,"s":119,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":16662598,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"SHIPS July 16th","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"31810626846807","o":false,"handle":"flourish-hair-scalp-herbal-infusion","p":"4476957818967","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/369910528-alodia-flourish-oil-front-package-1.png?v=1645123640","q":false,"r":true,"s":253,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-Order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260802,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"28170785936","o":false,"handle":"washngo-style-kit","p":"8207435792","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/new_style_kit-min.png?v=1600127272","q":false,"r":false,"s":285,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260800,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"21529428805","o":false,"handle":"hair-scalp-oil","p":"6494171653","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/369910396-alodia_hair-scalpoil.png?v=1645123434","q":false,"r":false,"s":869,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260993,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"28170824848","o":false,"handle":"healthy-hair-kit","p":"8207450640","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/369911262-alodia_new_kit_mockup.png?v=1645122843","q":false,"r":false,"s":407,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260810,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"28170802832","o":false,"handle":"heat-style-kit","p":"8207441040","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/Heat-Style-Kit_2000x_7ed9e3a9-7ef9-4426-909c-68accb24c777-min.png?v=1646322294","q":false,"r":false,"s":148,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260899,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"37953376714921","o":false,"handle":"family-healthy-hair-holiday-bundle","p":"6229058977961","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/FamilyHealthyHairBundle.png?v=1646321971","q":false,"r":false,"s":365,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"},{"id":18260805,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"Shipping Starts November 4th 2021","h":"below","i":true,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"28170816080","o":false,"handle":"twist-or-braid-out-style-kit","p":"8207446160","y":"https://cdn.shopify.com/s/files/1/1555/4789/products/Twist-and-Braid-Out-Style-Kit_6bc5ee9e-31ca-4a4b-802e-82ff55a96c46-min.png?v=1605832259","q":false,"r":false,"s":438,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":"Pre-order Item ","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0"}];
+pn.settings.tagSettings=[];
+</script>
+<style type="text/css">
+  .pn-original-subtotal{
+    text-decoration: line-through;
+    display:inline-block;
+  }
+  .pn-discounted-subtotal{
+    font-weight:bold;
+    margin-left:20px;
+    display:inline-block;
+    font-size: 1.3em;
+  }
+
+  .pn-line-item-original-price {
+    text-decoration: line-through;
+  }
+
+  .pn-line-item-discounted-price {
+    font-size: 1.2em;
+    margin-left: 8px;
+  }
+</style>
+{% endraw %}
+
+
+<div id="pn-mixed-cart-warning" class="pn-modal">
+  <div id="pn-mixed-cart-warning-content">
+    <span id="pn-modal-close-btn">x</span>
+    <h2 id="pn-mixed-cart-warning-title"></h2>
+    <div id="pn-mixed-cart-warning-text"></div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container main content padding-50">
+  {% if section.settings.title != blank %}
+  <h4 class="title center">{{  section.settings.title }}</h4>
+  {% endif %}
+  {% if section.blocks.size > 0 %}
+  <div class="sixteen columns">
+    <div class="icon-grid">
+      {% for block in section.blocks %}  
+          {% if block.settings.svg != blank or block.settings.description != blank %}
+          <div class="icon-box">
+            {% if block.settings.svg != blank %}          
+            {{ block.settings.svg }}
+            {% endif %}
+            {% if block.settings.description != blank %}
+            <small>{{ block.settings.description }}</small>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Never contains",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Alodia's Products never Contain:"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "Icon",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "svg",
+            "label": "SVG"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

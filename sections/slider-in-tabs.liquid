@@ -1,0 +1,971 @@
+<style>
+  .slider-in-tabs {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-family: montserrat, 'sans-serif';
+  }
+  .slider-in-tabs::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    z-index: -1;
+    background: url('https://cdn.shopify.com/s/files/1/1555/4789/files/palm-curved-left.png?v=1590079335');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 33%;
+    transform: rotate(-6deg);
+  }
+  .sit__inner {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+  }
+  
+  .sit__sliders {
+      max-width: 1550px;
+      margin-left: auto;
+  }
+  
+  @media screen and (max-width: 1760px){
+    .sit__sliders {
+	 max-width: 1350px;
+	}
+  }
+  
+  @media screen and (max-width: 1460px){
+    .sit__inner {
+      padding: 0px 20px;
+    }
+    .sit__sliders {
+	 max-width: 1150px;
+	}
+  }
+  @media screen and (max-width: 1440px){
+    
+  }
+  @media screen and (max-width: 768px){
+    .slider-in-tabs::before {
+      content: '';
+      display: none;
+    }
+  }
+
+
+  .sit__header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .sit__header-title {
+    font-size: 28px;
+    line-height: 39px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .sit__header-tabs-wrap {
+    width: auto;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sit__tab-wrap {
+    margin: 0px 15px;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .sit__tab-wrap:hover {
+    border-bottom: 1px solid #222222;
+  }
+  .sit__selected-tab {
+    border-bottom: 1px solid #222222;
+  }
+  .sit__tab-text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  .sit__content {
+    width: 100%;
+    height: 520px;
+  }
+
+  @media screen and (max-width: 768px){
+    .sit__header {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sit__header-title {
+      margin-bottom: 0px;
+    }
+    .sit__header-tabs-wrap {
+      display: none;
+    }
+    .sit__content {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+  
+
+
+
+  /* Desktop & Mobile */ 
+
+  .sit__desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .sit__mobile {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 768px){
+    .sit__desktop {
+      display: none;
+    }
+    .sit__mobile {
+      display: block;
+    }
+  }
+
+
+
+  .sit__sliders {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .sit__slider {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+  }
+      .sit__selected-slider {
+        z-index: 2;
+        opacity: 1;
+      }
+  .sit__slide {
+    width: 100%;
+    max-width: 369px;
+    height: 520px;
+    margin-right: 18px;
+    padding: 35px 30px;
+  }
+  .sit__slide-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sit__slide-image-wrap {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  .sit__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .sit__product-image {
+    object-fit: contain
+  }
+  .sit__slide-details {
+    width: 100%;
+    min-height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    padding: 5px;
+  }
+  .sit__slide-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+  }
+
+
+  /*Slide Nav */
+  .slider-in-tabs .flickity-prev-next-button {
+    opacity: 1;
+    background: #222222;
+  }
+  .slider-in-tabs .flickity-prev-next-button svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%; height: 95%;
+  }
+  .slider-in-tabs .flickity-prev-next-button:disabled {
+    opacity: .3;
+  }
+  .flickity-prev-next-button .arrow { 
+    fill: 
+    #fff
+  }
+
+
+
+
+
+
+  /* Mobile - Accordoin */
+  .sit__accordion {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .sit__accordion-block {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    border-bottom: 1px solid #eaeaea;
+  }
+    .sit__accordion-no-border {
+      border-bottom: none;
+    }
+
+  .sit__accordion-title-wrap {
+    width: 100%;
+    height: 48px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .sit__accordion-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .sit__accordion-icon-wrap {
+    width: 25px;
+    height: 20px;
+  }
+    .sit__plus-icon {
+      display: block;
+    }
+    .sit__x-icon {
+      display: none;
+    }
+
+  .sit__accordion-drawer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+  }
+
+
+  .sit__slider-m {
+    width: 100%;
+  }
+  .sit__slide-m {
+    width: 100%;
+    max-width: 259px;
+    height: 450px;
+    margin-right: 15px;
+    padding: 15px;
+  }
+  @media screen and (max-width: 420px){
+    .sit__slide-m {
+      max-width: 100%;
+    }
+  }
+  .sit__slide-inner-m {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .sit__slide-image-wrap-m {
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  .sit__slide-image-m {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .sit__slide-details-m {
+    width: 100%;
+    height: calc(40% - 20px);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .it__slide-title-link-m {
+    display: block;
+    margin: 0;
+    color: #000;
+  }
+  .it__slide-title-link-m:visited {
+    color: #000;
+  }
+  .sit__slide-title-m {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    max-height: 60px;
+    overflow: hidden;
+  }
+  .sit__slide-price-m {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .slider-in-tabs .ro_widget, 
+  .slider-in-tabs .bold-ro__recurring-title, 
+  .slider-in-tabs .bold-ro__radio-div {
+    display: none;
+  }
+
+  .slider-in-tabs form {
+    margin: 0;
+  }
+  .slider-in-tabs button .checkmark path {
+    stroke: #222222
+  }
+  .sit__slide-button {
+    background-color: #222222;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 50px;
+    border-radius: 2px;
+    border: 1px solid #222222;
+  }
+  .sit__slide-button:hover {
+    background-color: #fff;
+    color: #222222;
+    border: 1px solid #222222;
+  }
+
+
+  .sit__product-image {
+    object-fit: contain
+  }
+
+
+
+  .sit__active-block .sit__accordion-drawer {
+    max-height: 450px;
+    margin: 10px 0px;
+  }
+
+  .sit__active-block .sit__plus-icon {
+    display: none;
+  }
+  .sit__active-block .sit__x-icon {
+    display: block;
+  }
+
+
+  /* Colors */
+  .sit__color-1 {
+    background-color: {{ section.settings.bg-color-1 }};
+  }
+  .sit__color-2 {
+    background-color: {{ section.settings.bg-color-2 }};
+  }
+  .sit__color-3 {
+    background-color: {{ section.settings.bg-color-3 }};
+  }
+  .sit__color-4 {
+    background-color: {{ section.settings.bg-color-4 }};
+  }
+
+</style>
+
+
+<div id="slider-in-tabs" class="slider-in-tabs">
+  <div class="sit__inner">
+
+    <div class="sit__header">
+      <p class="sit__header-title">
+        {{ section.settings.title }}
+      </p>
+      <div class="sit__header-tabs-wrap">
+        {% if section.settings.tab-1 != blank %}
+          <div id="tab-1" class="sit__tab-wrap sit__selected-tab">
+            <p class="sit__tab-text">
+              {{ section.settings.tab-1 }}
+            </p>
+          </div>
+        {% endif %}
+        {% if section.settings.tab-2 != blank %}
+          <div id="tab-2" class="sit__tab-wrap">
+            <p class="sit__tab-text">
+              {{ section.settings.tab-2 }}
+            </p>
+          </div>
+        {% endif %}
+        {% if section.settings.tab-3 != blank %}
+          <div id="tab-3" class="sit__tab-wrap">
+            <p class="sit__tab-text">
+              {{ section.settings.tab-3 }}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+   
+
+    <div class="sit__content">
+
+      <div class="sit__desktop">
+        <div class="sit__sliders">
+
+        
+
+      
+          <div id="slider-1" class="sit__slider sit__slider-d sit sit__selected-slider">
+            {% for product in collections[section.settings.collection].products %}
+              <div class="sit__slide sit__slider-1-slide">
+                    <div class="sit__slide-inner-m">
+                      <a href="{{ product.url }}" class="sit__slide-image-wrap-m">
+                        <img src="{{ product.featured_image | img_url: 'master' }}" class="sit__slide-image-m sit__product-image">
+                      </a>
+                      <div class="sit__slide-details-m">
+                        <a href="{{ product.url }}" class="it__slide-title-link-m">
+                          <p class="sit__slide-title-m">
+                            {{ product.title }}
+                          </p>
+                        </a>
+                        
+<!--                         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div> -->
+{% comment %} /snippets/bv-inline-ratings.liquid Bazaarvoice Inline Rating
+{% endcomment %}
+{% render 'bv-inline-ratings', product: product %}
+{% comment %}
+End Bazaarvoice Inline Rating
+{% endcomment %}
+                        
+                        <p class="sit__slide-price-m">
+                          {% assign price = product.price %}
+                          {% for variant in product.variants %}
+                            {% if variant.price > price %}
+                              {{ variant.price | money }}
+                              {% break %}
+                            {% endif %}
+                            {% if variant.price <= price %}
+                              {{ price | money }}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                        </p>
+                          {% include 'product-form-hp' %}
+                      </div>
+                    </div>
+                  </div>
+            {% endfor %}
+          </div>
+
+          <div id="slider-2" class="sit__slider sit__slider-d">
+            {% for link in linklists[section.settings.tab-2-list].links %}
+              <div class="sit__slide sit__slider-2-slide">
+                <a href="{{ link.object.url }}" class="sit__slide-inner">
+                  <div class="sit__slide-image-wrap">
+                    <img src="{{ link.object.image | img_url: 'master' }}" class="sit__slide-image">
+                  </div>
+                  <div class="sit__slide-details">
+                    <p class="sit__slide-title">
+                      {{ link.object.title }}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div id="slider-3" class="sit__slider sit__slider-d">
+            {% for link in linklists[section.settings.tab-3-list].links %}
+              <div class="sit__slide sit__slider-3-slide">
+                <a href="{{ link.object.url }}" class="sit__slide-inner">
+                  <div class="sit__slide-image-wrap">
+                    <img src="{{ link.object.image | img_url: 'master' }}" class="sit__slide-image">
+                  </div>
+                  <div class="sit__slide-details">
+                    <p class="sit__slide-title">
+                      {{ link.object.title | remove: "Hair Type -" }}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        
+        </div>
+      </div>
+      
+      <div class="sit__mobile">
+        <div class="sit__accordion">
+
+          <div id="sit-acc-block-1" class="sit__accordion-block sit__active-block">
+
+            <div id="acc-title-1" class="sit__accordion-title-wrap">
+              <p class="sit__accordion-title">
+                {{ section.settings.tab-1 }}
+              </p>
+              <div class="sit__accordion-icon-wrap">
+                <img src="{{ section.settings.plus-icon | img_url: 'master' }}" class="sit__accordion-icon sit__plus-icon">
+              </div>
+            </div>
+
+            <div class="sit__accordion-drawer">
+              <div id="slider-1-m" class="sit__slider-m">
+                {% for product in collections[section.settings.collection].products %}
+                  <div class="sit__slide-m sit__slider-1-slide">
+                    <div class="sit__slide-inner-m">
+                      <div class="sit__slide-image-wrap-m">
+                        <img src="{{ product.featured_image | img_url: 'master' }}" class="sit__slide-image-m sit__product-image">
+                      </div>
+                      <div class="sit__slide-details-m">
+                        <p class="sit__slide-title-m">
+                          {{ product.title }}
+                        </p>
+<!--                         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div> -->
+                        {% comment %} /snippets/bv-inline-ratings.liquid Bazaarvoice Inline Rating
+{% endcomment %}
+{% render 'bv-inline-ratings', product: product %}
+                        {% comment %}
+End Bazaarvoice Inline Rating
+{% endcomment %}
+                        <p class="sit__slide-price-m">
+                          {% assign price = product.price %}
+                          {% for variant in product.variants %}
+                            {% if variant.price > price %}
+                              {{ variant.price | money }}
+                              {% break %}
+                            {% endif %}
+                            {% if variant.price <= price %}
+                              {{ price | money }}
+                              {% break %}
+                            {% endif %}
+                          {% endfor %}
+                        </p>
+                          {% include 'product-form-hp' %}
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+
+
+          <div id="sit-acc-block-2" class="sit__accordion-block">
+
+            <div id="acc-title-2" class="sit__accordion-title-wrap">
+              <p class="sit__accordion-title">
+                {{ section.settings.tab-2 }}
+              </p>
+              <div class="sit__accordion-icon-wrap">
+                <img src="{{ section.settings.plus-icon | img_url: 'master' }}" class="sit__accordion-icon sit__plus-icon">
+              </div>
+            </div>
+
+            <div class="sit__accordion-drawer">
+              <div id="slider-2-m" class="sit__slider-m">
+                {% for link in linklists[section.settings.tab-2-list].links %}
+                  <div class="sit__slide-m sit__slider-2-slide">
+                    <a href="{{ link.object.url }}" class="sit__slide-inner">
+                      <div class="sit__slide-image-wrap">
+                        <img src="{{ link.object.image | img_url: 'master' }}" class="sit__slide-image">
+                      </div>
+                      <div class="sit__slide-details">
+                        <p class="sit__slide-title">
+                          {{ link.object.title }}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+
+          <div id="sit-acc-block-3" class="sit__accordion-block sit__accordion-no-border">
+
+            <div id="acc-title-3" class="sit__accordion-title-wrap">
+              <p class="sit__accordion-title">
+                {{ section.settings.tab-3 }}
+              </p>
+              <div class="sit__accordion-icon-wrap">
+                <img src="{{ section.settings.plus-icon | img_url: 'master' }}" class="sit__accordion-icon sit__plus-icon">
+              </div>
+            </div>
+
+             <div class="sit__accordion-drawer">
+              <div id="slider-3-m" class="sit__slider-m">
+                {% for link in linklists[section.settings.tab-3-list].links %}
+                  <div class="sit__slide-m sit__slider-2-slide">
+                    <a href="{{ link.object.url }}" class="sit__slide-inner">
+                      <div class="sit__slide-image-wrap">
+                        <img src="{{ link.object.image | img_url: 'master' }}" class="sit__slide-image">
+                      </div>
+                      <div class="sit__slide-details">
+                        <p class="sit__slide-title">
+                          {{ link.object.title | remove: "Hair Type -" }}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(){
+    window.addEventListener('DOMContentLoaded', () => {
+
+
+
+      //Sliders -----
+
+      //Desktop
+        var flkty1 = new Flickity( '#slider-1', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: true,
+          groupCells: '100%',
+          pageDots: false,
+          cellAlign: 'left'
+        });
+        var flkty2 = new Flickity( '#slider-2', {
+            wrapAround: false,
+            draggable: true,
+            freeScroll: false,
+            prevNextButtons: true,
+            groupCells: '100%',
+            pageDots: false,
+            cellAlign: 'left'
+        });
+        var flkty3 = new Flickity( '#slider-3', {
+            wrapAround: false,
+            draggable: true,
+            freeScroll: false,
+            prevNextButtons: true,
+            groupCells: '100%',
+            pageDots: false,
+            cellAlign: 'left'
+        });
+        //Displaying the right slider on *DESKTOP*
+        const sliders = document.querySelectorAll('.sit__slider-d');
+        const tabs = document.querySelectorAll('.sit__tab-wrap');
+
+        const setCurrentSlider = (e, id) => {
+          sliders.forEach(slider => {
+            const sliderID = slider.id.split('-')[1];
+            if(sliderID == id){
+              slider.classList.add('sit__selected-slider');
+
+            } else {
+              slider.classList.remove('sit__selected-slider');
+            }
+          });
+          tabs.forEach(tab => {
+            const tabID = tab.id.split('-')[1];
+            if(tabID == id){
+              tab.classList.add('sit__selected-tab')
+            } else {
+              tab.classList.remove('sit__selected-tab')
+            }
+          })
+        }
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', (e) => setCurrentSlider(e, tab.id.split('-')[1]))
+        });
+
+
+
+
+
+      //Mobile
+        var flkty1 = new Flickity( '#slider-1-m', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: false,
+          pageDots: false,
+          groupCells: '100%',
+          cellAlign: 'left'
+        });
+      var flkty2 = new Flickity( '#slider-2-m', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: false,
+          pageDots: false,
+          groupCells: '100%',
+          cellAlign: 'left'
+      });
+      var flkty3 = new Flickity( '#slider-3-m', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: false,
+          pageDots: false,
+          groupCells: '100%',
+          cellAlign: 'left'
+      });
+
+      //Display the right slider on *MOBILE*
+        const blocks = document.querySelectorAll('.sit__accordion-block');
+        const titles = document.querySelectorAll('.sit__accordion-title-wrap');
+
+
+        const accHandler = (e, id) => {
+          blocks.forEach(block => {
+            const blockID = block.id.split('-')[3];
+            if(blockID == id){
+              block.classList.add('sit__active-block')
+            } else {
+              block.classList.remove('sit__active-block')
+            }
+          })
+        } 
+
+        titles.forEach(title => {
+          title.addEventListener('click', (e) => accHandler(e, title.id.split('-')[2]))
+        })
+    
+    
+
+
+    //Set Slides BG Colors
+      const slider1Slide = document.querySelectorAll('.sit__slider-1-slide')
+      const slider2Slide = document.querySelectorAll('.sit__slider-2-slide')
+      const slider3Slide = document.querySelectorAll('.sit__slider-3-slide')
+
+      for (let i = 0; slider1Slide.length > i; i++){
+        if (i == 0 || i == 4 || i == 8 || i == 12 || i == 16 || i == 20 || i == 24 || i == 28 ){
+          slider1Slide[i].classList.add('sit__color-1');
+        }
+        if (i == 1 || i == 5 || i == 9 || i == 13 || i == 17 || i == 21 || i == 25 || i == 29 ){
+          slider1Slide[i].classList.add('sit__color-2');
+        }
+        if (i == 2 || i == 6 || i == 10 || i == 14 || i == 18|| i == 22 || i == 26 || i == 30 ){
+          slider1Slide[i].classList.add('sit__color-3');
+        }
+        if (i == 3 || i == 7 || i == 11 || i == 15 || i == 19 || i == 23 || i == 27 || i == 31 ){
+          slider1Slide[i].classList.add('sit__color-4');
+        }
+      }
+
+      for (let i = 0; slider2Slide.length > i; i++){
+        if (i == 0 || i == 4 || i == 8 || i == 12 || i == 16 || i == 20 || i == 24 || i == 28 ){
+          slider2Slide[i].classList.add('sit__color-1');
+        }
+        if (i == 1 || i == 5 || i == 9 || i == 13 || i == 17 || i == 21 || i == 25 || i == 29 ){
+          slider2Slide[i].classList.add('sit__color-2');
+        }
+        if (i == 2 || i == 6 || i == 10 || i == 14 || i == 18|| i == 22 || i == 26 || i == 30 ){
+          slider2Slide[i].classList.add('sit__color-3');
+        }
+        if (i == 3 || i == 7 || i == 11 || i == 15 || i == 19 || i == 23 || i == 27 || i == 31 ){
+          slider2Slide[i].classList.add('sit__color-4');
+        }
+      }
+
+      for (let i = 0; slider3Slide.length > i; i++){
+        if (i == 0 || i == 4 || i == 8 || i == 12 || i == 16 || i == 20 || i == 24 || i == 28 ){
+          slider3Slide[i].classList.add('sit__color-1');
+        }
+        if (i == 1 || i == 5 || i == 9 || i == 13 || i == 17|| i == 21 || i == 25 || i == 29 ){
+          slider3Slide[i].classList.add('sit__color-2');
+        }
+        if (i == 2 || i == 6 || i == 10 || i == 14 || i == 18|| i == 22 || i == 26 || i == 30 ){
+          slider3Slide[i].classList.add('sit__color-3');
+        }
+        if (i == 3 || i == 7 || i == 11 || i == 15 || i == 19 || i == 23 || i == 27 || i == 31 ){
+          slider3Slide[i].classList.add('sit__color-4');
+        }
+      }
+        
+    
+    });
+  }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Slider in Tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Clean Green Beauty Products backed by Science"
+      },
+
+      {
+        "type": "header",
+        "content": "Tabs"
+      },
+      {
+        "type": "text",
+        "id": "tab-1",
+        "label": "Name your first tab",
+        "default": "Shop Best Sellers"
+      },
+      {
+        "type": "text",
+        "id": "tab-2",
+        "label": "Name your second tab",
+        "default": "Shop By Concern"
+      },
+      {
+        "type": "text",
+        "id": "tab-3",
+        "label": "Name your third tab",
+        "default": "Shop By Hair Type"
+      },
+      {
+        "type": "image_picker",
+        "id": "plus-icon",
+        "label": "Icon for the plus symbol"
+      },
+
+
+      {
+        "type": "header",
+        "content": "First Tab Collection"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+
+
+      {
+        "type": "header",
+        "content": "Second Tab Collection List"
+      },
+      {
+        "type": "link_list",
+        "id": "tab-2-list",
+        "label": "Link List"
+      },
+
+
+      {
+        "type": "header",
+        "content": "Third Tab Collection List"
+      },
+      {
+        "type": "link_list",
+        "id": "tab-3-list",
+        "label": "Link List"
+      },
+
+      {
+        "type": "header",
+        "content": "Card Background Colors"
+      },
+      {
+        "type": "color",
+        "id": "bg-color-1",
+        "label": "Color 1"
+      },
+      {
+        "type": "color",
+        "id": "bg-color-2",
+        "label": "Color 2"
+      },
+      {
+        "type": "color",
+        "id": "bg-color-3",
+        "label": "Color 3"
+      },
+      {
+        "type": "color",
+        "id": "bg-color-4",
+        "label": "Color 4"
+      }
+
+    ],
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "Slider in Tabs"
+      }
+    ]
+  }
+{% endschema %}

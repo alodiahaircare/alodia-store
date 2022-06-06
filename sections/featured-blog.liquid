@@ -1,0 +1,87 @@
+{% comment %}
+** Featured blog - homepage partial **
+- Draggable section
+{% endcomment %}
+<div class="container">
+<div class="yotpo yotpo-reviews-carousel" 
+ data-header-customisation-enabled="1" 
+ data-header-customisation-color="#56575f" 
+ data-header-customisation-font-size="18" 
+ data-header-customisation-text="" 
+ data-header-customisation-alignment="left" 
+ data-background-color="transparent" 
+ data-mode="most_recent" 
+ data-type="per_product" 
+ data-count="9" 
+ data-show-bottomline="1" 
+ data-autoplay-enabled="1" 
+ data-autoplay-speed="6000" 
+ data-show-navigation="1" 
+     data-product-id="{{ product.id }}">&nbsp;</div><br/>
+</div>
+{% include 'include-featured-blog' %}
+
+{% schema %}
+
+{
+  "name": "Blog posts",
+  "class": "featured-blog-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Blog posts"
+    },
+    {
+      "type": "blog",
+      "id": "blog_widget_select",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "home_page_articles",
+      "label": "Posts",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_tags",
+      "label": "Show blog post tags"
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_author",
+      "label": "Show author"
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_comment_count",
+      "label": "Show comment count",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "read_more_link",
+      "label": "Show continue reading link for blog post excerpts",
+      "default": true
+    }
+  ],
+  "presets": [{
+    "name": "Blog posts",
+    "category": "Blog",
+    "settings": {
+      "blog_widget_select": ""
+    }
+  }]
+}
+{% endschema %}

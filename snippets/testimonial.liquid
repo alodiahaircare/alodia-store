@@ -1,0 +1,6 @@
+<h2 class="headline">Customer Reviews</h2>
+<div class="testimonials large--two-thirds push--large--one-sixth">
+{% for article in blogs.testimonials.articles limit: 8 %}
+  <div class="testi-content">{{ article.content }}</div>
+{% endfor %}
+</div>

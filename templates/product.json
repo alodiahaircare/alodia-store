@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "settings": {}
+    },
+    "nosto": {
+      "type": "nosto-element",
+      "settings": {}
+    },
+    "product-never-contains": {
+      "type": "product-never-contains",
+      "settings": {}
+    },
+    "founder-bio": {
+      "type": "founder-bio",
+      "settings": {}
+    },
+    "product-materials": {
+      "type": "product-materials",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {}
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {}
+    }
+    
+  },
+  "order": [
+    "main",
+    "product-never-contains",
+    "founder-bio",
+    "product-materials",
+    "nosto",
+    "related-products",
+    "recently-viewed",
+    "reviews"
+  ]
+}

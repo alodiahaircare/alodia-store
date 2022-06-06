@@ -1,0 +1,277 @@
+
+<style>
+.side-by-side-images {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.side-by-side-images::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  z-index: -1;
+  background: url('https://cdn.shopify.com/s/files/1/1555/4789/files/palm-curved-left.png?v=1590079335');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 33%;
+  transform: rotate(-6deg);
+}
+.sbsi-inner {
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media screen and (max-width: 1260px){
+  .sbsi-inner {
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 768px){
+  .sbsi-inner {
+    flex-direction: column;
+  }
+  .side-by-side-images::before {
+    content: '';
+    opacity: 0;
+  }
+}
+
+.sbsi__column {
+  width: auto;
+  height: 100%;
+}
+.sbsi__column:first-child {
+  margin-right: 20px;
+}
+.sbsi__column:last-child {
+  margin-left: 20px;
+}
+.sbsi__column-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s ease-in-out;
+}
+  .sbsi__column-inner-fade {
+    opacity: .5;
+  }
+
+.sbsi__image-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+}
+.sbsi__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.sbsi__text-wrapper {
+  width: 100%;
+  text-align: right;
+}
+.sbsi__text-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sbsi__text {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: {{ section.settings.text-color }};
+}
+
+.sbsi__icon-wrap {
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.sbsi__icon {
+  max-height: 18px;
+  object-fit: contain;
+}
+
+
+@media screen and (max-width: 768px){
+  .sbsi__column {
+    max-width: 530px;
+  }
+  .sbsi__column:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .sbsi__column:last-child {
+    margin-left: 0px;
+  }
+
+  .sbsi__text-wrapper {
+    width: 100%;
+    text-align: right;
+  }
+  .sbsi__text {
+    font-size: 15px;
+    font-weight: 700;
+    color: {{ section.settings.text-color }};
+  }
+}
+</style>
+
+<div id="side-by-side-images" class="side-by-side-images">
+  <div class="sbsi-inner">
+
+
+
+    <div class="sbsi__column">
+      <div id="block-1" class="sbsi__column-inner">
+
+        <a href="{{ section.settings.link-1 }}" class="sbsi__image-wrapper">
+          <img src="{{ section.settings.image-1 | img_url: 'master' }}" class="sbsi__image">
+        </a>
+        <div class="sbsi__text-wrapper">
+          <a href="{{ section.settings.link-1 }}" class="sbsi__text-link">
+            <p class="sbsi__text">
+              {{ section.settings.text-1 }}
+            </p>
+            <span class="sbsi__icon-wrap">
+              <img src="{{ section.settings.icon | img_url: 'master' }}" class="sbsi__icon" >
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sbsi__column">
+      <div id="block-2" class="sbsi__column-inner">
+
+        <a href="{{ section.settings.link-2 }}" class="sbsi__image-wrapper">
+          <img src="{{ section.settings.image-2 | img_url: 'master' }}" class="sbsi__image">
+        </a>
+        <div class="sbsi__text-wrapper">
+          <a href="{{ section.settings.link-2 }}" class="sbsi__text-link">
+            <p class="sbsi__text">
+              {{ section.settings.text-2 }}
+            </p>
+            <span class="sbsi__icon-wrap">
+              <img src="{{ section.settings.icon | img_url: 'master' }}" class="sbsi__icon" >
+            </span>
+          </a>
+        </div>
+
+      </div>  
+    </div>
+
+
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    const blocks = document.querySelectorAll('.sbsi__column-inner');
+
+    const fadeBlock = (id) => {
+      const ID = id.split('-')[1];
+      blocks.forEach(block => {
+        const bID = block.id.split('-')[1];
+        if (bID != ID){
+          block.style.opacity = '.5'
+        } else {
+           block.style.opacity = '1'
+        }
+      })
+    }
+
+    const unfadeBlocks = () => {
+      blocks.forEach(block => {
+        block.style.opacity = '1'
+      })
+    }
+
+    blocks.forEach(block => {
+      block.addEventListener('mouseover', (e) => fadeBlock(block.id));
+      block.addEventListener('mouseleave', unfadeBlocks);
+    })
+
+  }())
+</script>
+
+{% schema %}
+  {
+    "name": "Side By Side Images",
+    "settings": [
+      {
+        "type": "color",
+        "id": "text-color",
+        "label": "Section Text Color",
+        "default": "#222222"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "Optional icon next to the right of text"
+      },
+      {
+        "type": "header",
+        "content": "Left Side"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-1",
+        "label": "Image 1"
+      },
+      {
+        "type": "text",
+        "id": "text-1",
+        "label": "Left Side Text"
+      },
+      {
+        "type": "url",
+        "id": "link-1",
+        "label": "Left Side Link"
+      },
+
+
+      {
+        "type": "header",
+        "content": "Right Side"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-2",
+        "label": "Image 2"
+      },
+      {
+        "type": "text",
+        "id": "text-2",
+        "label": "Right Side Text"
+      },
+      {
+        "type": "url",
+        "id": "link-2",
+        "label": "Right Side Link"
+      }
+    ],
+    
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "Side By Side Images"
+        
+      }
+    ]
+  }
+{% endschema %}

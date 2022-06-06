@@ -1,0 +1,304 @@
+<style>
+.hp-50-50-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-family: montserrat, 'sans-serif';
+}
+.hp50b__backing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%;
+  height: 85%;
+}
+
+.hp50b-inner {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0px auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hp50b__column {
+  width: 50%;
+  height: 100%;
+}
+@media screen and (max-width: 1460px){
+  .hp50b-inner {
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 1024px){
+  .hp50b__backing {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 88%;
+  }
+  .hp50b-inner {
+    flex-direction: column;
+    padding: 50px 20px 0px;
+  }
+  .hp50b__column {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.hp50b__column--text {
+  width: auto;
+  margin-right: 30px;
+}
+.hp50b__text-container {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  padding: 40px 10px;
+}
+.hp50b__title-wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.hp50b__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 39px;
+}
+.hp50b__text-wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+.hp50b__text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.hp50b__button-wrap {
+  width: 100%;
+}
+.hp50b__button {
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid {{ section.settings.button-bg-color }};
+  overflow: hidden;
+}
+.hp50b__button:hover {
+  border: none;
+}
+.hp50b__button-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background-color: {{ section.settings.button-bg-color }};
+  color: {{ section.settings.button-color }};
+  
+}
+.hp50b__button-link:visited {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background-color: {{ section.settings.button-bg-color }};
+  color: {{ section.settings.button-color }};
+}
+.hp50b__button-link:hover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: {{ section.settings.button-hover-bg-color }};
+  color: {{ section.settings.button-hover-color }};
+}
+
+.hp50b__column--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hp50b__image-wrapper {
+  height: 100%;
+  width: auto;
+}
+.hp50b__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+
+@media screen and (max-width: 1024px){
+  .hp50b__column--text {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+  .hp50b__text-container {
+    width: 100%;
+    max-width: 468px;
+    margin-left: 0;
+    margin: 0px auto;
+    padding: 0px 20px;
+    text-align: center;
+  }
+  .hp50b__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+  }
+  .hp50b__button-wrap {
+    width: 100%;
+  }
+  .hp50b__button {
+    max-width: 350px;
+    margin: 0px auto;
+  }
+
+  .hp50b__column--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hp50b__image-wrapper {
+    height: 100%;
+    width: 600px;
+  }
+  .hp50b__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+</style>
+
+<div id="hp-50-50-banner" class="hp-50-50-banner">
+      <div 
+        class="hp50b__backing" 
+        style="background-color: {{ section.settings.banner-bg }}" >
+      </div>
+  <div class="hp50b-inner">
+
+    <div class="hp50b__column hp50b__column--text">
+      <div class="hp50b__text-container">
+        <div class="hp50b__title-wrap">
+          <p class="hp50b__title">
+            {{ section.settings.title }}
+          </p>
+        </div>
+        <div class="hp50b__text-wrap">
+          <p class="hp50b__text">
+            {{ section.settings.text }}
+          </p>
+        </div>
+        <div class="hp50b__button-wrap">
+          <div class="hp50b__button">
+            <a href="{{ section.settings.button-link }}" class="hp50b__button-link">
+              {{ section.settings.button-text }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hp50b__column hp50b__column--image">
+      <div class="hp50b__image-wrapper">
+        <img src="{{ section.settings.image | img_url: 'master' }}" class="hp50b__image">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "HP 50 50 Banner",
+    "settings": [
+      {
+        "type": "color",
+        "id": "banner-bg",
+        "label": "Banner Background Color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Take the Guesswork out of Having Healthy Hair & Scalp"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Section Text",
+        "default": "Our easy to use kits come with 3-5 products and a step by step guide making it easy to style your hair and establish a healthy scalp and hair routine. You will see a difference from your first use!"
+      },
+      {
+        "type": "text",
+        "id": "button-text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button-link",
+        "label": "Button Link"
+      },
+      {
+        "type": "color",
+        "id": "button-bg-color",
+        "label": "Button Background Color",
+        "default": "#222222"
+      },
+      {
+        "type": "color",
+        "id": "button-color",
+        "label": "Button Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button-hover-bg-color",
+        "label": "Button Hover Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button-hover-color",
+        "label": "Button Hover Color",
+        "default": "#222222"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Section Image"
+      }
+
+
+    ],
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "50 50 Banner"
+      }
+    ]
+  }
+{% endschema %}

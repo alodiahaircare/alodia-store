@@ -1,0 +1,49 @@
+<div class="ssw-instagram-feed-wrap container">
+    <div class="section clearfix">
+      <div class="sixteen columns">
+
+        <div class="clearfix placeholder-instagram">
+          
+          
+          <div class="ssw-html-widget ssw-instagram-widget" data-module="service" data-name="instagramPhotos" {{section.settings.option_galleries_id}} data-type="{{section.settings.option_font}}">
+            <div class="ssw-page-loading">
+              <span class="ssw-spin ssw-loader"></span>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Shoppable Instagram",
+    "class": "ssw-instagram-section",
+    "settings": [
+        {
+            "type": "select",
+            "id": "option_galleries_id",
+            "options": [
+                {
+                    "group": "(#1) ",
+                    "value": "data-gallery_id=\"1\" data-widget=\"0\"",
+                    "label": "grid"
+                },
+                {
+                    "group": "(#2) New Homepage gallery",
+                    "value": "data-gallery_id=\"2\" data-widget=\"0\"",
+                    "label": "grid"
+                }
+            ],
+            "label": "Choose gallery"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Shoppable Instagram",
+            "category": "Image"
+        }
+    ]
+}
+{% endschema %}

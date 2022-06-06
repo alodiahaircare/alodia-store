@@ -1,0 +1,547 @@
+<style>
+  .before-and-after {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .before-and-after::before {
+    content: '';
+    position: absolute;
+    top: -21%;
+    right: -6.5%;
+    z-index: -1;
+    background: url('https://cdn.shopify.com/s/files/1/1555/4789/files/palm-curved-right.png?v=1590079361');
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 24%;
+    transform: rotate(-17deg);
+  }
+  @media screen and (max-width: 1024px){
+    .before-and-after::before {
+      opacity: 0;
+    }
+  }
+  .baa-inner {
+    width: 100%;
+    max-width: 1240px;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px 20px
+  }
+
+
+  .baa__slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  .baa__slide {
+    width: 100%;
+    height: 585px; 
+  }
+  .baa__slide-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .baa__slide-column {
+    height: auto;
+  }
+        .baa__slide-column--image {
+          min-width: 585px;
+          max-width: 585px;
+        }
+        .baa__slide-column--text {
+          width: 100%;
+          height: auto;
+        }
+
+
+
+  /* Content */
+  .baa__slide-image-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .baa__slide-image {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+
+  .baa__slide-text-wrap {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .baa__slide-title-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .baa__slide-title {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .baa__slide-quote-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .baa__slide-quote {
+    font-size: 22px;
+    line-height: 37px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .baa__slide-name-wrap {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .baa__slide-name {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .baa__slide-products-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .baa__slide-products-title-wap {
+    width: auto;
+    height: auto;
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+  .baa__slide-products-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .baa__slide-products {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .baa__slide-product-name-link {
+    display: inline-block;
+    width: auto;
+    color: inherit;
+    margin: 0;
+    margin-right: 6px; 
+  }
+  .baa__slide-product-name {
+    font-size: 15px;
+    color: #000;
+    margin: 0;
+    text-transform: capitalize;
+  }
+  .baa__slide-product-name-underline {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin-top: -2px;
+  }
+  .baa__slide-product-name-link:hover .baa__slide-product-name {
+    color: #5D8A6D;
+  }
+  .baa__slide-product-name-link:hover .baa__slide-product-name-underline {
+    background-color: #5D8A6D;
+  }
+
+  .baa__nav {
+    margin-top: 40px;
+  }
+  .baa__nav-item {
+    width: 40px;
+    height: 9px;
+    padding: 3px 5px;
+    margin: 0px 10px;
+  }
+  .baa__nav-item-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #248C9D;
+    opacity: .5;
+  }
+
+  .is-selected .baa__nav-item-inner {
+    opacity: 1;
+  }
+
+
+@media screen and (max-width: 1070px){
+  .baa__slide-text-wrap {
+    margin-left: 20px;
+  }
+}
+
+
+/* - Mobile - */
+@media screen and (max-width: 1024px){
+
+
+.before-and-after {
+  }
+  .baa-inner {
+  }
+
+
+  .baa__slider {
+  }
+
+
+  .baa__slide {
+    width: 100%;
+    height: 830px; 
+  }
+  .baa__slide-inner {
+    flex-direction: column;
+  }
+  .baa__slide-column {
+    height: 100%;
+  }
+        .baa__slide-column--image {
+          min-width: 0px;
+          width: 100%;
+          max-width: 585px;
+          height: 50%;
+          max-height: 585px;
+          margin-bottom: 20px;
+        }
+        .baa__slide-column--text {
+          width: 100%;
+          height: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  /* Content */
+  .baa__slide-image-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .baa__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .baa__slide-text-wrap {
+    margin-left: 0px;
+    padding: 0px 20px;
+  }
+
+  .baa__slide-title-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .baa__slide-title {
+    font-size: 24px;
+  }
+
+  .baa__slide-quote-wrap {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  .baa__slide-quote {
+    font-size: 18px;
+    line-height: 31px;
+  }
+
+  .baa__slide-name-wrap {
+    margin-bottom: 15px;
+  }
+  .baa__slide-name {
+  }
+
+  .baa__slide-products-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .baa__slide-products-title-wap {
+    margin-right: 0px;
+    margin-bottom: 15px
+  }
+  .baa__slide-products-title {
+  }
+
+  .baa__slide-products {
+    justify-content: center;
+  }
+  .baa__slide-product-name-link {
+  }
+  .baa__slide-product-name {
+  }
+
+  .baa__nav-item {
+    width: 40px;
+    height: 12px;
+    padding: 3px 5px;
+    margin: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .baa__slide-text-wrap {
+    padding: 0px;
+  }
+}
+
+
+</style>
+
+<div id="before-and-after" class="before-and-after">
+  <div class="baa-inner">
+
+    <div id="baa__slider" class="baa__slider">
+      {% for block in section.blocks %}
+        <div class="baa__slide">
+          <div class="baa__slide-inner">
+
+            <div class="baa__slide-column baa__slide-column--image">
+              <div class="baa__slide-image-wrap">
+                <img src="{{ block.settings.image | img_url: 'master' }}" class="baa__slide-image">
+              </div>
+            </div>
+
+            <div class="baa__slide-column baa__slide-column--text">
+              <div class="baa__slide-text-wrap">
+
+                <div class="baa__slide-title-wrap">
+                  <p class="baa__slide-title">{{ section.settings.title-1 }}</p>
+                  {% if section.settings.title-2 != '' %}
+                    <p class="baa__slide-title">{{ section.settings.title-2 }}</p>
+                  {% endif %}
+                </div>
+
+                <div class="baa__slide-quote-wrap">
+                  <p class="baa__slide-quote">{{ block.settings.quote }}</p>
+                </div>
+
+                <div class="baa__slide-name-wrap">
+                  <p class="baa__slide-name">{{ block.settings.name }}</p>
+                </div>
+
+                <div class="baa__slide-products-wrap">
+
+                  <div class="baa__slide-products-title-wap">
+                    <p class="baa__slide-products-title">Products used:</p>
+                  </div>
+
+                  <div class="baa__slide-products">
+                    {% if block.settings.product-1 != "" %}
+                      <a href="/products/{{ block.settings.product-1 }}" class="baa__slide-product-name-link">
+                        {% comment %} <p class="baa__slide-product-name">Product #</p> {% endcomment %}
+                        <p class="baa__slide-product-name">{{ block.settings.product-1 | replace: "-", " " }}{% if block.settings.product-2 != "" %},{% endif %}</p>
+                        <div class="baa__slide-product-name-underline"></div>
+                      </a>
+                    {% endif %}
+
+                    {% if block.settings.product-2 != "" %}
+                      <a href="/products/{{ block.settings.product-2 }}" class="baa__slide-product-name-link">
+                        {% comment %} <p class="baa__slide-product-name">Product #</p> {% endcomment %}
+                        <p class="baa__slide-product-name">{{ block.settings.product-2 | replace: "-", " " }}{% if block.settings.product-3 != "" %},{% endif %}</p>
+                        <div class="baa__slide-product-name-underline"></div>
+                      </a>
+                    {% endif %}
+                    
+                    {% if block.settings.product-3 != "" %}
+                      <a href="/products/{{ block.settings.product-3 }}" class="baa__slide-product-name-link">
+                        {% comment %} <p class="baa__slide-product-name">Product #</p> {% endcomment %}
+                        <p class="baa__slide-product-name">{{ block.settings.product-3 | replace: "-", " " }}{% if block.settings.product-4 != "" %},{% endif %}</p>
+                        <div class="baa__slide-product-name-underline"></div>
+                      </a>
+                    {% endif %}
+                    
+                    {% if block.settings.product-4 != "" %}
+                      <a href="/products/{{ block.settings.product-4 }}" class="baa__slide-product-name-link">
+                        {% comment %} <p class="baa__slide-product-name">Product #</p> {% endcomment %}
+                        <p class="baa__slide-product-name">{{ block.settings.product-4 | replace: "-", " " }}{% if block.settings.product-5 != "" %},{% endif %}</p>
+                        <div class="baa__slide-product-name-underline"></div>
+                      </a>
+                    {% endif %}
+                    
+                    {% if block.settings.product-5 != "" %}
+                      <a href="/products/{{ block.settings.product-5 }}" class="baa__slide-product-name-link" data-test="{{ block.settings.product-5 }}">
+                        {% comment %} <p class="baa__slide-product-name">Product #</p> {% endcomment %}
+                        <p class="baa__slide-product-name">{{ block.settings.product-5 | replace: "-", " " }}</p>
+                        <div class="baa__slide-product-name-underline"></div>
+                      </a>
+                    {% endif %}
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div id="baa__nav" class="baa__nav">
+      {% for block in section.blocks %}
+        <div class="baa__nav-item">
+          <div class="baa__nav-item-inner"></div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  window.addEventListener('DOMContentLoaded', () => {
+    var flkty1 = new Flickity( '#baa__slider', {
+      wrapAround: false,
+      draggable: true,
+      freeScroll: false,
+      prevNextButtons: false,
+      pageDots: false,
+      cellAlign: 'center',
+      autoPlay: 8000,
+      pauseAutoPlayOnHover: true
+    });
+    var flktyNav = new Flickity( '#baa__nav', {
+      asNavFor: '#baa__slider',
+      contain: true,
+      pageDots: false,
+      prevNextButtons: false
+    });
+    
+  });
+}());
+</script>
+
+{% schema %}
+  {
+    "name": "Before and After",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title-2",
+        "label": "Constant Title Line 1",
+        "info": "This title will be used on every slide.",
+        "default": "Real Customers"
+      },
+      {
+        "type": "text",
+        "id": "title-1",
+        "label": "Constant Title Line 2",
+        "info": "This title will be used on every slide.",
+        "default": "Real Reviews"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Slide",
+        "name": "Slide",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Slide Image"
+          },
+          {
+            "type": "text",
+            "id": "quote",
+            "label": "Slide Quote",
+            "default": "My hair is in love with these products. It beautifully defined my 4b/c curls and loils leaving my hair misturized"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Customer Name",
+            "default": "Jane Doe"
+          },
+          {
+            "type": "header",
+            "content": "Slide Products",
+            "info": "You can choose a max of 5 products"
+          },
+          {
+            "type": "product",
+            "id": "product-1",
+            "label": "Product 1"
+          },
+          {
+            "type": "product",
+            "id": "product-2",
+            "label": "Product 2"
+          },
+          {
+            "type": "product",
+            "id": "product-3",
+            "label": "Product 3"
+          },
+          {
+            "type": "product",
+            "id": "product-4",
+            "label": "Product 4"
+          },
+          {
+            "type": "product",
+            "id": "product-5",
+            "label": "Product 5"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "Before and After"
+      }
+    ]
+  }
+{% endschema %}

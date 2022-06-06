@@ -1,0 +1,407 @@
+<style>
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 40vw;
+    max-height: 1000px;
+    overflow: hidden;
+    font-family: montserrat, 'sans-serif';
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -1%;
+    right: -17.5%;
+    z-index: -1;
+    background: url('https://cdn.shopify.com/s/files/1/1555/4789/files/palm-curved-right.png?v=1590079361');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 33%;
+    transform: rotate(-19deg);
+  }
+  @media screen and (max-width: 1200px){
+    .hero {
+
+    }
+  }
+  @media screen and (max-width: 1024px){
+    .hero {
+      width: 100%;
+      height: auto;
+    }
+    .hero::before {
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .hero {
+      width: 100%;
+      height: auto;
+      min-height: 450px;
+    }
+    
+  }
+
+
+  .hero__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .hero__inner {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .hero__banner-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .desktop-hero-image {
+    display: block;
+  }
+  .mobile-hero-image {
+    display: none;
+  }
+
+
+
+  .hero__slit-views {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .split-views__column {
+    height: 100%;
+    position: relative;
+  }
+    .split-views__column-image {
+      width: 63%;
+    }
+    .split-views__column-text {
+      width: 37%;
+      display: flex;
+      align-items: center;
+      padding: 0px 40px;
+    }
+
+    .split-views__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+
+    .split-views__text-container {
+      display: inline-block;
+      width: auto;
+      max-width: 390px;
+      height: auto;
+    }
+    .split-views__title {
+      font-size: 38px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .split-views__text {
+      font-size: 15px;
+      line-height: 30px;
+      color: #000;
+      margin-bottom: 30px;
+    }
+    .split-views__button {
+      width: 203px;
+      height: 52px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: {{ section.settings.button-bg-color }};
+      cursor: pointer;
+    }
+    .split-views__button:hover {
+      background-color: {{ section.settings.button-bg-color-hover }} !important;
+    }
+    .split-views__button-link {
+      font-size: 15px;
+      font-weight: bold;
+      color: {{ section.settings.button-color }};
+      text-decoration: none;
+    }
+    .split-views__button-link:visited {
+      color: {{ section.settings.button-color }}; 
+    }
+
+    .split-views__button:hover .split-views__button-link {
+        color: {{ section.settings.button-color-hover }};
+      }
+
+
+  @media screen and (max-width: 1024px){
+
+    .hero__slit-views {
+      display: block;
+    }
+      .split-views__column-image {
+        width: 100%;
+        height: auto;
+      }
+      .split-views__column-text {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px;
+      }
+
+      .split-views__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        
+      }
+
+
+      .split-views__text-container {
+        max-width: 415px;
+        text-align: center;
+      }
+      .split-views__title {
+        font-size: 30px;
+      }
+      .split-views__button {
+        width: 100%;
+        max-width: 415px;
+        height: 52px;
+        margin: 0px auto;
+      }
+      .split-views__button-link {
+
+      }
+  
+    .desktop-hero-image {
+      display: none;
+    }
+    .mobile-hero-image {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (max-height: 700px){
+    .hero {
+      min-height: 0px;
+    }
+    .split-views__column-text {
+      padding: 15px 20px;
+    }
+    .split-views__title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .split-views__text {
+      font-size: 13px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+    .split-views__button {
+      width: 100%;
+      height: 50px;
+    }
+    .split-views__button-link {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 768px) and (max-height: 600px){
+    .hero {
+      min-height: 0px;
+    }
+    .split-views__column-image {
+        width: 100%;
+        height: 45%;
+      }
+      .split-views__column-text {
+        height: 55%;
+        padding: 10px 20px;
+      }
+  }
+</style>
+
+
+<div id="hero" class="hero">
+    <div class="hero__inner">
+
+      {% if section.settings.hero-type == 'banner' %}
+        <a href="{{ section.settings.url }}" class="hero__link">
+          <div class="hero__banner-wrap">
+            <img src="{{ section.settings.banner-image | img_url: 'master' }}" class="banner-image desktop-hero-image" />
+            <img src="{{ section.settings.banner-image-mobile | img_url: 'master' }}" class="banner-image mobile-hero-image" />
+          </div>
+        </a>
+      {% endif %}
+
+      {% if section.settings.hero-type == 'split-views' %}
+        <div class="hero__slit-views">
+          <div class="split-views__column split-views__column-image">
+            <img src="{{ section.settings.split-view-image | img_url: 'master' }}" class="split-views__image desktop-hero-image" />
+            <img src="{{ section.settings.split-view-mobile-image | img_url: 'master' }}" class="split-views__image mobile-hero-image" />
+          </div>
+          <div class="split-views__column split-views__column-text">
+            <div class="split-views__text-container">
+              <p class="split-views__title">
+                {{ section.settings.title }}
+              </p>
+              <p class="split-views__text">
+                {{ section.settings.text }}
+              </p>
+              <div class="split-views__button">
+                <a href="{{ section.settings.url }}" class="split-views__button-link">
+                  {{ section.settings.btn-text }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+</div>
+
+<script>
+  (function(){
+    //var style = document.createElement('style');
+    //style.type = 'text/css';
+    //style.innerHTML = '.cssClass { color: #F00; }';
+    //document.getElementsByTagName('head')[0].appendChild(style);
+    //document.getElementById('someElementId').className = 'cssClass';
+  }())
+</script>
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Hero Layout / General"
+      },
+        {
+          "type": "select",
+          "id": "hero-type",
+          "label": "Choose the type of layout",
+          "options": [
+            {"value": "banner", "label": "Banner"},
+            {"value": "split-views", "label": "Split Views"}
+          ]
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Choose a link for the hero",
+          "info": "This link is used to make the entire banner clickable and also for the button in the split views layout."
+        },
+
+
+      {
+        "type": "header",
+        "content": "Banner"
+      },
+        {
+          "type": "image_picker",
+          "id": "banner-image",
+          "label": "Banner Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "banner-image-mobile",
+          "label": "Banner Mobile Image"
+        },
+
+
+      {
+        "type": "header",
+        "content": "Spit Views"
+      },
+      {
+        "type": "image_picker",
+        "id": "split-view-image",
+        "label": "Image for Split View"
+      },
+      {
+        "type": "image_picker",
+        "id": "split-view-mobile-image",
+        "label": "Mobile Image for Split View"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Hero Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Hero Text"
+      },
+      {
+        "type": "text",
+        "id": "btn-text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "color",
+        "id": "button-color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button-bg-color",
+        "label": "Button Background Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "button-color-hover",
+        "label": "Button Hover Text Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "button-bg-color-hover",
+        "label": "Button Hover Background Color",
+        "default": "#fff"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Slide",
+        "name": "Slide",
+        "settings": [
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Hero",
+        "name": "Hero"
+        
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,85 @@
+
+<style>
+.ssw-instagram-feed-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.ssw-instagram-feed-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: url('https://cdn.shopify.com/s/files/1/1555/4789/files/palm-curved-right.png?v=1590079361');
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  max-height: 900px;
+  width: 45px;
+  transform: rotate(0deg);
+}
+.iss__header {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0px 20px;
+}
+.iss__title {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.ssw-html-widget {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.ssw-instagram-load-more {
+  margin-bottom: 0px;
+}
+  .ssw-instagram-grid {
+  	margin-bottom: 0px !important;
+  }
+@media screen and (max-width: 768px){
+  .iss__title {
+    font-size: 24px;
+  }
+}
+</style>
+
+<div class="ssw-instagram-feed-wrap">
+  <div class="iss__header">
+    <p class="iss__title">
+      {{ section.settings.title }}
+    </p>
+  </div>
+         
+  
+  <div 
+   	class="ssw-html-widget ssw-instagram-widget" 
+    data-type="grid" 
+  	data-rows_count="1" 
+  	data-columns_count_for_grid="3"  
+  	data-spaces="10" 
+    data-widget="1" 
+    data-gallery_id="1"
+    data-module="service"
+    data-name="instagramPhotos">
+   <div class="ssw-page-loading"><span class="ssw-spin ssw-loader"></span></div>
+  </div>
+</div>
+
+
+
+{% schema %}{"name":"Shoppable Instagram","class":"ssw-instagram-section","settings":[{
+          "type": "text",
+          "id": "title",
+          "label": "Section title",
+          "default": "Share you hair journey"
+        },{"type":"select","id":"option_galleries_id","options":[{"value":"1","label":""}],"label":"Choose gallery"},{"type":"select","id":"option_font","options":[{"value":"grid","label":"Grid"},{"value":"masonry","label":"Masonry"},{"value":"slide","label":"Slide"},{"value":"listing","label":"Listing"}],"label":"Choose gallery layout"}],"presets":[{"name":"Shoppable Instagram","category":"Image"}]}{% endschema %}

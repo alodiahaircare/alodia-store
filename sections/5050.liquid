@@ -1,0 +1,320 @@
+
+<style>
+  .hp-5050 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-family: montserrat, 'sans-serif';
+  }
+  .hp50-inner {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0px auto;
+  }
+  .hp50__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hp50__column {
+    width: calc(50% - 80px)
+  }  
+
+  @media screen and (max-width: 1460px){
+    .hp50-inner {
+      padding: 0px 20px;
+    }
+  }
+  @media screen and (max-width: 1024px){
+    .hp50__content {
+      width: 100%;
+      height: 100%;
+      flex-direction: column-reverse;
+    }
+    .hp50__column {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  /* Text Side */
+  .hp50__column--text {
+    margin-right: 40px;
+    max-width: 505px;
+    color: #222222;
+  }
+  .hp50__title-wrap {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .hp50__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 39.2px;
+  }
+  .hp50__text-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .hp50__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .hp50__button-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hp50__button {
+    width: 50%;
+    max-width: 237px;
+    height: 50px;
+    border-radius: 2px;
+  }
+/*         .hp50__button-second {
+          margin-left: 20px;
+        } */
+  .hp50__button-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    color: #fff;
+    border: 1px solid #222222;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+      .hp50__button--alt-styling {
+        background-color: #fff;
+        color: #222222;
+      }
+  .hp50__button-link:visited {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+      .hp50__button--alt-styling:visited {
+        background-color: #fff;
+        color: #222222;
+      }
+          .hp50__button-link:hover {
+            background-color:  #5D8A6D;
+            color: #fff;
+            border: none;
+          }
+          .hp50__button--alt-styling:hover {
+            background-color:  #5D8A6D;
+            color: #fff;
+          }
+
+
+  @media screen and (max-width: 1024px){
+    .hp50__column--text {
+      margin-right: 0px;
+      max-width: 505px;
+    }
+    .hp50__button-wrap {
+      width: 100%;
+      display: block;
+    }
+    .hp50__button {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    .hp50__button-second {
+      margin-left: 0px;
+    }
+    .hp50__button--alt-styling {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .hp50__title {
+      font-size: 24px;
+    }
+    .hp50__text {
+      font-size: 20px;
+    }
+  }
+
+
+
+  /* Image Side */
+  .hp50__column--image {
+    margin-left: 40px;
+  }
+  .hp50__image-wrap {
+    max-width: 581px;
+    max-height: 423px;
+  }
+  .hp50__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1024px){
+    .hp50__column--image {
+      margin-left: 0px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    .hp50__image-wrap {
+      max-width: 750px;
+      max-height: 100%;
+    }
+  }
+
+
+  a:visited {
+    color: 
+  }
+</style>
+
+<div id="hp-50-50" class="hp-5050">
+  <div class="hp50-inner">
+    <div class="hp50__content">
+
+        <div class="hp50__column hp50__column--text">
+          <div class="hp50__title-wrap">
+            <p class="hp50__title">
+              {{ section.settings.title }}
+            </p>
+          </div>
+          <div class="hp50__text-wrap">
+            <p class="hp50__text">
+              {{ section.settings.text }}
+            </p>
+          </div>
+          <div class="hp50__button-wrap">
+            {% for block in section.blocks %}
+              <div class="hp50__button {% if forloop.last %} hp50__button-second {% endif %}">
+                <a href="{{ block.settings.button-url }}" {% if block.settings.new-tab %}target="_blank"{% endif %} class="hp50__button-link {% if forloop.last %} hp50__button--alt-styling {% endif %}">
+                  {{ block.settings.button-text }}
+                </a>
+              </div>
+            {% endfor %}
+           
+          </div>
+        </div>
+
+        <div class="hp50__column hp50__column--image">
+          <div class="hp50__image-wrap">
+            <img src="{{ section.settings.image | img_url: 'master' }}" class="hp50__image">
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "50/50",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Section Text"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Personalize Your Scalp and Hair Care Routine"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "with doctor formulated clean products"
+      },
+      {
+        "type": "header",
+        "content": "Section Buttons"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Button",
+        "name": "Button",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button-text",
+            "label": "Button Text",
+            "default": "Customize Your Kit"
+          },
+          {
+            "type": "url",
+            "id": "button-url",
+            "label": "Button Link"
+          },
+          {
+            "type": "color",
+            "id": "button-color-bg",
+            "label": "Button Background Color",
+            "default": "#000"
+          },
+          {
+            "type": "color",
+            "id": "button-color-text",
+            "label": "Button Text Color",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "button-hover-color-bg",
+            "label": "Button Hover Background Color",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "button-hover-color-text",
+            "label": "Button Hover Text Color",
+            "default": "#000"
+          },
+          {
+            "type": "checkbox",
+            "id": "new-tab",
+            "default": false,
+            "label": "Enable opening link in new tab"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "50/50"
+        
+      }
+    ]
+  }
+{% endschema %}

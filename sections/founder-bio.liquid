@@ -1,0 +1,80 @@
+<div class="padding-50">
+  {% if section.settings.title != blank %}    
+  <div class="container main content">
+    <div class="fourteen columns offset-by-two">
+      <h4 class="title center">{{ section.settings.title }}</h4>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="container main content bio-section">
+    <div class="eight columns">
+      <figure class="bio-container">
+        {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+        {% endif %}
+        <figcaption class="bio-caption">
+          {% for block in section.blocks %}
+            <div>
+              {%- if block.settings.name != blank -%}
+              <strong>{{ block.settings.name }}</strong>
+              {%- endif -%}
+              {%- if block.settings.role != blank -%}
+                {{ block.settings.role }}
+              {%- endif -%}
+            </div>
+          {% endfor %}
+        </figcaption>
+      </figure>
+    </div>
+    {% if section.settings.description != blank %}      
+    <div class="eight columns offset-by-one">
+      {{ section.settings.description }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Founder bio",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Alodia is so very passionate about empowering and educating women all around the globe to Learn, Love and Grow their hair"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "bio",
+        "name": "Bio",
+        "settings": [
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "role",
+            "label": "Role"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

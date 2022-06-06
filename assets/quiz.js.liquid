@@ -1,0 +1,178 @@
+(function() {
+  const myQuestions = [
+    {
+      question: "Hair Type",
+      answers: {
+        a: "Natural (Curly)",
+        b: "Natural (Coily)",
+        c: "Relaxed",
+        d: "Straight to Wavy Hair",
+        e: "Children",
+        f: "Men"
+      },
+      images: {
+       a: "https://cdn.shopify.com/s/files/1/1555/4789/t/2/assets/feature2_480x.jpg?17314427314162973500",
+       b: "https://cdn.shopify.com/s/files/1/1555/4789/t/2/assets/feature6_480x.jpg?17314427314162973500",
+       c: "https://cdn.shopify.com/s/files/1/1555/4789/t/2/assets/feature3_480x.jpg?17314427314162973500",
+       d: "https://cdn.shopify.com/s/files/1/1555/4789/t/2/assets/feature4_480x.jpg?17314427314162973500",
+       e: "http://devoutfashion.com/wp-content/uploads/2016/06/Bun-Braids-and-Ribbons.jpg",
+       f: "http://www.newnaturalhairstyles.com/wp-content/uploads/2017/04/Curly-Hairstyles-Pictures-2.jpg"
+      }
+    },
+    {
+      question: "Major Hair Concern",
+      answers: {
+        a: "Need more moisture or less frizz",
+        b: "Scalp Health (Itchy, Dry, Irritated)",
+        c: "Need help with Healthy Hair Routine",
+        d: "Hair Growth"
+      },
+      images: {
+       a: "https://cdn-img.essence.com/sites/default/files/styles/1x1_lg/public/1482163007/black-woman-natural-hair-73224087.jpg",
+       b: "https://ath.unileverservices.com/wp-content/uploads/sites/3/2017/06/dandruff-itchy-afro.jpeg",
+       c: "https://s3.envato.com/files/83378775/ritabonita_010-590.jpg",
+       d: "https://ae01.alicdn.com/kf/HTB1AcdpNVXXXXcmXVXXq6xXFXXX5/-font-b-Afro-b-font-font-b-Wigs-b-font-for-Black-Women-Kinky-Curly.jpg",
+      }
+    },
+    {
+      question: "Hair Style would like to Achieve",
+      answers: {
+        a: "Braids or Twists",
+        b: "Wash n Go",
+        c: "Thermal Styling",
+        d: "Children Styles",
+        e: "Men Styles",
+        f: "Other"
+      },
+      images: {
+       a: "http://dolls4sale.info/wp-content/uploads/2017/11/black-hair-braiding-styles-best-25-black-braided-hairstyles-ideas-on-pinterest-black-hairblack-hair-braiding-styles-best-25-black-braided-hairstyles-ideas-on-pinterest-black-hair-short.jpg",
+       b: "http://1.bp.blogspot.com/-XVeDtjDFbFI/UPqfZnU9KaI/AAAAAAAADzo/TQqjSBE-vb4/s1600/photo+2-8.JPG",
+       c: "https://i.pinimg.com/736x/d3/7a/8c/d37a8cb85aaedba854ab11cce3eeca15.jpg",
+       d: "//res.cloudinary.com/startup-grind/image/upload/c_fill,f_auto,g_center,h_500,q_auto:good,w_500/v1/softlayer0/80135C1/media/v1/AUTH_d0619b05-07fc-49f0-8249-da585ea45ce5/atlassian/events/42234F79-B5F1-4F49-B66D5D747D34D278_source.jpg",
+       e: "//www.menshairstylesnow.com/wp-content/uploads/2017/02/Temple-Fade-with-Sponge-Twists.jpg",
+       f: "https://i1.wp.com/therighthairstyles.com/wp-content/uploads/2015/01/2-medium-natural-hairstyle-with-highlights.jpg"
+      }
+    }
+  ];
+
+  function buildQuiz() {
+    // we'll need a place to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // we'll want to store the list of answer choices
+      const answers = [];
+      const images = [];
+
+      // and for each available answer...
+      for (letter in currentQuestion.answers) {
+        // ...add an HTML radio button
+        answers.push(
+          `<div class="hair-question">
+              <figure class="featured-image">
+                <img src="${currentQuestion.images[letter]}"/>
+              </figure>
+              <p>${currentQuestion.answers[letter]}</p>
+           </div>`
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        `<div class="slide">
+<div class="question"><h2>${currentQuestion.question}</h2></div>
+           <div class="answers" id="answers"> ${answers.join("")} </div>
+         </div>`
+      );
+    });
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
+  }
+
+  function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+   console.log(myQuestions);
+  }
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove("active-slide");
+    slides[n].classList.add("active-slide");
+    currentSlide = n;
+    
+    if (currentSlide === 0) {
+      previousButton.style.display = "none";
+    } else {
+      previousButton.style.display = "inline-block";
+    }
+    
+    if (currentSlide === slides.length - 1) {
+      nextButton.style.display = "none";
+      submitButton.style.display = "none";
+      //$('.answers').off('click','.hair-question');
+    } else {
+      nextButton.style.display = "none";
+      submitButton.style.display = "none";
+    }
+  }
+
+  function showNextSlide() {
+    showSlide(currentSlide + 1);
+  }
+ 
+  function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
+
+  // display quiz right away
+  buildQuiz();
+
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  showSlide(0);
+
+  // on submit, show results
+  submitButton.addEventListener("click", showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
+ 
+$('.answers').on('click', '.hair-question', function(event) {
+   showNextSlide();
+});
+ 
+  
+  var bigHeight = 0;
+  
+  $('.quiz-container *').each(function(){
+    if($(this).height() > bigHeight ) {
+    	bigHeight = $(this).height();
+    } 
+  });
+  
+  $('.quiz-container').height(bigHeight);
+
+})();

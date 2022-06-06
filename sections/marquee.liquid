@@ -1,0 +1,155 @@
+<style>
+.hp-marquee {
+  position: relative;
+  width: 100vw;
+  height: 65px;
+  overflow: hidden;
+  background-color: {{ section.settings.marq-bg-color }};
+  display: flex;
+  align-items: center;
+}
+.marquee {
+  overflow: hidden;
+  margin: auto 0px;
+}
+.hpis-text-wrap {
+  display: inline-block;
+}
+.hpis-text {
+  white-space: nowrap;
+  letter-spacing: 1px;
+  margin: 0px;
+  font-size: {{ section.settings.marq-font }}px;
+  color: {{ section.settings.marq-color }};
+}
+
+@media screen and (max-width: 768px){
+  
+}
+</style>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
+
+
+<div id="hp-marquee" class="hp-marquee">
+
+  <div class="marquee">
+    {% for block in section.blocks %}
+      <div class="hpis-text-wrap">
+        <p class="hpis-text">{{ block.settings.text }} - </p>
+      </div>
+    {% endfor %}
+    {% for block in section.blocks %}
+      <div class="hpis-text-wrap">
+        <p class="hpis-text">{{ block.settings.text }} - </p>
+      </div>
+    {% endfor %}
+  </div>
+  
+</div>
+
+<script>
+  (function () {
+
+    const srceen = window.innerWidth;
+    const flow = '{{ section.settings.marq-direction }}';
+    let time = {{ section.settings.marq-duration }} * 1000;
+    if(screen.width < 900){
+      time = time / 1.5;
+    }
+    
+
+    try {
+      $('.marquee').marquee({
+        //duration in milliseconds of the marquee
+        duration: time,
+        //gap in pixels between the tickers
+        gap: 0,
+        //time in milliseconds before the marquee will start animating
+        delayBeforeStart: 0,
+        //'left' or 'right'
+        direction: flow,
+        //true or false - should the marquee be duplicated to show an effect of continues flow
+        duplicated: true
+      });
+    } 
+    catch(err) {
+      console.log(err)
+      const el = document.querySelector('.hp-marquee');
+      el.style.display = 'none';
+    }
+
+    
+  })();
+</script>
+
+{% schema %}
+  {
+    "name": "Marquee",
+    "settings": [
+      {
+        "type":      "range",
+        "id":        "marq-duration",
+        "min":       5,
+        "max":        30,
+        "step":       1,
+        "unit":       "sec",
+        "label":     "Marquee Duration",
+        "default":   15
+      },
+      {
+        "type": "select",
+        "id": "marq-direction",
+        "options": [
+            { "value": "left", "label": "Left"},
+            { "value": "right", "label": "Right"}
+        ],
+        "label": "Marquee Direction"
+      },
+      {
+        "type":      "range",
+        "id":        "marq-font",
+        "min":       10,
+        "max":        32,
+        "step":       1,
+        "unit":       "px",
+        "label":     "Marquee Font Size",
+        "default":   18
+      },
+      {
+        "type": "color",
+        "id": "marq-color",
+        "label": "Text Color",
+        "default": "#222222"
+      },
+      {
+        "type": "color",
+        "id": "marq-bg-color",
+        "label": "Background Color",
+        "default": "#fff"
+      }
+
+    ],
+    "blocks": [
+      {
+        "type": "Phrase",
+        "name": "Phrase",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Home Page",
+        "name": "Marquee"
+      }
+    ]
+  }
+{% endschema %}

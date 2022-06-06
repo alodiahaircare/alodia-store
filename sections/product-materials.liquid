@@ -1,0 +1,66 @@
+<div class="padding-50" style="background: {{ section.settings.background }}">
+  <div class="container main content justify-content-center">
+    {% if section.settings.title != blank %}
+    <h4 class="title center twelve columns">{{ section.settings.title }}</h4>
+    {% endif %}
+    
+    {% for block in section.blocks %}      
+    <div class="five columns text-center">
+      {% if block.settings.svg != blank %}
+        {{ block.settings.svg }}
+      {% endif %}
+      {% if block.settings.title != blank %}
+        <h3>{{  block.settings.title }}</h3>
+      {% endif %}
+      {% if block.settings.description != blank %}
+        <div>{{ block.settings.description }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Product Materials",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "We are committed to using recyclable materials for our product packaging and are against animal testing"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#cfe1e4"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "materials",
+        "name": "Materials",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "svg",
+            "label": "SVG"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
