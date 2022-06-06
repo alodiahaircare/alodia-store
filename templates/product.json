@@ -2,37 +2,201 @@
   "sections": {
     "main": {
       "type": "product-template",
-      "settings": {}
-    },
-    "nosto": {
-      "type": "nosto-element",
-      "settings": {}
+      "settings": {
+        "gallery_arrows": true,
+        "activate_zoom": false,
+        "enable_product_lightbox": true,
+        "activate_autoplay": false,
+        "slideshow_animation": "slide",
+        "product_images_position": "left",
+        "product_thumbs": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "product_breadcrumb": false,
+        "display_vendor": false,
+        "display_sku": false,
+        "display_savings": true,
+        "show_payment_button": false,
+        "display_collections": false,
+        "display_type": false,
+        "display_tags": false,
+        "display_social_buttons": true,
+        "product_description_position": "top",
+        "display_related_products": true,
+        "related_products_style": "grid",
+        "related_products_limit": 12,
+        "products_per": 3,
+        "display_recently_viewed": false,
+        "rv_title": "Recently Viewed Items",
+        "rv_products_style": "grid",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "toggle": false
+      }
     },
     "product-never-contains": {
       "type": "product-never-contains",
-      "settings": {}
+      "blocks": {
+        "aa5c96ca-e434-4fc2-8a59-5bd86f90ee05": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M24.6689 1.66663H14.6689V6.66663H24.6689V1.66663Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M16.6131 6.66663C16.6131 6.66663 16.6131 12.2083 16.6131 13.7916C12.0297 15.375 10.502 19.3333 10.502 24.0833C10.502 27.6347 10.502 33.8445 10.502 36.75C10.502 37.624 11.1849 38.3333 12.0297 38.3333H27.3075C28.1508 38.3333 28.8353 37.624 28.8353 36.75C28.8353 33.8445 28.8353 27.6347 28.8353 24.0833C28.8353 19.3333 27.3075 15.375 22.7242 13.7916C22.7242 12.2083 22.7242 6.66663 22.7242 6.66663\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M11.502 28.5L14.002 25.5L16.002 28.5L20.002 23.5L23.002 28.5L28.502 23\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No mineral oil"
+          }
+        },
+        "12f0892a-d4aa-4169-b8c8-fee016906146": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M2.50195 2H37.502V4.69565V6.04348H34.9094V29C34.9094 33.4183 31.3276 37 26.9094 37H13.0945C8.67627 37 5.09455 33.4183 5.09455 29V6.04348H2.50195V4.69565V2Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<rect x=\"9.50195\" y=\"28\" width=\"4\" height=\"4\" transform=\"rotate(-45 9.50195 28)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<rect x=\"18.3301\" y=\"24.8284\" width=\"2.94975\" height=\"2.94975\" transform=\"rotate(-45 18.3301 24.8284)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<rect x=\"24.3301\" y=\"30.0858\" width=\"2.94975\" height=\"2.94975\" transform=\"rotate(-45 24.3301 30.0858)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<rect x=\"11.5449\" y=\"18.1287\" width=\"4.3033\" height=\"4.3033\" transform=\"rotate(-45 11.5449 18.1287)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<rect x=\"24.4805\" y=\"21.0215\" width=\"2.91942\" height=\"2.91942\" transform=\"rotate(-45 24.4805 21.0215)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<\/svg>",
+            "description": "No sulfates"
+          }
+        },
+        "09354516-2f51-48c9-9252-8f5dd0c41230": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"35.4941\" y=\"2\" width=\"5.75399\" height=\"28.4135\" transform=\"rotate(52.2964 35.4941 2)\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/rect>\n<path d=\"M14.332 20.9932L15.4499 22.4393L8.24854 27.2358L7.87593 26.7537L14.332 20.9932Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M7.50195 35.3913C7.50195 36.8323 6.38262 38 5.00195 38C3.62062 38 2.50195 36.8323 2.50195 35.3913C2.50195 33.9503 5.00195 30 5.00195 30C5.00195 30 7.50195 33.9503 7.50195 35.3913Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No silicones"
+          }
+        },
+        "38195369-a706-46b6-bb21-4d1a07aed6ce": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.8911 19.4927L22.5507 27.5634L17.8911 35.6341L8.57176 35.6341L3.91212 27.5634L8.57176 19.4927L17.8911 19.4927Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.8911 19.4927L22.5507 27.5634L17.8911 35.6341L8.57176 35.6341L3.91212 27.5634L8.57176 19.4927L17.8911 19.4927Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M31.5129 10.8482L22.1936 10.8482L17.534 18.919L22.1936 26.9897L31.5129 26.9897L36.1726 18.919\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M10.502 23H16.002\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M18.502 27L15.502 32.1962\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M7.50195 27L10.502 32.1962\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.502 36L31.502 27\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.502 10L16.502 2\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No phthalates"
+          }
+        },
+        "0c6236b7-5239-4456-8843-bdee92be3327": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M36.502 36.3636C36.502 37.2685 35.7852 38 34.902 38H6.10195C5.21715 38 4.50195 37.2685 4.50195 36.3636V10.1818H15.702V5.27273C15.702 3.46455 17.134 2 18.902 2H33.302C35.0684 2 36.502 3.46455 36.502 5.27273V36.3636Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M20.9464 5C20.1476 5 19.502 5.745 19.502 6.66667V8.33333C19.502 9.255 20.1476 10 20.9464 10H31.5575C32.3548 10 33.002 9.255 33.002 8.33333V6.66667C33.002 5.745 32.3548 5 31.5575 5H20.9464Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M12.502 5H6.50195V10H12.502V5Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No Propyline Glycol"
+          }
+        },
+        "56c4193a-4656-461a-8dbf-382d4d40da85": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M31.502 18V13V5H8.50195V37H31.502V30.5\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.50195 5H34.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.50195 37H34.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.50195 26H23.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.502 25.8633C35.502 28.1491 33.7122 30 31.502 30C29.2917 30 27.502 28.1491 27.502 25.8633C27.502 23.5804 31.502 17 31.502 17C31.502 17 35.502 23.579 35.502 25.8633Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.50195 16H25.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M29.502 2H23.502V5H29.502V2Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No Petroleum"
+          }
+        },
+        "755bc9f4-1421-4f6a-818e-76cc531b9770": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M30.502 23.0041C30.502 16.5773 24.252 11 21.127 11H14.877C12.377 11 5.50195 16.5773 5.50195 23.0041C5.50195 29.4309 7.08112 35.922 7.08112 35.922C7.3582 37.0638 8.52279 38 9.66862 38H26.3353C27.4811 38 28.6457 37.0638 28.9228 35.922C28.9228 35.922 30.502 29.4309 30.502 23.0041Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M23.502 7.66758C23.502 6.2394 20.752 5 19.377 5H16.627C15.527 5 12.502 6.2394 12.502 7.66758C12.502 9.09576 13.1968 10.5382 13.1968 10.5382C13.3187 10.792 13.8311 11 14.3353 11H21.6686C22.1728 11 22.6852 10.792 22.8071 10.5382C22.8071 10.5382 23.502 9.09576 23.502 7.66758Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.502 8H35.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M29.502 12L35.502 16\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M29.502 4L35.502 2\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M6.50195 23H29.502\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "No artificial colors or fragrences"
+          }
+        },
+        "3adc4d2f-ca64-4a12-8b79-5372009e22eb": {
+          "type": "icon",
+          "settings": {
+            "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12.501 14C3.88079 18.0653 0.48959 26.497 5.03453 32.2532C16.1318 43.3237 25.3674 35.9855 27.501 27.5C29.6347 19.0144 34.5471 21.7423 38.501 12C41.9156 3.58634 30.7341 -1.19373 25.501 3.99999C19.7561 9.70163 21.8908 9.57175 12.501 14Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M27.8066 6.12681C30.7944 4.35554 31.9896 5.24116 33.3554 5.24116\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M22.5354 29.1537C19.7373 33.288 17.693 32.9004 15.944 33.7534\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M10.3066 29.1537C11.4448 27.2348 14.831 22.8656 19.27 20.7401C24.8188 18.0831 26.5261 10.1123 31.2212 8.78381\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M9.45312 24.7255C10.8759 25.0207 13.9775 26.1425 15.0019 28.2681\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M12.0137 22.0685C13.4364 22.3637 16.538 23.4855 17.5624 25.6111\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M16.2832 19.4115C17.706 19.7067 20.8076 20.8285 21.832 22.9541\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M20.5508 16.7546C21.9735 17.0499 25.0752 18.1717 26.0995 20.2972\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M23.1113 13.212C24.4246 13.5073 27.2877 14.6291 28.2333 16.7546\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.5273 10.5551C27.6218 10.7765 30.0076 11.6178 30.7956 13.212\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "description": "Nut Free"
+          }
+        }
+      },
+      "block_order": [
+        "aa5c96ca-e434-4fc2-8a59-5bd86f90ee05",
+        "12f0892a-d4aa-4169-b8c8-fee016906146",
+        "09354516-2f51-48c9-9252-8f5dd0c41230",
+        "38195369-a706-46b6-bb21-4d1a07aed6ce",
+        "0c6236b7-5239-4456-8843-bdee92be3327",
+        "56c4193a-4656-461a-8dbf-382d4d40da85",
+        "755bc9f4-1421-4f6a-818e-76cc531b9770",
+        "3adc4d2f-ca64-4a12-8b79-5372009e22eb"
+      ],
+      "settings": {
+        "title": "Alodia's Products never Contain:"
+      }
     },
     "founder-bio": {
       "type": "founder-bio",
-      "settings": {}
+      "blocks": {
+        "1d52f655-0187-4578-9a27-84b7de1d43e6": {
+          "type": "bio",
+          "settings": {
+            "name": "Dr. Isfahan Chambers Harris PhD",
+            "role": "CEO and Founder of Alodia,"
+          }
+        },
+        "b800beb3-7324-4f37-9283-dfacf09a9236": {
+          "type": "bio",
+          "settings": {
+            "name": "Dr. Rashad DuPree Harris MD",
+            "role": "Chief Medical Officer & Co-Founder of Alodia"
+          }
+        }
+      },
+      "block_order": [
+        "1d52f655-0187-4578-9a27-84b7de1d43e6",
+        "b800beb3-7324-4f37-9283-dfacf09a9236"
+      ],
+      "settings": {
+        "title": "Alodia is so very passionate about empowering and educating women all around the globe to Learn, Love and Grow their hair",
+        "description": "<p>Our founder, Dr. Isfahan Chambers-Harris is committed to educating women on holistic health approaches to textured hair care. As a Black woman, mother, Medical scientist, and Trichology practitioner, Dr. Isfahan understands first-hand the misperceptions and misinformation that exists around textured hair. Alodia Hair Care was created with the primary goal of educating and empowering women around the globe.<\/p><p>Alodia Hair Care was birthed out of Dr. Isfahan’s’ personal experiences with unnatural, toxic hair care products. Facing excessive hair damage, she turned to her expertise in biology and chemistry. Over a 3-year period filled with countless research and experimentation, she developed transformative products made with organic and natural ingredients.<\/p><p>Alodia is a clinically proven hair and scalp care line that uses virtual hair and scalp consultations and personalized regimens to help resolve chronic scalp conditions and help with hair care styling. We also provide organic plant based products that use scientifically proven ingredients to provide a healthy scalp and length retention.<\/p>",
+        "image": "shopify:\/\/shop_images\/bio-isfahan.png"
+      }
     },
     "product-materials": {
       "type": "product-materials",
-      "settings": {}
+      "blocks": {
+        "46997ee0-ab4b-4b0b-89cd-69efcc42b479": {
+          "type": "materials",
+          "settings": {
+            "svg": "<svg width=\"42\" height=\"42\" viewbox=\"0 0 42 42\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M29.695 14.9131L16.6515 27.087L12.3037 22.7392\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21 41C32.0457 41 41 32.0457 41 21C41 9.9543 32.0457 1 21 1C9.9543 1 1 9.9543 1 21C1 32.0457 9.9543 41 21 41Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Lorem ipsum",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+          }
+        },
+        "dfe60752-15fe-4bed-8fe6-bd19ce8cfdc6": {
+          "type": "materials",
+          "settings": {
+            "svg": "<svg width=\"46\" height=\"44\" viewbox=\"0 0 46 44\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5445 11.2984L38.4302 9.09302L32.5445 6.88363L30.3372 1L28.1298 6.88363L22.2441 9.09302L28.1298 11.2984L30.3372 17.186L32.5445 11.2984Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M41.5564 22.3352L44.5002 21.2325L41.5564 20.1279L40.4537 17.186L39.3511 20.1279L36.4072 21.2325L39.3511 22.3352L40.4537 25.2791L41.5564 22.3352Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M34.3837 30.3369C22.8107 30.3369 14.5599 19.1342 17.9427 8.09326C8.56293 8.23084 1 15.8666 1 25.2788C1 34.7739 8.70051 42.4765 18.1977 42.4765C25.9387 42.4765 32.4839 37.3597 34.6387 30.3228C34.5537 30.3248 34.4707 30.3369 34.3837 30.3369Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Lorem ipsum",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+          }
+        },
+        "5c6002d1-8092-41e6-b879-38d2a75a7b5d": {
+          "type": "materials",
+          "settings": {
+            "svg": "<svg width=\"42\" height=\"42\" viewbox=\"0 0 42 42\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M29.695 14.9131L16.6515 27.087L12.3037 22.7392\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21 41C32.0457 41 41 32.0457 41 21C41 9.9543 32.0457 1 21 1C9.9543 1 1 9.9543 1 21C1 32.0457 9.9543 41 21 41Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Lorem ipsum",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "46997ee0-ab4b-4b0b-89cd-69efcc42b479",
+        "dfe60752-15fe-4bed-8fe6-bd19ce8cfdc6",
+        "5c6002d1-8092-41e6-b879-38d2a75a7b5d"
+      ],
+      "settings": {
+        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing"
+      }
     },
-    "reviews": {
-      "type": "reviews",
-      "settings": {}
+    "nosto": {
+      "type": "nosto-element",
+      "settings": {
+      }
     },
     "related-products": {
       "type": "related-products",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+      }
     },
     "recently-viewed": {
       "type": "recently-viewed",
-      "settings": {}
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_products_style": "grid",
+        "rv_max_display": 6,
+        "rv_per": 4
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {
+      }
     }
-    
   },
   "order": [
     "main",
