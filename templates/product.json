@@ -169,7 +169,8 @@
         "5c6002d1-8092-41e6-b879-38d2a75a7b5d"
       ],
       "settings": {
-        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing"
+        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing",
+        "background": "#cfe1e4"
       }
     },
     "nosto": {
@@ -196,6 +197,32 @@
       "type": "reviews",
       "settings": {
       }
+    },
+    "1654606629b2de1604": {
+      "type": "faq",
+      "blocks": {
+        "20b5cb4f-5de0-4a98-8099-05da71e464eb": {
+          "type": "Content",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "8a016c50-9fac-4597-ade0-bccc75dede90": {
+          "type": "Content",
+          "settings": {
+            "title": "Consectetur adipiscing elit, sed do eiusmod",
+            "subtitle": "<p>Suspendisse feugiat. Fusce  commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "20b5cb4f-5de0-4a98-8099-05da71e464eb",
+        "8a016c50-9fac-4597-ade0-bccc75dede90"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
     }
   },
   "order": [
@@ -206,6 +233,7 @@
     "nosto",
     "related-products",
     "recently-viewed",
-    "reviews"
+    "reviews",
+    "1654606629b2de1604"
   ]
 }

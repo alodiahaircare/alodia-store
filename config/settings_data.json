@@ -1771,7 +1771,8 @@
         "blocks": {
           "1551886133276": {
             "type": "filter_by_collection",
-            "settings": {}
+            "settings": {
+            }
           }
         },
         "block_order": [
@@ -1835,7 +1836,8 @@
         "blocks": {
           "1543976722318": {
             "type": "search",
-            "settings": {}
+            "settings": {
+            }
           },
           "1543976698289": {
             "type": "recent_posts",
@@ -1970,7 +1972,8 @@
           "page-details-2-template-17",
           "page-details-2-template-18"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "page-banner-template": {
         "type": "page-banner-template",
@@ -1997,7 +2000,8 @@
         "blocks": {
           "78bb7609-645b-4ca5-9ab7-d77eb566bfa3": {
             "type": "Slide",
-            "settings": {}
+            "settings": {
+            }
           }
         },
         "block_order": [
