@@ -1,0 +1,74 @@
+<a name="pagecontent" id="pagecontent"></a>
+
+<div class="container main content">
+  <div class="sixteen columns page clearfix">
+    <h2 class="title">
+        {{ section.settings.title }}
+      </h2>
+  </div>
+  <div class="sixteen columns">
+    {% if section.blocks.size > 0 %}
+      <dl class="faqAccordion">
+        {% for block in section.blocks %}
+          {% if block.type == "heading" %}
+            {% if block.settings.heading != blank %}
+              <h2 class="title faq--heading">{{ block.settings.heading }}</h2>
+            {% endif %}
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <dt><button type="button" aria-controls="panel-01" aria-expanded="true">{{ block.settings.title }}</button></dt>
+            <dd id="panel-01" aria-hidden="false">
+              {{ block.settings.subtitle }}
+            </dd>
+          {% endif %}
+        {% endfor %}
+      </dl>
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Heading",
+      "type": "heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Title"
+        }
+      ]
+    },
+    {
+      "name": "Frequently Asked Question",
+      "type": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Answer",
+          "default": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
