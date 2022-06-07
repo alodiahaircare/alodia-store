@@ -2957,7 +2957,7 @@ $accordionBg: {{ settings.shop_bg_color }};
       box-shadow: none;
       border-radius: 0px;
       font-size: 18px;
-			&:hover,&:focus{
+			&:not(.faq-section):hover,&:focus{
 				background: darken($accordionBg, 3%);
         border: none;
         border-bottom: 1px solid {{ settings.border_color }};

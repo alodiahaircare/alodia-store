@@ -17,7 +17,8 @@
         {% endif %}
         {% endif %}
         {% if block.settings.title != blank %}
-        <dt><button type="button" aria-controls="panel-01" aria-expanded="true">{{ block.settings.title }}</button></dt>
+        <dt><button type="button" aria-controls="panel-01" class="faq-section"
+          aria-expanded="true">{{ block.settings.title }}</button></dt>
         <dd id="panel-01" aria-hidden="false">
           {{ block.settings.subtitle }}
         </dd>
