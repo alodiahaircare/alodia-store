@@ -9,22 +9,20 @@
     </div>
     <div class="sixteen columns">
       {% if section.blocks.size > 0 %}
-      <dl class="faqAccordion">
-        {% for block in section.blocks %}
-        {% if block.type == "heading" %}
-        {% if block.settings.heading != blank %}
-        <h2 class="title faq--heading" style="color: {{ section.settings.color }}">{{ block.settings.heading }}</h2>
-        {% endif %}
-        {% endif %}
-        {% if block.settings.title != blank %}
-        <dt><button type="button" aria-controls="panel-01" class="faq-section-button"
-          aria-expanded="true" style="color: {{ section.settings.color_question }}">{{ block.settings.title }}</button></dt>
-        <dd id="panel-01" aria-hidden="false" style="color: {{ section.settings.color_answer }}">
-          {{ block.settings.subtitle }}
-        </dd>
-        {% endif %}
-        {% endfor %}
-      </dl>
+        <dl class="faqAccordion">
+          {% for block in section.blocks %}
+            {% if block.type == "heading" and block.settings.heading != blank %}
+              <h2 class="title faq--heading" style="color: {{ section.settings.color }}">{{ block.settings.heading }}</h2>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <dt><button type="button" aria-controls="panel-01" class="faq-section-button"
+                aria-expanded="true" style="color: {{ section.settings.color_question }}">{{ block.settings.title }}</button></dt>
+              <dd id="panel-01" aria-hidden="false" style="color: {{ section.settings.color_answer }}">
+                {{ block.settings.subtitle }}
+              </dd>
+            {% endif %}
+          {% endfor %}
+        </dl>
       {% endif %}
     </div>
   </div>
