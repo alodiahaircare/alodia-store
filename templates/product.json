@@ -214,16 +214,34 @@
             "title": "Title",
             "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Suspendisse feugiat. Fusce commoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoddo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
           }
+        },
+        "ed37f264-ab0b-4aa5-aaeb-1762234dfb62": {
+          "type": "Content",
+          "settings": {
+            "title": "{{ product.metafields.alodia.faq_question_1.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_1 | metafield_tag }}<\/p>"
+          }
+        },
+        "4f5e670f-7619-4d48-a384-c608443957db": {
+          "type": "Content",
+          "settings": {
+            "title": "Title",
+            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
         }
       },
       "block_order": [
         "20b5cb4f-5de0-4a98-8099-05da71e464eb",
         "8a016c50-9fac-4597-ade0-bccc75dede90",
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5",
-        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9"
+        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9",
+        "ed37f264-ab0b-4aa5-aaeb-1762234dfb62",
+        "4f5e670f-7619-4d48-a384-c608443957db"
       ],
       "settings": {
-        "title": "Frequently Asked Questions"
+        "title": "Frequently Asked Questions",
+        "bg": "#faf9f7",
+        "color": "#000"
       }
     },
     "recently-viewed": {
