@@ -225,8 +225,15 @@
         "4f5e670f-7619-4d48-a384-c608443957db": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+            "title": "{{ product.metafields.alodia.faq_question_2.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_2 | metafield_tag }}<\/p>"
+          }
+        },
+        "f75dab6b-c607-44ab-9628-e57bf803a510": {
+          "type": "Content",
+          "settings": {
+            "title": "{{ product.metafields.alodia.faq_question_3.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_3 | metafield_tag }}<\/p>"
           }
         }
       },
@@ -236,7 +243,8 @@
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5",
         "65dc9529-e43d-486a-a9b0-7ccb3d2929d9",
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62",
-        "4f5e670f-7619-4d48-a384-c608443957db"
+        "4f5e670f-7619-4d48-a384-c608443957db",
+        "f75dab6b-c607-44ab-9628-e57bf803a510"
       ],
       "settings": {
         "title": "Frequently Asked Questions",
