@@ -184,20 +184,6 @@
       "settings": {
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {
-        "rv_title": "Recently viewed products",
-        "rv_products_style": "grid",
-        "rv_max_display": 6,
-        "rv_per": 4
-      }
-    },
-    "reviews": {
-      "type": "reviews",
-      "settings": {
-      }
-    },
     "1654606629b2de1604": {
       "type": "faq",
       "blocks": {
@@ -239,6 +225,20 @@
       "settings": {
         "title": "Frequently Asked Questions"
       }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_products_style": "grid",
+        "rv_max_display": 6,
+        "rv_per": 4
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -248,8 +248,8 @@
     "product-materials",
     "nosto",
     "related-products",
+    "1654606629b2de1604",
     "recently-viewed",
-    "reviews",
-    "1654606629b2de1604"
+    "reviews"
   ]
 }
