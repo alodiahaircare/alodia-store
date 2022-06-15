@@ -2957,12 +2957,17 @@ $accordionBg: {{ settings.shop_bg_color }};
       box-shadow: none;
       border-radius: 0px;
       font-size: 18px;
-			&:hover,&:focus{
+			&:not(.faq-section-button):hover,&:not(.faq-section-button):focus{
 				background: darken($accordionBg, 3%);
         border: none;
         border-bottom: 1px solid {{ settings.border_color }};
         color: {{ settings.link_hover_color }};
 			}
+      &.faq-section-button:hover, &.faq-section-button:focus{
+        border: none;
+        border-bottom: 1px solid {{ settings.border_color }};
+        border-color: #eaebe9;
+      }
 			&::after{
         position: absolute;
         top: 50%;
@@ -2997,6 +3002,22 @@ $accordionBg: {{ settings.shop_bg_color }};
       margin-left: 15px;
     }
 	}
+}
+
+.faq-section .faqAccordion>dt>button {
+  padding: 20px 40px 20px 0px;
+  border-color: #eaebe9;
+}
+
+.faq-section .faqAccordion>dt>button:after {
+  right: 15px;
+  left: inherit;
+  opacity: .6;
+}
+
+.faq-section .faqAccordion>dd{
+  margin-right: 40px;
+  margin-left: 0px;
 }
 
 //Accordion tabs
@@ -9938,24 +9959,53 @@ $delay: 0;
 }
 .purchase-details__buttons_sticky {
 	position: fixed;
-	bottom: -80px;
-	z-index: 99;
+	top: -280px;
+  z-index: 9999;
 	left: 0;
 	right: 0;
 	background: #fff;
 	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	padding: 10px 10px;
+	padding: 10px 40px;
     transition: bottom 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .purchase-details__buttons_sticky button {
 	display: block;
 	max-width: 280px;
-	margin: 0 auto;
 	width: 100%;
 }
 .purchase-details__buttons_sticky.active {
-	bottom: 0px;
+	top: 0px;
 }
+
+.purchase-details__product-info{
+  display: flex;
+  align-items: center;
+}
+.purchase-details__product-info p{
+  max-width: 250px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.purchase-details__product-image{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.purchase-details__product-image img{
+  max-height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+
 .gallery-wrap.js-product-page-gallery .product_gallery {
 	margin-bottom: 10px;
 }
@@ -9967,9 +10017,9 @@ $delay: 0;
 }
 
 @media screen and (max-width:600px){
- .purchase-details__buttons_sticky {
-	bottom: 0px;
- }
+  .purchase-details__product-info{
+    display: none;
+  }
  .product .section.product_section .product_gallery .gallery-cell {
 	height: 400px;
 }

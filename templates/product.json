@@ -169,7 +169,8 @@
         "5c6002d1-8092-41e6-b879-38d2a75a7b5d"
       ],
       "settings": {
-        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing"
+        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing",
+        "background": "#cfe1e4"
       }
     },
     "nosto": {
@@ -181,6 +182,74 @@
       "type": "related-products",
       "disabled": true,
       "settings": {
+      }
+    },
+    "1654606629b2de1604": {
+      "type": "faq",
+      "blocks": {
+        "20b5cb4f-5de0-4a98-8099-05da71e464eb": {
+          "type": "Content",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "8a016c50-9fac-4597-ade0-bccc75dede90": {
+          "type": "Content",
+          "settings": {
+            "title": "Consectetur adipiscing elit, sed do eiusmod",
+            "subtitle": "<p>Suspendisse feugiat. Fusce  commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5": {
+          "type": "Content",
+          "settings": {
+            "title": "Dolore magna aliqua. Ut enim ad minim veniam",
+            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9": {
+          "type": "Content",
+          "settings": {
+            "title": "Title",
+            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Suspendisse feugiat. Fusce commoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoddo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "ed37f264-ab0b-4aa5-aaeb-1762234dfb62": {
+          "type": "Content",
+          "settings": {
+            "title": "{{ product.metafields.alodia.faq_question_1.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_1 | metafield_tag }}<\/p>"
+          }
+        },
+        "4f5e670f-7619-4d48-a384-c608443957db": {
+          "type": "Content",
+          "settings": {
+            "title": "{{ product.metafields.alodia.faq_question_2.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_2 | metafield_tag }}<\/p>"
+          }
+        },
+        "f75dab6b-c607-44ab-9628-e57bf803a510": {
+          "type": "Content",
+          "settings": {
+            "title": "{{ product.metafields.alodia.faq_question_3.value }}",
+            "subtitle": "<p>{{ product.metafields.alodia.faq_answer_3 | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "20b5cb4f-5de0-4a98-8099-05da71e464eb",
+        "8a016c50-9fac-4597-ade0-bccc75dede90",
+        "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5",
+        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9",
+        "ed37f264-ab0b-4aa5-aaeb-1762234dfb62",
+        "4f5e670f-7619-4d48-a384-c608443957db",
+        "f75dab6b-c607-44ab-9628-e57bf803a510"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "bg": "#faf9f7",
+        "color": "#000"
       }
     },
     "recently-viewed": {
@@ -196,6 +265,11 @@
       "type": "reviews",
       "settings": {
       }
+    },
+    "ingredients": {
+      "type": "ingredients",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -204,7 +278,9 @@
     "founder-bio",
     "product-materials",
     "nosto",
+    "ingredients",
     "related-products",
+    "1654606629b2de1604",
     "recently-viewed",
     "reviews"
   ]

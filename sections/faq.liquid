@@ -1,0 +1,107 @@
+<a name="pagecontent" id="pagecontent"></a>
+
+<div style="background: {{ section.settings.bg }}" class="padding-50">
+  <div class="container main content faq-section">
+    <div class="sixteen columns page clearfix center">
+      <h2 class="title" style="color: {{ section.settings.color }}">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+    <div class="sixteen columns">
+      {% if section.blocks.size > 0 %}
+        <dl class="faqAccordion">
+          {% for block in section.blocks %}
+            {% if block.type == "heading" and block.settings.heading != blank %}
+              <h2 class="title faq--heading" style="color: {{ section.settings.color }}">{{ block.settings.heading }}</h2>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <dt><button type="button" aria-controls="panel-01" class="faq-section-button"
+                aria-expanded="true" style="color: {{ section.settings.color_question }}">{{ block.settings.title }}</button></dt>
+              <dd id="panel-01" aria-hidden="false" style="color: {{ section.settings.color_answer }}">
+                {{ block.settings.subtitle }}
+              </dd>
+            {% endif %}
+          {% endfor %}
+        </dl>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+   {
+     "type": "header",
+     "content": "Color"
+   },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Background",
+      "default": "#faf9f7"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Title",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "color_question",
+      "label": "Color question",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "color_answer",
+      "label": "Color answer",
+      "default": "#000"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Heading",
+      "type": "heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Title"
+        }
+      ]
+    },
+    {
+      "name": "Frequently Asked Question",
+      "type": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Answer",
+          "default": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "FAQs",
+    "category": "FAQs"
+  }]
+}
+{% endschema %}

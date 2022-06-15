@@ -96,6 +96,12 @@
         </button>
         
        <div class="purchase-details__buttons_sticky"> 
+         <div class="purchase-details__product-info">
+           <div class="purchase-details__product-image">
+             <img src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}">
+           </div>
+           <p>{{ product.title }}</p>
+         </div>
          <button type="submit" name="add" class="addtocart action_button add_to_cart {% if show_payment_button %} action_button--secondary {% endif %}" data-label={{ add_to_cart_label | json }}>
           <span class="text">{{ add_to_cart_label }}</span>
           <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">

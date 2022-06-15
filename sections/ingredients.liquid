@@ -1,0 +1,110 @@
+<div class="padding-50">
+  <div class="container main content ingredients-section">
+    <div class="nine columns offset-by-one">
+      {% if section.settings.title != blank %}    
+        <h4 class="title">{{ section.settings.title }}</h4>
+      {% endif %}
+
+      {% for block in section.blocks %}
+        <div class="ingredient">
+          {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | img_url: 'master'}}" alt="{{ block.settings.name  }}">
+          {% endif %}
+          {%- if block.settings.name != blank or block.settings.content != blank -%}
+          <div class="ingredient-description">
+            {%- if block.settings.name != blank -%}
+            <h3>{{ block.settings.name }}</h3>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+              {{ block.settings.content }}
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="seven columns">
+      <figure class="bio-container">
+        {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+        {% endif %}
+      </figure>
+    </div>
+
+  </div>
+</div>
+
+  
+  
+{% schema %}
+  {
+    "name": "Ingredients",
+    "max_blocks": 2,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ingredients",
+        "name": "Ingredients",
+        "settings": [
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  
+
+<style>
+  .ingredient img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.ingredient {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ingredient-description {
+    max-width: 350px;
+}
+
+.ingredient-description h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.ingredients-section .title{
+  max-width: 400px;
+  color: black;
+  font-weight: 500;
+}
+</style>
