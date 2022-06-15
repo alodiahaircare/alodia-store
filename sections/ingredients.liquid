@@ -1,5 +1,32 @@
 <div class="padding-50">
   <div class="container main content ingredients-section">
+    <div class="eight columns offset-by-one">
+      {% if section.settings.title != blank %}    
+      <div class="fourteen columns offset-by-two">
+        <h4 class="title center">{{ section.settings.title }}</h4>
+      </div>
+      {% endif %}
+
+      {% for block in section.blocks %}
+        <div class="ingredient">
+          {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | img_url: 'master'}}" alt="{{ block.settings.name  }}">
+          {% endif %}
+          {%- if block.settings.name != blank or block.settings.content != blank -%}
+          <div class="ingredient-description">
+            {%- if block.settings.name != blank -%}
+            <h3>{{ block.settings.name }}</h3>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+              {{ block.settings.content }}
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </div>
+      {% endfor %}
+
+    </div>
+
     <div class="eight columns">
       <figure class="bio-container">
         {% if section.settings.image != blank %}
@@ -8,32 +35,6 @@
       </figure>
     </div>
 
-    <div class="eight columns offset-by-one">
-      {% if section.settings.title != blank %}    
-      <div class="fourteen columns offset-by-two">
-        <h4 class="title center">{{ section.settings.title }}</h4>
-      </div>
-      {% endif %}
-
-    {% for block in section.blocks %}
-      <div class="ingredient">
-        {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | img_url: 'master'}}" alt="{{ block.settings.name  }}">
-        {% endif %}
-        {%- if block.settings.name != blank or block.settings.content != blank -%}
-        <div class="ingredient-description">
-          {%- if block.settings.name != blank -%}
-          <h3>{{ block.settings.name }}</h3>
-          {%- endif -%}
-          {%- if block.settings.content != blank -%}
-            {{ block.settings.content }}
-          {%- endif -%}
-        </div>
-        {%- endif -%}
-      </div>
-    {% endfor %}
-
-    </div>
   </div>
 </div>
 
@@ -46,8 +47,7 @@
       {
         "type": "text",
         "id": "title",
-        "label": "Title",
-        "default": "Alodia is so very passionate about empowering and educating women all around the globe to Learn, Love and Grow their hair"
+        "label": "Title"
       },
       {
         "type": "image_picker",
@@ -66,7 +66,7 @@
             "label": "Name"
           },
           {
-            "type": "text",
+            "type": "richtext",
             "id": "content",
             "label": "Content"
           },
