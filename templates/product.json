@@ -185,7 +185,7 @@
           "type": "ingredients",
           "settings": {
             "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
             "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
           }
         },
@@ -193,7 +193,7 @@
           "type": "ingredients",
           "settings": {
             "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
             "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
           }
         }
@@ -279,8 +279,8 @@
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
         "color": "#000000",
-        "color_question": "#000",
-        "color_answer": "#000"
+        "color_question": "#000000",
+        "color_answer": "#000000"
       }
     },
     "recently-viewed": {
