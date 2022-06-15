@@ -178,35 +178,6 @@
       "settings": {
       }
     },
-    "ingredients": {
-      "type": "ingredients",
-      "blocks": {
-        "d709aaaf-aedf-40e7-9709-ff66f8b2df29": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
-          }
-        },
-        "e8864958-0b0d-4444-9444-347c2a55120d": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "d709aaaf-aedf-40e7-9709-ff66f8b2df29",
-        "e8864958-0b0d-4444-9444-347c2a55120d"
-      ],
-      "settings": {
-        "title": "Made with Natural Ingredients",
-        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -278,9 +249,7 @@
       "settings": {
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
-        "color": "#000000",
-        "color_question": "#000000",
-        "color_answer": "#000000"
+        "color": "#000"
       }
     },
     "recently-viewed": {
@@ -294,6 +263,11 @@
     },
     "reviews": {
       "type": "reviews",
+      "settings": {
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
       "settings": {
       }
     }
