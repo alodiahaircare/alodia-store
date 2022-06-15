@@ -203,7 +203,7 @@
         "e8864958-0b0d-4444-9444-347c2a55120d"
       ],
       "settings": {
-        "title": "",
+        "title": "Made with Natural Ingredients",
         "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
