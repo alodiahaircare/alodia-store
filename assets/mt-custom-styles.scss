@@ -231,11 +231,16 @@ li.bv-content-item.bv-content-top-review.bv-content-review {
   margin: 30px 0 !important;
   border: 1px solid gainsboro !important;
 }
+div.bv-cv2-cleanslate .bv-core-container-31 .bv-content-item-author-profile-offset-on {
+  position: relative !important;
+}
 div.bv-cv2-cleanslate .bv-core-container-31 .bv-content-item-author-profile-offset-on::before {
   content: '';
   display: block;
-  height: 100%;
+  position: absolute;
+  top: 0;
   width: 1px;
+  height: calc(100% + 30px);
   background: gainsboro;
 }
 div.bv-cv2-cleanslate .bv-core-container-31 .bv-content-details-container .bv-secondary-ratings {
