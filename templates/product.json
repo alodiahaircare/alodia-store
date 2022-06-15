@@ -279,8 +279,8 @@
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
         "color": "#000000",
-        "color_question": "#000",
-        "color_answer": "#000"
+        "color_question": "#000000",
+        "color_answer": "#000000"
       }
     },
     "recently-viewed": {
@@ -288,8 +288,8 @@
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
-        "rv_max_display": 6,
-        "rv_per": 4
+        "rv_max_display": 3,
+        "rv_per": 3
       }
     },
     "reviews": {
