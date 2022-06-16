@@ -240,9 +240,10 @@ div.bv-cv2-cleanslate .bv-core-container-31 .bv-content-item-author-profile-offs
   content: '';
   display: block;
   position: absolute;
-  top: -15px;
+  top: 0;
+  left: 0;
   width: 1px;
-  height: calc(100% + 30px);
+  height: 100%;
   background: gainsboro;
 }
 div.bv-cv2-cleanslate .bv-core-container-31 .bv-content-item.bv-content-review .bv-author-profile {
