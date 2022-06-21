@@ -270,7 +270,7 @@
       "settings": {
         "rv_title": "Other products you might like",
         "rv_products_style": "grid",
-        "rv_max_display": 4,
+        "rv_max_display": 3,
         "rv_per": 4
       }
     }
