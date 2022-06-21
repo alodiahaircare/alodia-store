@@ -51,12 +51,12 @@
       </div>
       <div class="product-bundle-section">
       {% for product in section.settings.product_list %}
-        <div class="product-bundle">
+        <a href="{{ product.url }}" class="product-bundle">
           <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
           <div class="product-bundle-title">
             {{ product.title }}
           </div>
-        </div>
+        </a>
       {% endfor %}
       </div>
     </div>
