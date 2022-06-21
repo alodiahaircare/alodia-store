@@ -151,7 +151,7 @@
         "subtitle": "",
         "text_position": "center",
         "text_align": "center",
-        "caption_background": false,
+        "caption_background": true,
         "caption_background_transparency": false,
         "button1_label": "",
         "button1_link": "",
