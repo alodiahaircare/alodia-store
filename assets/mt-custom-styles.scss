@@ -177,6 +177,12 @@
 .related-products--grid .thumbnail:nth-child(2) .image__container { background: #CBBEDD; }
 .related-products--grid .thumbnail:nth-child(3) .image__container { background: #A3D2B4; }
 
+@media (max-width: 768px) {
+  .related-products--grid .image__container{
+    min-height: 200px;
+    padding: 10px 5px;
+  }
+}
 
 /* Newsletter section */
 .newsletter_section {
@@ -224,10 +230,4 @@
   .newsletter-both-names--true #contact_form .sign_up {
     width: 178px;
   }
-}
-
-/* Comments section */
-li.bv-content-item.bv-content-top-review.bv-content-review {
-  margin: 10px 0 !important;
-  border: 1px solid gray !important;
 }
