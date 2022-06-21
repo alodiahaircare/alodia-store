@@ -20,7 +20,7 @@
                 {% endif %}
                 {% if block.settings.description != blank %}
                   <div class="text-box">
-                      <p>{{ block.settings.description }}</p>
+                     {{ block.settings.description | upcase }}
                   </div>
                 {% endif %}
                 </div>
