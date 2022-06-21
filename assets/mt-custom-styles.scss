@@ -168,10 +168,10 @@
 }
 .related-products--grid .image__container {
   display: flex;
-  align-items: flex-end;
-  min-height: 400px;
+  align-items: center;
+  min-height: 340px;
   margin-bottom: 24px;
-  padding: 25px 50px;
+  padding: 25px;
 }
 .related-products--grid .thumbnail:nth-child(1) .image__container { background: #E6D0B3; }
 .related-products--grid .thumbnail:nth-child(2) .image__container { background: #CBBEDD; }
