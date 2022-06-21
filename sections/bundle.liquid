@@ -26,8 +26,7 @@
 
         {% form  'product', bundle %}
           <input type="hidden" name="id" value="{{ bundle.variants.first.id }}" />
-          <button type="submit" class="addCart" {% unless bundle.available %} disabled="disabled" {% endunless %}
-          onclick="openMiniCart()">
+          <button type="submit" class="addCart" {% unless bundle.available %} disabled="disabled" {% endunless %}>
             {% unless bundle.available %}
             {{ "products.product.sold_out" | t }}
             {% else %}
