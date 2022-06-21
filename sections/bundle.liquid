@@ -1,3 +1,5 @@
+{% if section.settings.product_list != blank and section.settings.bundle != blank %}
+
 <div class="container main content padding-50">
   {% if section.settings.title != blank %}
   <h4 class="title center">{{  section.settings.title }}</h4>
@@ -29,7 +31,8 @@
   </div>
 </div>
   
-  
+{% endif %}
+
   
   {% schema %}
     {
