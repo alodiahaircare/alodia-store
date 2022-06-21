@@ -271,11 +271,17 @@
     flex-direction: column;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 798px) {
   .image-box{
     width:48%;
     margin-bottom: 20px;
     padding: 15px 10px;
+  }
+}
+
+@media (min-width: 798px) and (max-width: 1024){
+  .image-box{
+    padding: 20px;
   }
 }
 
