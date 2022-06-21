@@ -33,6 +33,24 @@
         "toggle": false
       }
     },
+    "165582416388c281b2": {
+      "type": "bundle",
+      "settings": {
+        "title": "Clinically proven",
+        "subtitle": "After 4 weeks of use:",
+        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "bundle": "low-porosity-hair-bundle-limited-edition",
+        "product_list": [
+          "hair-scalp-oil",
+          "black-soap-wash",
+          "deep-conditioning-treatment",
+          "flourish-hair-scalp-herbal-infusion",
+          "curl-enhancing-butter-creme"
+        ]
+      }
+    },
     "product-never-contains": {
       "type": "product-never-contains",
       "blocks": {
@@ -324,42 +342,11 @@
         "rv_max_display": 3,
         "rv_per": 4
       }
-    },
-    "165582416388c281b2": {
-      "type": "bundle",
-      "settings": {
-        "title": "Clinically proven",
-        "subtitle": "",
-        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
-        "background": "#faf9f7",
-        "title_bundle": "Shop Bundle",
-        "bundle": "low-porosity-hair-bundle-limited-edition",
-        "product_list": [
-          "hair-scalp-oil",
-          "black-soap-wash",
-          "deep-conditioning-treatment",
-          "flourish-hair-scalp-herbal-infusion",
-          "curl-enhancing-butter-creme"
-        ]
-      }
-    },
-    "16558241739cb4955b": {
-      "type": "bundle",
-      "settings": {
-        "title": "Clinically proven",
-        "subtitle": "",
-        "content": "",
-        "background": "#faf9f7",
-        "title_bundle": "Shop Bundle",
-        "bundle": "",
-        "product_list": [
-
-        ]
-      }
     }
   },
   "order": [
     "main",
+    "165582416388c281b2",
     "product-never-contains",
     "1655821932fe3302df",
     "founder-bio",
@@ -369,8 +356,6 @@
     "related-products",
     "1654606629b2de1604",
     "reviews",
-    "recently-viewed",
-    "165582416388c281b2",
-    "16558241739cb4955b"
+    "recently-viewed"
   ]
 }
