@@ -1,5 +1,8 @@
 {% if section.settings.product_list != blank and section.settings.bundle != blank %}
-
+{% assign qty = 0 %}
+{% for product in section.settings.product_list %}
+  {% assign qty = qty | plus: 1 %}
+{% endfor %}
 <div class="container main content padding-50">
   {% if section.settings.title != blank %}
   <h4 class="title center">{{  section.settings.title }}</h4>
@@ -19,7 +22,7 @@
     <div class="bundle-section" style="background: {{ section.settings.background }}">
       <div class="bundle-buy">
         {% if section.settings.title_bundle != blank %}
-           <p class="bundle-buy-text">{{ section.settings.title_bundle }} <span><small>({{ section.settings.product_list.size }} Products)</small></span></p>
+           <p class="bundle-buy-text">{{ section.settings.title_bundle }} <span><small>({{ qty }} Products)</small></span></p>
         {% endif %}
         {% assign bundle = section.settings.bundle %}
 
