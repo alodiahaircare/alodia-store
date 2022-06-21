@@ -324,6 +324,34 @@
         "rv_max_display": 3,
         "rv_per": 4
       }
+    },
+    "165582416388c281b2": {
+      "type": "bundle",
+      "settings": {
+        "title": "Clinically proven",
+        "subtitle": "",
+        "content": "",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "bundle": "",
+        "product_list": [
+
+        ]
+      }
+    },
+    "16558241739cb4955b": {
+      "type": "bundle",
+      "settings": {
+        "title": "Clinically proven",
+        "subtitle": "",
+        "content": "",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "bundle": "",
+        "product_list": [
+
+        ]
+      }
     }
   },
   "order": [
@@ -337,6 +365,8 @@
     "related-products",
     "1654606629b2de1604",
     "reviews",
-    "recently-viewed"
+    "recently-viewed",
+    "165582416388c281b2",
+    "16558241739cb4955b"
   ]
 }
