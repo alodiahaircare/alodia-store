@@ -177,7 +177,7 @@
 .related-products--grid .thumbnail:nth-child(2) .image__container { background: #CBBEDD; }
 .related-products--grid .thumbnail:nth-child(3) .image__container { background: #A3D2B4; }
 
-@media (max-width: 959px) {
+@media (max-width: 767px) {
   .related-products--grid .image__container{
     min-height: 200px;
     padding: 10px 5px;
@@ -186,6 +186,12 @@
   .related-products--grid .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_averageRating_component_container,
   .related-products--grid .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_numReviews_component_container{
     display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px){
+  .related-products--grid .image__container{
+    min-height: 230px;
   }
 }
 
