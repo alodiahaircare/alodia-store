@@ -333,9 +333,13 @@
         "content": "",
         "background": "#faf9f7",
         "title_bundle": "Shop Bundle",
-        "bundle": "",
+        "bundle": "low-porosity-hair-bundle-limited-edition",
         "product_list": [
-
+          "hair-scalp-oil",
+          "black-soap-wash",
+          "deep-conditioning-treatment",
+          "flourish-hair-scalp-herbal-infusion",
+          "curl-enhancing-butter-creme"
         ]
       }
     },
