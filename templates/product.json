@@ -41,6 +41,7 @@
         "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
         "background": "#faf9f7",
         "title_bundle": "Shop Bundle",
+        "button_bundle": "Add bundle to cart",
         "bundle": "low-porosity-hair-bundle-limited-edition",
         "product_list": [
           "hair-scalp-oil",
@@ -249,8 +250,31 @@
     },
     "ingredients": {
       "type": "ingredients",
+      "blocks": {
+        "fb262db4-fcdb-426c-9f72-fb47a547dd53": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
+          }
+        },
+        "3ebf4139-ed5d-43cb-b0e7-f7cb11edc6f8": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "fb262db4-fcdb-426c-9f72-fb47a547dd53",
+        "3ebf4139-ed5d-43cb-b0e7-f7cb11edc6f8"
+      ],
       "settings": {
-        "title": ""
+        "title": "Made with Natural Ingredients",
+        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "related-products": {
