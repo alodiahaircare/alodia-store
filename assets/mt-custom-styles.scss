@@ -329,6 +329,11 @@
   flex-wrap: wrap;
 }
 
+.bundle-buy button{
+    text-transform: capitalize;
+    background-color: #0E1511;
+}
+
 @media (max-width: 798px) {
   .bundle-section {
     padding: 20px;
