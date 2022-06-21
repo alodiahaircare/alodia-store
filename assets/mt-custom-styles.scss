@@ -244,6 +244,12 @@
 }
 /* Image blocks */
 
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .image-box{
   width: 370px;
   height: 520px;
