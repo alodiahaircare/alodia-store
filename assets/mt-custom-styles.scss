@@ -183,8 +183,8 @@
     padding: 10px 5px;
   }
 
-  .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_averageRating_component_container,
-  .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_numReviews_component_container{
+  .related-products--grid .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_averageRating_component_container,
+  .related-products--grid .js-recently-viewed-product [data-bv-show=inline_rating] .bv_main_container .bv_numReviews_component_container{
     display: none !important;
   }
 }
