@@ -260,18 +260,18 @@
         "color_answer": "#000"
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {
-        "rv_title": "Recently viewed products",
-        "rv_products_style": "grid",
-        "rv_max_display": 4,
-        "rv_per": 4
-      }
-    },
     "reviews": {
       "type": "reviews",
       "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Other products you might like",
+        "rv_products_style": "grid",
+        "rv_max_display": 4,
+        "rv_per": 4
       }
     }
   },
@@ -284,7 +284,7 @@
     "ingredients",
     "related-products",
     "1654606629b2de1604",
-    "recently-viewed",
-    "reviews"
+    "reviews",
+    "recently-viewed"
   ]
 }
