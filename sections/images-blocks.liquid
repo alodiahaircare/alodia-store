@@ -9,9 +9,9 @@
           {% if block.settings.image != blank or block.settings.description != blank %}
             
             {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}" class="image-box" style="background: {{ block.settings.color }}">
+              <a href="{{ block.settings.link }}" class="image-box sit__slide" style="background: {{ block.settings.color }}">
             {% else %}
-              <div class="image-box" style="background: {{ block.settings.color }}">
+              <div class="image-box sit__slide" style="background: {{ block.settings.color }}">
             {% endif %}
 
                 {% if block.settings.image != blank %}          
