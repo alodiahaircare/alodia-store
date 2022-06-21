@@ -21,12 +21,14 @@
         {% if section.settings.title_bundle != blank %}
            <p>{{ section.settings.title_bundle }}</p>
         {% endif %}
+        {% form  'product', section.settings.bundle %}
         <button type="submit" name="add" class="addtocart action_button add_to_cart sit__slide-button" data-label={{ add_to_cart_label | json }}>
           <span class="text">{{ add_to_cart_label }}</span>
           <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
             <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
           </svg>
         </button>
+        {% endform %}
 
       </div>
       <div class="product-bundle-section padding-50">
