@@ -169,7 +169,8 @@
         "5c6002d1-8092-41e6-b879-38d2a75a7b5d"
       ],
       "settings": {
-        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing"
+        "title": "We are committed to using recyclable materials for our product packaging and are against animal testing",
+        "background": "#cfe1e4"
       }
     },
     "nosto": {
@@ -188,8 +189,8 @@
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
-        "rv_max_display": 6,
-        "rv_per": 4
+        "rv_max_display": 3,
+        "rv_per": 3
       }
     },
     "reviews": {
