@@ -14,6 +14,7 @@
               <div class="image-box" style="background: {{ block.settings.color }}">
             {% endif %}
 
+                <div class="image-text-content-box">
                 {% if block.settings.image != blank %}          
                   <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.description}}">
                 {% endif %}
@@ -22,6 +23,7 @@
                       <p>{{ block.settings.description }}</p>
                   </div>
                 {% endif %}
+                </div>
 
             {% if block.settings.link != blank %}
               </a>
