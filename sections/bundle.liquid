@@ -16,7 +16,7 @@
 
 
     <div class="bundle-section" style="background: {{ section.settings.background }}">
-      <div class="product-bundle-section">
+      <div class="product-bundle-section padding-50">
       {% for product in section.settings.product_list %}
         <div class="product-bundle">
           <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
