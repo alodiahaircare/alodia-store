@@ -178,6 +178,12 @@
       "settings": {
       }
     },
+    "ingredients": {
+      "type": "ingredients",
+      "settings": {
+        "title": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -249,7 +255,9 @@
       "settings": {
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
-        "color": "#000"
+        "color": "#000000",
+        "color_question": "#000",
+        "color_answer": "#000"
       }
     },
     "recently-viewed": {
@@ -257,17 +265,12 @@
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
-        "rv_max_display": 6,
+        "rv_max_display": 4,
         "rv_per": 4
       }
     },
     "reviews": {
       "type": "reviews",
-      "settings": {
-      }
-    },
-    "ingredients": {
-      "type": "ingredients",
       "settings": {
       }
     }
