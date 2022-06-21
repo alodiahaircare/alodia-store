@@ -1,41 +1,33 @@
 <div class="container main content padding-50">
+  {% if section.settings.title != blank %}
+  <h4 class="title center">{{  section.settings.title }}</h4>
+  {% endif %}
+
+  <div class="sixteen columns">
     {% if section.settings.title != blank %}
-    <h4 class="title center">{{  section.settings.title }}</h4>
+    <h5 class="title left">{{  section.settings.subtitle }}</h5>
     {% endif %}
-    {% if section.blocks.size > 0 %}
-    <div class="sixteen columns">
-      <div class="image-grid">
-        {% for block in section.blocks %}  
-          {% if block.settings.image != blank or block.settings.description != blank %}
-            
-            {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}" class="image-box" style="background: {{ block.settings.color }}">
-            {% else %}
-              <div class="image-box" style="background: {{ block.settings.color }}">
-            {% endif %}
 
-                <div class="image-text-content-box">
-                {% if block.settings.image != blank %}          
-                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.description}}">
-                {% endif %}
-                {% if block.settings.description != blank %}
-                  <div class="text-box">
-                     {{ block.settings.description | upcase }}
-                  </div>
-                {% endif %}
-                </div>
+    {% if section.settings.content != blank %}
+    <div>{{ section.settings.content }}</div>
+    {% endif %}
 
-            {% if block.settings.link != blank %}
-              </a>
-            {% else %}
-              </div>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+
+    <div class="bundle-section" style="background: {{ section.settings.background }}">
+      <div class="product-bundle-section">
+      {% for product in section.settings.product_list %}
+        <div class="product-bundle">
+          <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
+          <div class="product-bundle-title">
+            {{ product.title }}
+          </div>
+        </div>
+      {% endfor %}
       </div>
     </div>
-    {% endif %}
+
   </div>
+</div>
   
   
   
