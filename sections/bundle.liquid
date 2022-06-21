@@ -19,7 +19,7 @@
     <div class="bundle-section" style="background: {{ section.settings.background }}">
       <div class="bundle-buy">
         {% if section.settings.title_bundle != blank %}
-           <p class="bundle-buy-text">{{ section.settings.title_bundle }} <span><small>({{section.settings.product_list.size }} Products)</small></span></p>
+           <p class="bundle-buy-text">{{ section.settings.title_bundle }} <span><small>({{ section.settings.product_list.size }} Products)</small></span></p>
         {% endif %}
         {% assign bundle = section.settings.bundle %}
 
