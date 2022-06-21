@@ -5,13 +5,13 @@
   <h4 class="title center">{{  section.settings.title }}</h4>
   {% endif %}
 
-  <div class="title-section">
+  <div class="column">
   {% if section.settings.title != blank %}
-  <h5 class="title left">{{  section.settings.subtitle }}</h5>
+  <h5 class="left">{{  section.settings.subtitle }}</h5>
   {% endif %}
 
   {% if section.settings.content != blank %}
-  <div>{{ section.settings.content }}</div>
+  <div  class="left">{{ section.settings.content }}</div>
   {% endif %}
 </div>
 
