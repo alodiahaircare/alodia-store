@@ -256,8 +256,8 @@
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
         "color": "#000000",
-        "color_question": "#000",
-        "color_answer": "#000"
+        "color_question": "#000000",
+        "color_answer": "#000000"
       }
     },
     "reviews": {
@@ -273,6 +273,57 @@
         "rv_max_display": 3,
         "rv_per": 4
       }
+    },
+    "1655821932fe3302df": {
+      "type": "images-blocks",
+      "blocks": {
+        "707ac550-adb5-44d1-8572-b7c286711531": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "description": "Locs",
+            "link": "shopify:\/\/collections\/locs-1"
+          }
+        },
+        "5ebba05b-2f37-4e67-839f-da67638f9fba": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbfdd",
+            "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
+            "description": "Relaxed",
+            "link": ""
+          }
+        },
+        "d4288ca4-cec4-4020-84d3-161ce97c3c6f": {
+          "type": "image",
+          "settings": {
+            "color": "#78aab3",
+            "image": "shopify:\/\/shop_images\/3.jpg",
+            "description": "Protective Styles",
+            "link": ""
+          }
+        },
+        "e4d66b89-ce1d-4778-acc1-c043887a0ebd": {
+          "type": "image",
+          "settings": {
+            "color": "#a3d2b4",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "description": "Straight Hair",
+            "link": "shopify:\/\/collections\/straight-hair"
+          }
+        }
+      },
+      "block_order": [
+        "707ac550-adb5-44d1-8572-b7c286711531",
+        "5ebba05b-2f37-4e67-839f-da67638f9fba",
+        "d4288ca4-cec4-4020-84d3-161ce97c3c6f",
+        "e4d66b89-ce1d-4778-acc1-c043887a0ebd"
+      ],
+      "settings": {
+        "title": "Our products work for all hair types",
+        "background": "#faf9f7"
+      }
     }
   },
   "order": [
@@ -285,6 +336,7 @@
     "related-products",
     "1654606629b2de1604",
     "reviews",
-    "recently-viewed"
+    "recently-viewed",
+    "1655821932fe3302df"
   ]
 }
