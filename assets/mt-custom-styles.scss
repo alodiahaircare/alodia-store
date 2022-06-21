@@ -331,3 +331,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .bundle-section {
+    padding: 20px;
+  }
+  .product-bundle {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+}
