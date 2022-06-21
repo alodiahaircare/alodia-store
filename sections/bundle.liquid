@@ -5,16 +5,17 @@
   <h4 class="title center">{{  section.settings.title }}</h4>
   {% endif %}
 
+  <div class="title-section">
+  {% if section.settings.title != blank %}
+  <h5 class="title left">{{  section.settings.subtitle }}</h5>
+  {% endif %}
+
+  {% if section.settings.content != blank %}
+  <div>{{ section.settings.content }}</div>
+  {% endif %}
+</div>
+
   <div class="sixteen columns">
-    {% if section.settings.title != blank %}
-    <h5 class="title left">{{  section.settings.subtitle }}</h5>
-    {% endif %}
-
-    {% if section.settings.content != blank %}
-    <div>{{ section.settings.content }}</div>
-    {% endif %}
-
-
     <div class="bundle-section" style="background: {{ section.settings.background }}">
       <div class="product-bundle-section padding-50">
       {% for product in section.settings.product_list %}
