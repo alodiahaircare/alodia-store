@@ -266,6 +266,11 @@
   text-align: center;
 }
 
+.image-text-content-box{
+  display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 1024px) {
   .image-box{
     width:48%;
