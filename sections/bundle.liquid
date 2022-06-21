@@ -37,7 +37,7 @@
           </button>
         {% endform %}
       </div>
-      <div class="product-bundle-section padding-50">
+      <div class="product-bundle-section">
       {% for product in section.settings.product_list %}
         <div class="product-bundle">
           <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
