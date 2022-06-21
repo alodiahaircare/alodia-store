@@ -36,7 +36,7 @@
             {{ "products.product.sold_out" | t }}
             {% else %}
             {% if section.settings.button_bundle != blank %}
-              {{ section.settings.button_bundle }}
+              <span>{{ section.settings.button_bundle }}</span>
               ({% if bundle.variants.first.price <  bundle.variants.first.compare_at_price %}
                 {{ bundle.variants.first.price | money }} <s>{{ bundle.variants.first.compare_at_price | money }}</s>
               {% else %}
