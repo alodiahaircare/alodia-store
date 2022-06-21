@@ -140,7 +140,7 @@
       "settings": {
         "aspect_ratio": "16:9",
         "autoplay": false,
-        "autoloop": true,
+        "autoloop": false,
         "video_dark_overlay": false,
         "video": "https:\/\/www.youtube.com\/watch?v=ob5dnPW9Ogg",
         "mp4": "",
