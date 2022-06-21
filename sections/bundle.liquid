@@ -34,60 +34,61 @@
 {% endif %}
 
   
-  {% schema %}
-    {
-      "name": "Bundle",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Clinically proven"
-        },
-        {
-            "type": "text",
-            "id": "subtitle",
-            "label": "After 4 weeks of use:"
-        },
-        {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content"
-        },
-        {
-            "type": "header",
-            "content": "Bundle"
-        },
-        {
-            "type": "color",
-            "id": "background",
-            "label": "Background",
-            "default": "#faf9f7"
-        },
-        {
-            "type": "text",
-            "id": "title_bundle",
-            "label": "Title",
-            "default": "Shop Bundle"
-        },
-        {
-            "type": "product",
-            "id": "bundle",
-            "label": "Bundle product"
-        },
-        {
-            "type": "product_list",
-            "id": "product_list",
-            "label": "Products",
-            "limit": 5
-        }
-      ],
-      "presets": [
+{% schema %}
+  {
+    "name": "Bundle",
+    "settings": [
       {
-        "category": "Bundle",
-        "name": "Bundle"
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Clinically proven"
+      },
+      {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "After 4 weeks of use:"
+      },
+      {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+      },
+      {
+          "type": "header",
+          "content": "Bundle"
+      },
+      {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#faf9f7"
+      },
+      {
+          "type": "text",
+          "id": "title_bundle",
+          "label": "Title",
+          "default": "Shop Bundle"
+      },
+      {
+          "type": "product",
+          "id": "bundle",
+          "label": "Bundle product"
+      },
+      {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Products",
+          "limit": 5
       }
-    ]
+    ],
+    "presets": [
+    {
+      "category": "Bundle",
+      "name": "Bundle"
     }
-  {% endschema %}
+  ]
+  }
+{% endschema %}
   
