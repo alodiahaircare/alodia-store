@@ -284,3 +284,30 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Bundle section */
+
+.product-bundle-section {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-bundle {
+  width: 15%;
+}
+
+.product-bundle-title {
+  line-height: 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.product-bundle img {
+  max-width: 100%;
+  background: white;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  padding: 10px;
+}
