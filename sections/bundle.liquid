@@ -22,7 +22,7 @@
     <div class="bundle-section" style="background: {{ section.settings.background }}">
       <div class="bundle-buy">
         {% if section.settings.title_bundle != blank %}
-           <p class="bundle-buy-text"><strong>{{ section.settings.title_bundle }}</strong><span><small>({{ qty }} Products)</small></span></p>
+           <p class="bundle-buy-text"><strong>{{ section.settings.title_bundle }}</strong> <span><small>({{ qty }} Products)</small></span></p>
         {% endif %}
         {% assign bundle = section.settings.bundle %}
 
@@ -35,7 +35,11 @@
             {% unless bundle.available %}
             {{ "products.product.sold_out" | t }}
             {% else %}
-            {{ "products.product.add_to_cart" | t }}
+            {% if section.settings.button_bundle != blank %}
+              {{ section.settings.button_bundle }} {{ bundle.price }}
+            {% else %}
+              {{ "products.product.add_to_cart" | t }}
+            {% endif %}
             {% endunless %}
           </button>
         {% endform %}
@@ -94,6 +98,12 @@
           "id": "title_bundle",
           "label": "Title",
           "default": "Shop Bundle"
+      },
+      {
+        "type": "text",
+        "id": "button_bundle",
+        "label": "Button",
+        "default": "Add bundle to cart"
       },
       {
           "type": "product",
