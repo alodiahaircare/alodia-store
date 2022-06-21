@@ -196,9 +196,9 @@
 }
 
 /* Newsletter section */
-// .newsletter_section {
-//   padding: calc(30px + 10vw) 0;
-// }
+.newsletter-section .newsletter_section {
+  padding: calc(30px + 10vw) 0;
+}
 .newsletter-wrapper form {
   display: flex;
   flex-direction: column;
