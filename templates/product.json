@@ -33,25 +33,6 @@
         "toggle": false
       }
     },
-    "165582416388c281b2": {
-      "type": "bundle",
-      "settings": {
-        "title": "Clinically proven",
-        "subtitle": "After 4 weeks of use:",
-        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
-        "background": "#faf9f7",
-        "title_bundle": "Shop Bundle",
-        "button_bundle": "Add bundle to cart",
-        "bundle": "low-porosity-hair-bundle-limited-edition",
-        "product_list": [
-          "hair-scalp-oil",
-          "black-soap-wash",
-          "deep-conditioning-treatment",
-          "flourish-hair-scalp-herbal-infusion",
-          "curl-enhancing-butter-creme"
-        ]
-      }
-    },
     "product-never-contains": {
       "type": "product-never-contains",
       "blocks": {
@@ -126,57 +107,6 @@
         "title": "Alodia's Products never Contain:"
       }
     },
-    "1655821932fe3302df": {
-      "type": "images-blocks",
-      "blocks": {
-        "707ac550-adb5-44d1-8572-b7c286711531": {
-          "type": "image",
-          "settings": {
-            "color": "#e6d0b3",
-            "image": "shopify:\/\/shop_images\/1.jpg",
-            "description": "Locs",
-            "link": "shopify:\/\/collections\/locs-1"
-          }
-        },
-        "5ebba05b-2f37-4e67-839f-da67638f9fba": {
-          "type": "image",
-          "settings": {
-            "color": "#cbbfdd",
-            "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
-            "description": "Relaxed",
-            "link": "shopify:\/\/collections\/relaxed-hair"
-          }
-        },
-        "d4288ca4-cec4-4020-84d3-161ce97c3c6f": {
-          "type": "image",
-          "settings": {
-            "color": "#78aab3",
-            "image": "shopify:\/\/shop_images\/3.jpg",
-            "description": "Protective Styles",
-            "link": "shopify:\/\/collections\/protective-styles"
-          }
-        },
-        "e4d66b89-ce1d-4778-acc1-c043887a0ebd": {
-          "type": "image",
-          "settings": {
-            "color": "#a3d2b4",
-            "image": "shopify:\/\/shop_images\/4.jpg",
-            "description": "Straight Hair",
-            "link": "shopify:\/\/collections\/straight-hair"
-          }
-        }
-      },
-      "block_order": [
-        "707ac550-adb5-44d1-8572-b7c286711531",
-        "5ebba05b-2f37-4e67-839f-da67638f9fba",
-        "d4288ca4-cec4-4020-84d3-161ce97c3c6f",
-        "e4d66b89-ce1d-4778-acc1-c043887a0ebd"
-      ],
-      "settings": {
-        "title": "Our products work for all hair types",
-        "background": "#faf9f7"
-      }
-    },
     "founder-bio": {
       "type": "founder-bio",
       "blocks": {
@@ -246,35 +176,6 @@
     "nosto": {
       "type": "nosto-element",
       "settings": {
-      }
-    },
-    "ingredients": {
-      "type": "ingredients",
-      "blocks": {
-        "fb262db4-fcdb-426c-9f72-fb47a547dd53": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
-          }
-        },
-        "3ebf4139-ed5d-43cb-b0e7-f7cb11edc6f8": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "fb262db4-fcdb-426c-9f72-fb47a547dd53",
-        "3ebf4139-ed5d-43cb-b0e7-f7cb11edc6f8"
-      ],
-      "settings": {
-        "title": "Made with Natural Ingredients",
-        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "related-products": {
@@ -348,9 +249,16 @@
       "settings": {
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
-        "color": "#000000",
-        "color_question": "#000000",
-        "color_answer": "#000000"
+        "color": "#000"
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_products_style": "grid",
+        "rv_max_display": 6,
+        "rv_per": 4
       }
     },
     "reviews": {
@@ -358,28 +266,22 @@
       "settings": {
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
+    "ingredients": {
+      "type": "ingredients",
       "settings": {
-        "rv_title": "Other products you might like",
-        "rv_products_style": "grid",
-        "rv_max_display": 3,
-        "rv_per": 4
       }
     }
   },
   "order": [
     "main",
-    "165582416388c281b2",
     "product-never-contains",
-    "1655821932fe3302df",
     "founder-bio",
     "product-materials",
     "nosto",
     "ingredients",
     "related-products",
     "1654606629b2de1604",
-    "reviews",
-    "recently-viewed"
+    "recently-viewed",
+    "reviews"
   ]
 }
