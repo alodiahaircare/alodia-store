@@ -33,6 +33,25 @@
         "toggle": false
       }
     },
+    "1656092815729f1831": {
+      "type": "bundle",
+      "settings": {
+        "title": "Clinically proven",
+        "subtitle": "After 4 weeks of use:",
+        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "button_bundle": "Add bundle to cart",
+        "bundle": "curl-enhancing-butter-creme",
+        "product_list": [
+          "family-healthy-hair-holiday-bundle",
+          "curl-enhancing-butter-creme",
+          "flourish-hair-scalp-herbal-infusion",
+          "healthy-hair-kit",
+          "heat-style-kit"
+        ]
+      }
+    },
     "product-never-contains": {
       "type": "product-never-contains",
       "blocks": {
@@ -305,8 +324,8 @@
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
         "color": "#000000",
-        "color_question": "#000",
-        "color_answer": "#000"
+        "color_question": "#000000",
+        "color_answer": "#000000"
       }
     },
     "recently-viewed": {
@@ -326,6 +345,7 @@
   },
   "order": [
     "main",
+    "1656092815729f1831",
     "product-never-contains",
     "founder-bio",
     "16560879104b95bc9e",
