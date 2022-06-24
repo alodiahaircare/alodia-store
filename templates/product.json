@@ -126,6 +126,57 @@
         "title": "Alodia's Products never Contain:"
       }
     },
+    "165609300610ca7c23": {
+      "type": "images-blocks",
+      "blocks": {
+        "9fa1fe00-a569-42ad-9372-c576c240ca56": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "description": "LOCS",
+            "link": ""
+          }
+        },
+        "9dab047f-45dd-409b-a5e9-e6de661a487f": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbfdd",
+            "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
+            "description": "RELAXED",
+            "link": ""
+          }
+        },
+        "4c451ab9-0433-4817-a035-9c106527fd4e": {
+          "type": "image",
+          "settings": {
+            "color": "#78aab3",
+            "image": "shopify:\/\/shop_images\/3.jpg",
+            "description": "PROTECTIVE STYLES",
+            "link": ""
+          }
+        },
+        "71525199-7ed1-403d-9398-6ca62b296c0f": {
+          "type": "image",
+          "settings": {
+            "color": "#a3d2b4",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "description": "STRAIGHT HAIR",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "9fa1fe00-a569-42ad-9372-c576c240ca56",
+        "9dab047f-45dd-409b-a5e9-e6de661a487f",
+        "4c451ab9-0433-4817-a035-9c106527fd4e",
+        "71525199-7ed1-403d-9398-6ca62b296c0f"
+      ],
+      "settings": {
+        "title": "Our products work for all hair types",
+        "background": "#faf9f7"
+      }
+    },
     "founder-bio": {
       "type": "founder-bio",
       "blocks": {
@@ -341,63 +392,13 @@
       "type": "reviews",
       "settings": {
       }
-    },
-    "165609300610ca7c23": {
-      "type": "images-blocks",
-      "blocks": {
-        "9fa1fe00-a569-42ad-9372-c576c240ca56": {
-          "type": "image",
-          "settings": {
-            "color": "#e6d0b3",
-            "image": "shopify:\/\/shop_images\/1.jpg",
-            "description": "LOCS",
-            "link": ""
-          }
-        },
-        "9dab047f-45dd-409b-a5e9-e6de661a487f": {
-          "type": "image",
-          "settings": {
-            "color": "#cbbfdd",
-            "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
-            "description": "RELAXED",
-            "link": ""
-          }
-        },
-        "4c451ab9-0433-4817-a035-9c106527fd4e": {
-          "type": "image",
-          "settings": {
-            "color": "#78aab3",
-            "image": "shopify:\/\/shop_images\/3.jpg",
-            "description": "PROTECTIVE STYLES",
-            "link": ""
-          }
-        },
-        "71525199-7ed1-403d-9398-6ca62b296c0f": {
-          "type": "image",
-          "settings": {
-            "color": "#a3d2b4",
-            "image": "shopify:\/\/shop_images\/4.jpg",
-            "description": "STRAIGHT HAIR",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "9fa1fe00-a569-42ad-9372-c576c240ca56",
-        "9dab047f-45dd-409b-a5e9-e6de661a487f",
-        "4c451ab9-0433-4817-a035-9c106527fd4e",
-        "71525199-7ed1-403d-9398-6ca62b296c0f"
-      ],
-      "settings": {
-        "title": "Our products work for all hair types",
-        "background": "#faf9f7"
-      }
     }
   },
   "order": [
     "main",
     "1656092815729f1831",
     "product-never-contains",
+    "165609300610ca7c23",
     "founder-bio",
     "16560879104b95bc9e",
     "product-materials",
@@ -406,7 +407,6 @@
     "related-products",
     "1654606629b2de1604",
     "recently-viewed",
-    "reviews",
-    "165609300610ca7c23"
+    "reviews"
   ]
 }
