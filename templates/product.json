@@ -135,32 +135,6 @@
         "image": "shopify:\/\/shop_images\/bio-isfahan.png"
       }
     },
-    "product-video": {
-      "type": "video",
-      "settings": {
-        "aspect_ratio": "16:9",
-        "autoplay": false,
-        "autoloop": false,
-        "video_dark_overlay": false,
-        "video": "https:\/\/www.youtube.com\/watch?v=ob5dnPW9Ogg",
-        "mp4": "",
-        "ogv": "",
-        "display_text_over_video": false,
-        "pretext": "",
-        "title": "",
-        "subtitle": "",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_background": false,
-        "caption_background_transparency": false,
-        "button1_label": "",
-        "button1_link": "",
-        "button1_highlight": false,
-        "button2_label": "",
-        "button2_link": "",
-        "button2_highlight": false
-      }
-    },
     "product-materials": {
       "type": "product-materials",
       "blocks": {
@@ -202,35 +176,6 @@
     "nosto": {
       "type": "nosto-element",
       "settings": {
-      }
-    },
-    "ingredients": {
-      "type": "ingredients",
-      "blocks": {
-        "b5d81af4-76c1-4a08-b913-28585094948f": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
-          }
-        },
-        "3c2ba760-4f5e-40e6-ab1d-58576508342a": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "b5d81af4-76c1-4a08-b913-28585094948f",
-        "3c2ba760-4f5e-40e6-ab1d-58576508342a"
-      ],
-      "settings": {
-        "title": "Made with Natural Ingredients",
-        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "related-products": {
@@ -304,9 +249,7 @@
       "settings": {
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
-        "color": "#000000",
-        "color_question": "#000000",
-        "color_answer": "#000000"
+        "color": "#000"
       }
     },
     "recently-viewed": {
@@ -314,12 +257,17 @@
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
-        "rv_max_display": 3,
-        "rv_per": 3
+        "rv_max_display": 6,
+        "rv_per": 4
       }
     },
     "reviews": {
       "type": "reviews",
+      "settings": {
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
       "settings": {
       }
     }
@@ -328,7 +276,6 @@
     "main",
     "product-never-contains",
     "founder-bio",
-    "product-video",
     "product-materials",
     "nosto",
     "ingredients",

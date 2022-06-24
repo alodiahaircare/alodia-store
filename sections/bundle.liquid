@@ -1,0 +1,133 @@
+{% if section.settings.product_list != blank and section.settings.bundle != blank %}
+{% assign qty = 0 %}
+{% for product in section.settings.product_list %}
+  {% assign qty = qty | plus: 1 %}
+{% endfor %}
+<div class="container main content padding-50">
+  {% if section.settings.title != blank %}
+  <h4 class="title center">{{  section.settings.title }}</h4>
+  {% endif %}
+
+  <div class="column">
+  {% if section.settings.subtitle != blank %}
+  <h4 class="left bundle-subtitle">{{  section.settings.subtitle }}</h4>
+  {% endif %}
+
+  {% if section.settings.content != blank %}
+  <div  class="left">{{ section.settings.content }}</div>
+  {% endif %}
+</div>
+
+  <div class="sixteen columns">
+    <div class="bundle-section" style="background: {{ section.settings.background }}">
+      <div class="bundle-buy">
+        {% if section.settings.title_bundle != blank %}
+           <p class="bundle-buy-text"><strong>{{ section.settings.title_bundle }}</strong> <span><small>({{ qty }} Products)</small></span></p>
+        {% endif %}
+        {% assign bundle = section.settings.bundle %}
+
+
+        {% form  'product', bundle %}
+          <input type="hidden" name="id" value="{{ bundle.variants.first.id }}" />
+          <button type="submit" class="addCart" 
+          name="add" class="action_button add_to_cart"
+          {% unless bundle.available %} disabled="disabled" {% endunless %}>
+            {% unless bundle.available %}
+            {{ "products.product.sold_out" | t }}
+            {% else %}
+            {% if section.settings.button_bundle != blank %}
+              <span>{{ section.settings.button_bundle }}</span>
+              ({%- if bundle.variants.first.price <  bundle.variants.first.compare_at_price -%}
+                {{- bundle.variants.first.price | money }} <s>{{ bundle.variants.first.compare_at_price | money }}</s>
+              {%- else -%}
+              {{- bundle.variants.first.price | money -}}
+              {%- endif -%})
+            {% else %}
+              {{ "products.product.add_to_cart" | t }}
+            {% endif %}
+            {% endunless %}
+          </button>
+        {% endform %}
+      </div>
+      <div class="product-bundle-section">
+      {% for product in section.settings.product_list %}
+        <a href="{{ product.url }}" class="product-bundle">
+          <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
+          <div class="product-bundle-title">
+            {{ product.title }}
+          </div>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+{% endif %}
+
+  
+{% schema %}
+  {
+    "name": "Bundle",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Clinically proven"
+      },
+      {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "After 4 weeks of use:"
+      },
+      {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+      },
+      {
+          "type": "header",
+          "content": "Bundle"
+      },
+      {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#faf9f7"
+      },
+      {
+          "type": "text",
+          "id": "title_bundle",
+          "label": "Title",
+          "default": "Shop Bundle"
+      },
+      {
+        "type": "text",
+        "id": "button_bundle",
+        "label": "Button",
+        "default": "Add bundle to cart"
+      },
+      {
+          "type": "product",
+          "id": "bundle",
+          "label": "Bundle product"
+      },
+      {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Products",
+          "limit": 5
+      }
+    ],
+    "presets": [
+    {
+      "category": "Bundle",
+      "name": "Bundle"
+    }
+  ]
+  }
+{% endschema %}
+  

@@ -1,3 +1,14 @@
+{% assign show_section = false %}
+
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% if block.settings.image != blank %}
+      {% assign show_section = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <div class="padding-50">
   <div class="container main content ingredients-section">
     <div class="nine columns offset-by-one">
@@ -91,6 +102,18 @@
 .ingredient {
     display: flex;
     margin-bottom: 10px;
+}
+
+@media (max-width: 798) {
+  .ingredient {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ingredients-section .title {
+    text-align: center;
+  }
 }
 
 .ingredient-description {

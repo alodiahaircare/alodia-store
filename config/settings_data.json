@@ -1573,7 +1573,7 @@
       "newsletter": {
         "type": "newsletter",
         "settings": {
-          "newsletter_title": "JOIN OUR VIP LIST",
+          "newsletter_title": "Join our VIP list",
           "newsletter_text": "<p>Sign up to receive updates on discounts, special offers, new product releases, and much more!<\/p>",
           "display_first_name": true,
           "display_last_name": true,
