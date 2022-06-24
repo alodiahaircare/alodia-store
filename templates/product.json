@@ -206,8 +206,31 @@
     },
     "ingredients": {
       "type": "ingredients",
+      "blocks": {
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
+          }
+        },
+        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
+        "7cb0840a-c44a-4a06-9728-aaf073eda742"
+      ],
       "settings": {
-        "title": ""
+        "title": "Made with Natural Ingredients",
+        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "related-products": {
