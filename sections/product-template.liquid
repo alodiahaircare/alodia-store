@@ -270,7 +270,8 @@
     </div>
     <div>
     </div>
-  {% if section.settings.left_plant != blank %}
+  </div>
+{% if section.settings.left_plant != blank %}
     <div class="left-plant plant-pdp">
       <img src="{{ section.settings.left_plant | img_url: 'master' }}" alt="{{ section.settings.left_plant.alt }}">
     </div>
@@ -280,7 +281,6 @@
       <img src="{{ section.settings.right_plant | img_url: 'master' }}" alt="{{ section.settings.right_plant.alt }}">
     </div>
 {% endif %}
-</div>
 
 
 <script type="application/ld+json">
