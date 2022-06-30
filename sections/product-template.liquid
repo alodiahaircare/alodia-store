@@ -194,7 +194,7 @@
               {% endunless %}
 
               {% if product.description contains "<!-- split -->" %}
-              <br class="clear" />
+              <div class="clear"></div>
               <div class="section clearfix">
                 <div class="description">
                   {{ product.description | split: '<!-- split -->' | last }}
