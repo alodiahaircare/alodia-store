@@ -393,6 +393,33 @@
       "type": "reviews",
       "settings": {
       }
+    },
+    "1656564076eb33145f": {
+      "type": "video",
+      "settings": {
+        "aspect_ratio": "16:9",
+        "autoplay": true,
+        "autoloop": true,
+        "video_dark_overlay": false,
+        "video_metafield": "",
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "mp4": "",
+        "ogv": "",
+        "display_text_over_video": false,
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_background": false,
+        "caption_background_transparency": false,
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_highlight": false,
+        "button2_label": "",
+        "button2_link": "",
+        "button2_highlight": false
+      }
     }
   },
   "order": [
@@ -408,6 +435,7 @@
     "related-products",
     "1654606629b2de1604",
     "recently-viewed",
-    "reviews"
+    "reviews",
+    "1656564076eb33145f"
   ]
 }
