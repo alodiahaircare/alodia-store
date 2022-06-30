@@ -1,8 +1,6 @@
 {% if section.settings.show_related_products == true %}
 <hr>
-<div class="product-template__container section text-align-center
-{% if section.settings.border_section %}border-section{% endif %}" 
-style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;"
+<div class="product-template__container section text-align-center"
 itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
  
 {% comment %}
@@ -174,24 +172,6 @@ itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id 
           "label": "4"
         }
       ]
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "label": "Top spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "margin_bottom",
-      "label": "Bottom spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
     }
   ]
 }
