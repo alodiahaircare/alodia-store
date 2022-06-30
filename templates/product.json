@@ -236,31 +236,10 @@
         "image": "shopify:\/\/shop_images\/bio-isfahan.png"
       }
     },
-    "16560879104b95bc9e": {
-      "type": "video",
+    "16566204600b659e23": {
+      "type": "video-url",
       "settings": {
-        "aspect_ratio": "16:9",
-        "autoplay": true,
-        "autoloop": true,
-        "video_dark_overlay": false,
-        "video_metafield": "",
-        "video": "https:\/\/www.youtube.com\/watch?v=qz8aOdyIAr0",
-        "mp4": "",
-        "ogv": "",
-        "display_text_over_video": false,
-        "pretext": "",
-        "title": "",
-        "subtitle": "",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_background": false,
-        "caption_background_transparency": false,
-        "button1_label": "Play Video",
-        "button1_link": "",
-        "button1_highlight": false,
-        "button2_label": "",
-        "button2_link": "",
-        "button2_highlight": false
+        "video": "https:\/\/www.youtube.com\/watch?v=qz8aOdyIAr0"
       }
     },
     "product-materials": {
@@ -404,7 +383,7 @@
     "165609300610ca7c23",
     "ingredients",
     "founder-bio",
-    "16560879104b95bc9e",
+    "16566204600b659e23",
     "product-materials",
     "nosto",
     "1654606629b2de1604",
