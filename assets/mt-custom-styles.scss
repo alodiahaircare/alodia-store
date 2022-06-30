@@ -464,7 +464,15 @@ h1.product_name {
   position: relative;
 }
 
-.product_section .nine{
-  position: sticky;
-  top: 0px;
+@media (min-width: 799px) {
+  .product_section .nine{
+    position: sticky;
+    top: 0px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .plant-pdp.right-plant {
+    display: none;
+  }
 }
