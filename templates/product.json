@@ -173,6 +173,8 @@
     "bazaarvoice": {
       "type": "bazaarvoice-product",
       "settings": {
+        "title": "Follow us!",
+        "bg": "#B7DCC4"
       }
     },
     "ingredients": {
@@ -351,15 +353,6 @@
         "color_answer": "#000000"
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "display_related_products": true,
-        "related_products_style": "grid",
-        "related_products_limit": 4,
-        "products_per": 4
-      }
-    },
     "recently-viewed": {
       "type": "recently-viewed",
       "disabled": true,
@@ -373,6 +366,15 @@
     "reviews": {
       "type": "reviews",
       "settings": {
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "display_related_products": true,
+        "related_products_style": "grid",
+        "related_products_limit": 4,
+        "products_per": 4
       }
     }
   },
@@ -388,8 +390,8 @@
     "product-materials",
     "nosto",
     "1654606629b2de1604",
-    "related-products",
     "recently-viewed",
-    "reviews"
+    "reviews",
+    "related-products"
   ]
 }
