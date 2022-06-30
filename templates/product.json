@@ -352,12 +352,11 @@
         "display_related_products": true,
         "related_products_style": "grid",
         "related_products_limit": 4,
-        "products_per": 3
+        "products_per": 4
       }
     },
     "recently-viewed": {
       "type": "recently-viewed",
-      "disabled": true,
       "settings": {
         "rv_title": "Recently viewed",
         "rv_products_style": "grid",
