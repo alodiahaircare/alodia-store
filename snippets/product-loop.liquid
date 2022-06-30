@@ -25,6 +25,7 @@
       {% else %}
 
   		
+	    {% include 'product-thumbnail', sidebar: sidebar %}
 
         {% if products_per_row == 2 %}
           {% cycle collection_group: '', new_row %}
@@ -42,6 +43,7 @@
       {% endif %}
     {% endif %}
   {% endfor %}
+  </div>
   {% if template contains 'collection' %}
     {% if settings.pagination_type == 'load_more' or settings.pagination_type == 'infinite_scroll' %}
       {% if paginate.next.url %}
