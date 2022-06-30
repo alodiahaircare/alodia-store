@@ -101,7 +101,6 @@
           {% endif %}
           <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
 
-          {% render 'bv-summary' %}
 
           <div class="feature_divider"></div>
 
@@ -151,6 +150,9 @@
                 </span>
               {% endif %}
             </p>
+
+            {% render 'bv-summary' %}
+
           
             {% comment %} <!-- Insert QuadPay Widget --> {% endcomment %}
             <div style="margin: 0 0 10px 0; min-height: 20px;">
