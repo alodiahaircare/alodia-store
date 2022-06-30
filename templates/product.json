@@ -376,14 +376,14 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
-        "related_grid_num": "4"
       }
     },
     "recently-viewed": {
       "type": "recently-viewed",
       "settings": {
-        "rv_title": "Recently viewed products",
+        "rv_title": "Other products you might like",
         "rv_products_style": "grid",
         "rv_max_display": 4,
         "rv_per": 4
