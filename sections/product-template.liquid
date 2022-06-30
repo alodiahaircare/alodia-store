@@ -184,8 +184,7 @@
               {% if section.settings.product_description_position == "top" %}
               {% if product.description != blank %}
               <div class="description" itemprop="description">
-                {{ product.description | split: '
-                <!-- split -->' | first }}
+                {{ product.description | split: '<!-- split -->' | first }}
               </div>
               {% endif %}
               {% endif %}
