@@ -72,7 +72,7 @@
 	 display: none;
 }
 /* Active */
- .accordion-item.is-active .accordion-thumb::before {
+ .accordion-item.is-active .accordion-thumb::after {
 	 transform: rotate(45deg);
 }
 
