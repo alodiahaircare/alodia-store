@@ -69,6 +69,8 @@
     {% assign video_type = 'youtube' %}
 {% endif %}
 
+<h2>si {{ metafields }}</h2>
+
 {% if metafields contains 'youtu.' or  metafields contains 'vimeo' %}
 {% assign video_id = metafields | split: '/' | last %}
 {% elsif metafields contains 'youtube' %}
