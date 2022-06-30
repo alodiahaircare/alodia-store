@@ -377,6 +377,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
+        "related_grid_num": "4"
       }
     },
     "recently-viewed": {

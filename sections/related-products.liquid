@@ -61,10 +61,7 @@
   {% unless same_type and current_product.type != product.type %}
   <div class="grid__item {{ grid_item_width }}">
     {% render 'product-thumbnail',
-    product: product,
-    mobile_products_per_row: '1',
-    product_rec: true
-
+    product: product
 %}
   </div>
   {% assign counter = counter | plus: 1 %}
