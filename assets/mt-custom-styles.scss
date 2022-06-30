@@ -494,7 +494,7 @@ h1.product_name {
 }
 
 .bold-ro__radio-div {
-  width: 50%;
+  width: calc(50% - 20px);
 }
 
 .bold-ro__product {
