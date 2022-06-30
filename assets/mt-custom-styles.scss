@@ -427,9 +427,11 @@ h1.product_name {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .purchase-details__quantity.product-quantity-box{
   display: flex;
   flex-direction: column;
+
 }
