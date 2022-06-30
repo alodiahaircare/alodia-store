@@ -1,0 +1,38 @@
+{% comment %}
+** Video - homepage partial **
+- Draggable section
+{% endcomment %}
+{% if section.settings.video contains 'youtu' %}
+  {% if section.settings.video contains 'youtu.' %}
+    {% assign video_id = section.settings.video | split: '/' | last %}
+  {% elsif section.settings.video contains 'youtube' %}
+      {% assign video_id = section.settings.video | split: '=' | last %}
+  {% endif %}
+
+    <div class="container main content padding-50">
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/{{ video_id }}?controls=0">
+      </iframe>
+    </div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Video by URL",
+  "class": "video-section under-menu",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video",
+      "label": "Video",
+      "info": "Only Youtube video links allowed"
+    }
+  ],
+  "presets": [{
+    "name": "Video by URL",
+    "category": "Video by URL"
+  }]
+}
+
+{% endschema %}

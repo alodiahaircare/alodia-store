@@ -1,0 +1,33 @@
+<script>var CRL8_SITENAME = 'alodia-2wav5t'; !function () { var e = window.crl8 = window.crl8 || {}, n = !1, i = []; e.ready = function (e) { n ? e() : i.push(e) }, e.pixel = e.pixel || function () { e.pixel.q.push(arguments) }, e.pixel.q = e.pixel.q || []; var t = window.document, o = t.createElement("script"), c = e.debug || -1 !== t.location.search.indexOf("crl8-debug=true") ? "js" : "min.js"; o.async = !0, o.src = t.location.protocol + "//edge.curalate.com/sites/" + CRL8_SITENAME + "/site/latest/site." + c, o.onload = function () { n = !0, i.forEach(function (e) { e() }) }; var r = t.getElementsByTagName("script")[0]; r.parentNode.insertBefore(o, r.nextSibling) }();</script>
+<div class="padding-50 bazaarvoice" style="background: {{ section.settings.bg }}">
+  <div class="container">
+    {% if section.settings.title != blank %}
+    <h4 class="title center">{{  section.settings.title }}</h4>
+    {% endif %}
+
+    <div crl8-container-id="product" crl8-filter="productId:'{{ product.selected_or_first_available_variant.id }}'">
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+    {
+      "name": "Bazaarvoice Instagram",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Follow us!"
+        },
+        {
+            "type": "color",
+            "id": "bg",
+            "label": "Background",
+            "default": "#B7DCC4"
+        }
+      ]
+    }
+  {% endschema %}
+  

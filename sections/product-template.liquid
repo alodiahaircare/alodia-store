@@ -14,245 +14,270 @@
 <div class="container main content">{% render 'preorder-now-collection-item', product: product %}
   <div class="sixteen columns">
     {% if collection.previous_product or collection.next_product or section.settings.product_breadcrumb %}
-      <div class="clearfix breadcrumb-collection">
-        {% if collection.previous_product or collection.next_product %}
-          <div class="nav_arrows breadcrumb_text">
-            {% if collection.previous_product %}
-              <a href="{{ collection.previous_product }}" title="{{ 'products.general.previous_product_html' | t }}" class="breadcrumb_link"><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t }}</span></a>
-            {% endif %}
-            {% if collection.previous_product and collection.next_product %}<span class="breadcrumb-divider"> | </span>{% endif %}
-
-            {% if collection.next_product %}
-              <a href="{{collection.next_product}}" title="{{ 'products.general.next_product_html' | t }}" class="breadcrumb_link">{{ 'products.general.next_product_html' | t }} <span class="icon-right-arrow"></span></a>
-            {% endif %}
-          </div>
+    <div class="clearfix breadcrumb-collection">
+      {% if collection.previous_product or collection.next_product %}
+      <div class="nav_arrows breadcrumb_text">
+        {% if collection.previous_product %}
+        <a href="{{ collection.previous_product }}" title="{{ 'products.general.previous_product_html' | t }}"
+          class="breadcrumb_link"><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t
+            }}</span></a>
         {% endif %}
+        {% if collection.previous_product and collection.next_product %}<span class="breadcrumb-divider"> | </span>{%
+        endif %}
 
-        {% if section.settings.product_breadcrumb %}
-          <div class="breadcrumb_text" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link"><span itemprop="name">{{ 'general.breadcrumbs.home' | t }}</span></a></span>
-            <span class="breadcrumb-divider">/</span>
-            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              {% if collection %}
-                <a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="item" class="breadcrumb_link"><span itemprop="name">{{ collection.title }}</span></a>
-              {% else %}
-                <a href="/collections/all" title="{{ collections.all.title }}" class="breadcrumb_link"><span>{{ collections.all.title }}</span></a>
-              {% endif %}
-            </span>
-            <span class="breadcrumb-divider">/</span>
-            {{ product.title }}
-          </div>
+        {% if collection.next_product %}
+        <a href="{{collection.next_product}}" title="{{ 'products.general.next_product_html' | t }}"
+          class="breadcrumb_link">{{ 'products.general.next_product_html' | t }} <span
+            class="icon-right-arrow"></span></a>
         {% endif %}
       </div>
+      {% endif %}
+
+      {% if section.settings.product_breadcrumb %}
+      <div class="breadcrumb_text" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{ shop.url }}"
+            title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link"><span itemprop="name">{{
+              'general.breadcrumbs.home' | t }}</span></a></span>
+        <span class="breadcrumb-divider">/</span>
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          {% if collection %}
+          <a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="item"
+            class="breadcrumb_link"><span itemprop="name">{{ collection.title }}</span></a>
+          {% else %}
+          <a href="/collections/all" title="{{ collections.all.title }}" class="breadcrumb_link"><span>{{
+              collections.all.title }}</span></a>
+          {% endif %}
+        </span>
+        <span class="breadcrumb-divider">/</span>
+        {{ product.title }}
+      </div>
+      {% endif %}
+    </div>
     {% endif %}
   </div>
 
   {% comment %}Check to see if sidebar should be enabled{% endcomment %}
   {% if section.blocks.size > 0 %}
-    {% assign sidebar = true %}
+  {% assign sidebar = true %}
   {% else %}
-    {% assign sidebar = false %}
+  {% assign sidebar = false %}
   {% endif %}
 
   <div class="product clearfix">
     {% if sidebar %}
-      {% include 'sidebar' %}
-      <div class="twelve columns">
-    {% else %}
+    {% include 'sidebar' %}
+    <div class="twelve columns">
+      {% else %}
       <div class="sixteen columns">
-    {% endif %}
+        {% endif %}
 
-    <div  class="product-{{ product.id }}"
-          data-free-text="{{ settings.free_price_text }}"
-          >
-      <div class="section product_section clearfix js-product_section {% if section.settings.product_images_position == 'right' %}align_right--images{% endif %}" itemscope data-rv-handle="{{ product.handle }}">
+        <div class="product-{{ product.id }}" data-free-text="{{ settings.free_price_text }}">
+          <div
+            class="section product_section clearfix js-product_section {% if section.settings.product_images_position == 'right' %}align_right--images{% endif %}"
+            itemscope data-rv-handle="{{ product.handle }}">
 
-        <div class="{% if sidebar %}seven{% else %}nine{% endif %} columns {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
-          {% include 'product-images' %}
-        </div>
-
-        <div class="{% if sidebar %}five{% else %}seven{% endif %} columns {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
-
-          {% assign collection_handles = product.collections | map: 'handle' %}
-          {% assign variant = product.selected_or_first_available_variant %}
-
-          {% if product.available %}
-            {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price_max %}
-              <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
-            {% endif %}
-          {% endif %}
-          {% if collection_handles contains 'new' %}
-            <div class="new_banner_product">{{ 'collections.general.new' | t }}</div>
-          {% endif %}
-          {% if collection_handles contains 'pre-order' %}
-            <div class="preorder_banner_product">{{ 'collections.general.pre_order' | t }}</div>
-          {% endif %}
-
-           {% if section.settings.display_vendor %}
-            <p class="vendor">
-              <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
-            </p>
-          {% endif %}
-
-          {% if variant.sku != blank and section.settings.display_sku %}
-            <p class="sku">
-              <span itemprop="sku">{{ variant.sku }}</span>
-            </p>
-          {% endif %}
-          <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
-
-          {% render 'bv-summary' %}
-
-          <div class="feature_divider"></div>
-
-          {% assign product_tags = product.tags | join: ' ' %}
-          {% if product_tags contains 'meta-size-chart-' %}
-            {% for tag in product.tags %}
-              {% if tag contains 'meta-size-chart-' %}
-                <a href="#size-chart{{product.id}}" class="size_chart" data-remodal-target="size-chart{{product.id}}" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
-                {% include 'popup-size-chart', product_id: product.id %}
-              {% endif %}
-            {% endfor %}
-          {% elsif settings.size_chart != blank %}
-            <a href="#size-chart" class="size_chart" data-remodal-target="size-chart" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
-          {% endif %}
-
-
-          {% if collection_handles contains 'coming-soon' %}
-            <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
-          {% else %}
-            <p class="modal_price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-              <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
-              <meta itemprop="seller" content="{{ shop.name | escape }}" />
-              <link itemprop="availability" href="http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}">
-              <meta itemprop="itemCondition" content="New" />
-
-              <span class="sold_out">{% if variant.available == false %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
-              <span itemprop="price" content="{{ variant.price | money_without_currency | remove: "," }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
-                <span class="current_price {% if product.available == false %}hidden{% endif %}">
-                  {% if variant.price > 0 %}
-                    <span class="money">{{ variant.price | money }}</span>
-                  {% else %}
-                    {{ settings.free_price_text }}
-                  {% endif %}
-                </span>
-              </span>
-              <span class="was_price">
-                {% if variant.price < variant.compare_at_price and variant.available %}
-                  <span class="money">{{ variant.compare_at_price | money }}</span>
-                {% endif %}
-              </span>
-
-          {% if section.settings.display_savings %}
-                <span class="sale savings">
-                  {% if variant.price < variant.compare_at_price and variant.available %}
-                    {{ 'products.product.savings' | t }}  {{ variant.compare_at_price | minus: variant.price | times: 100 | divided_by: variant.compare_at_price }}% (<span class="money">{{ variant.compare_at_price | minus: variant.price | money }}</span>)
-                  {% endif %}
-                </span>
-              {% endif %}
-            </p>
-          
-            {% comment %} <!-- Insert QuadPay Widget --> {% endcomment %}
-            <div style="margin: 0 0 10px 0; min-height: 20px;">
-              <quadpay-widget amount={{ variant.price | divided_by: 100.00 }} logocolor="#5D8A6D"></quadpay-widget>
+            <div
+              class="{% if sidebar %}seven{% else %}nine{% endif %} columns {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
+              {% include 'product-images' %}
             </div>
 
-            {% include 'product-notify-me' %}
-          {% endif %}
+            <div
+              class="{% if sidebar %}five{% else %}seven{% endif %} columns {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
 
-          {% if section.settings.product_description_position == "top" %}
-            {% if product.description != blank %}
-             <div class="description" itemprop="description">
-               {{ product.description | split: '<!-- split -->' | first }}
-             </div>           
-           {% endif %}
-          {% endif %}
+              {% assign collection_handles = product.collections | map: 'handle' %}
+              {% assign variant = product.selected_or_first_available_variant %}
 
-          {% unless collection_handles contains 'coming-soon' %}
-            {% include 'product-form' with 'product' %}
-          {% endunless %}
+              {% if product.available %}
+              {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price_max %}
+              <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
+              {% endif %}
+              {% endif %}
+              {% if collection_handles contains 'new' %}
+              <div class="new_banner_product">{{ 'collections.general.new' | t }}</div>
+              {% endif %}
+              {% if collection_handles contains 'pre-order' %}
+              <div class="preorder_banner_product">{{ 'collections.general.pre_order' | t }}</div>
+              {% endif %}
 
-          {% if section.settings.product_description_position == "bottom" %}
-            {% if product.description != blank %}
-             <div class="description bottom" itemprop="description">
-              {{ product.description | split: '<!-- split -->' | first }}
-             </div>
-            {% endif %}
-          {% endif %}
+              {% if section.settings.display_vendor %}
+              <p class="vendor">
+                <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
+              </p>
+              {% endif %}
 
-          {% if settings.enable_shopify_review_comments and settings.review_position == "next_to_gallery" %}
-            <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
-          {% endif %}
+              {% if variant.sku != blank and section.settings.display_sku %}
+              <p class="sku">
+                <span itemprop="sku">{{ variant.sku }}</span>
+              </p>
+              {% endif %}
+              <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
 
-          {% if section.settings.display_collections or section.settings.display_tags or section.settings.display_type %}
-            <div class="product_links">
-              {% if section.settings.display_collections %}
+
+              <div class="feature_divider"></div>
+
+              {% assign product_tags = product.tags | join: ' ' %}
+              {% if product_tags contains 'meta-size-chart-' %}
+              {% for tag in product.tags %}
+              {% if tag contains 'meta-size-chart-' %}
+              <a href="#size-chart{{product.id}}" class="size_chart" data-remodal-target="size-chart{{product.id}}"
+                data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
+              {% include 'popup-size-chart', product_id: product.id %}
+              {% endif %}
+              {% endfor %}
+              {% elsif settings.size_chart != blank %}
+              <a href="#size-chart" class="size_chart" data-remodal-target="size-chart" data-no-instant>{{
+                'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
+              {% endif %}
+
+
+              {% if collection_handles contains 'coming-soon' %}
+              <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
+              {% else %}
+              <p class="modal_price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+                <meta itemprop="seller" content="{{ shop.name | escape }}" />
+                <link itemprop="availability"
+                  href="http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}">
+                <meta itemprop="itemCondition" content="New" />
+
+                <span class="sold_out">{% if variant.available == false %}{{ 'products.product.sold_out' | t }}{% endif
+                  %}</span>
+                <span itemprop="price" content="{{ variant.price | money_without_currency | remove: " ," }}"
+                  class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
+                  <span class="current_price {% if product.available == false %}hidden{% endif %}">
+                    {% if variant.price > 0 %}
+                    <span class="money">{{ variant.price | money }}</span>
+                    {% else %}
+                    {{ settings.free_price_text }}
+                    {% endif %}
+                  </span>
+                </span>
+                <span class="was_price">
+                  {% if variant.price < variant.compare_at_price and variant.available %} <span class="money">{{
+                    variant.compare_at_price | money }}</span>
+                {% endif %}
+                </span>
+
+                {% if section.settings.display_savings %}
+                <span class="sale savings">
+                  {% if variant.price < variant.compare_at_price and variant.available %} {{ 'products.product.savings'
+                    | t }} {{ variant.compare_at_price | minus: variant.price | times: 100 | divided_by:
+                    variant.compare_at_price }}% (<span class="money">{{ variant.compare_at_price | minus: variant.price
+                    | money }}</span>)
+                {% endif %}
+                </span>
+                {% endif %}
+              </p>
+
+              {% render 'bv-summary' %}
+
+
+              {% comment %}
+              <!-- Insert QuadPay Widget --> {% endcomment %}
+              <div style="margin: 0 0 10px 0; min-height: 20px;">
+                <quadpay-widget amount={{ variant.price | divided_by: 100.00 }} logocolor="#5D8A6D"></quadpay-widget>
+              </div>
+
+              {% include 'product-notify-me' %}
+              {% endif %}
+
+              {% if section.settings.product_description_position == "top" %}
+              {% if product.description != blank %}
+              <div class="description" itemprop="description">
+                {{ product.description | split: '<!-- split -->' | first }}
+              </div>
+              {% endif %}
+              {% endif %}
+
+              {% unless collection_handles contains 'coming-soon' %}
+              {% include 'product-form' with 'product' %}
+              {% endunless %}
+
+              {% if product.description contains "<!-- split -->" %}
+              <div class="clear"></div>
+              <div class="section clearfix">
+                <div class="description">
+                  {{ product.description | split: '<!-- split -->' | last }}
+                </div>
+              </div>
+              {% endif %}
+
+              {% if settings.enable_shopify_review_comments and settings.review_position == "next_to_gallery" %}
+              <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+              {% endif %}
+
+              {% if section.settings.display_collections or section.settings.display_tags or
+              section.settings.display_type %}
+              <div class="product_links">
+                {% if section.settings.display_collections %}
                 <p>
                   <span class="label">{{ 'products.product.collections' | t }}:</span>
                   <span>
-                   {% for col in product.collections %}
-                     <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
-                   {% endfor %}
+                    {% for col in product.collections %}
+                    <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{%
+                    endunless %}
+                    {% endfor %}
                   </span>
                 </p>
-              {% endif %}
+                {% endif %}
 
-              {% if section.settings.display_type %}
+                {% if section.settings.display_type %}
                 <p>
                   <span class="label">{{ 'products.product.product_types' | t }}:</span>
                   <span>{{ product.type | link_to_type }}</span>
                 </p>
-              {% endif %}
+                {% endif %}
 
-              {% if section.settings.display_tags %}
+                {% if section.settings.display_tags %}
                 <p>
-                 {% for tag in product.tags %}
-                   {% if forloop.first %}
-                     <span class="label">{{ 'products.product.tags' | t }}:</span>
-                   {% endif %}
+                  {% for tag in product.tags %}
+                  {% if forloop.first %}
+                  <span class="label">{{ 'products.product.tags' | t }}:</span>
+                  {% endif %}
 
-                   {% unless tag contains 'meta-' %}
-                     <span>
-                       <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
-                       </span>
-                   {% endunless %}
-                 {% endfor %}
+                  {% unless tag contains 'meta-' %}
+                  <span>
+                    <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}"
+                      title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>{% unless forloop.last
+                    %},{% endunless %}
+                  </span>
+                  {% endunless %}
+                  {% endfor %}
                 </p>
+                {% endif %}
+              </div>
               {% endif %}
             </div>
-          {% endif %}
-
-          <div class="meta">
-          <p style="font-size:13px;"><a href="https://alodiahaircare.com/pages/shipping-policy" target="_blank">Shipping Policy</a> | <a href="https://alodiahaircare.com/pages/returns-policy" target="_blank">Returns Policy</a></p><br/>
-		      <p style="text-align: left;"><img alt="Payment Options" src="https://cdn.shopify.com/s/files/1/0763/8199/files/card-icons-2.0.png?14946049589802842017" style="float: none;" width="300px" height="32px" /></p>
-            {% if section.settings.display_social_buttons %}
-              {% include "social-buttons" with "product" %}
-            {% endif %}
           </div>
+
+
+          {% include 'nosto-element' with 'productpage-nosto-1' %}
+          <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}"
+            data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}"
+            data-image-url="{{ product.featured_image | product_img_url: " large" |replace: '?' , '%3F' | replace: '&'
+            ,'%26'}}" data-description="{{ product.description | escape }}"></div>
+
+          {% if settings.enable_shopify_review_comments and settings.review_position == "below_gallery" %}
+          <div class="shopify-reviews">
+            <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          </div>
+          {% endif %}
         </div>
       </div>
-
-      {% if product.description contains "<!-- split -->"  %}
-        <br class="clear" />
-        <div class="section clearfix">
-          <div class="description">
-            {{ product.description | split: '<!-- split -->' | last }}
-          </div>
-        </div>
-      {% endif %}
-      {% include 'nosto-element' with 'productpage-nosto-1' %}
-      <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
-      
-      {% if settings.enable_shopify_review_comments and settings.review_position == "below_gallery" %}
-        <div class="shopify-reviews">
-          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
-        </div>
-      {% endif %}
     </div>
-
+    <div>
+    </div>
   </div>
-</div>
-</div>
+{% if section.settings.left_plant != blank %}
+    <div class="left-plant plant-pdp">
+      <img src="{{ section.settings.left_plant | img_url: 'master' }}" alt="{{ section.settings.left_plant.alt }}">
+    </div>
+  {% endif %}
+  {% if section.settings.left_plant != blank %}
+    <div class="right-plant plant-pdp">
+      <img src="{{ section.settings.right_plant | img_url: 'master' }}" alt="{{ section.settings.right_plant.alt }}">
+    </div>
+{% endif %}
 
 
 <script type="application/ld+json">
@@ -461,104 +486,6 @@
     },
     {
       "type": "header",
-      "content": "Related products"
-    },
-    {
-      "type": "checkbox",
-      "id": "display_related_products",
-      "label": "Show related products ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006909487-Related-Products))",
-      "default": true
-    },
-    {
-      "type": "radio",
-      "id": "related_products_style",
-      "label": "Layout",
-      "default": "grid",
-      "options": [
-        {
-          "value": "slider",
-          "label": "Slider"
-        },
-        {
-          "value": "grid",
-          "label": "Grid"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "related_products_limit",
-      "label": "Limit products",
-      "min": 2,
-      "max": 50,
-      "step": 1,
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "products_per",
-      "label": "Products per row",
-      "min": 3,
-      "max": 5,
-      "step": 1,
-      "default": 3
-    },
-    {
-      "type": "header",
-      "content": "Recently viewed products"
-    },
-    {
-      "type": "paragraph",
-      "content": "To test the recently viewed products, view your online store outside of the Editor and visit multiple product pages ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008765228))"
-    },
-    {
-      "type": "checkbox",
-      "id": "display_recently_viewed",
-      "label": "Show recently viewed products",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "rv_title",
-      "label": "Title",
-      "default": "Recently Viewed Items"
-    },
-    {
-      "type": "radio",
-      "id": "rv_products_style",
-      "label": "Layout",
-      "default": "grid",
-      "options": [
-        {
-          "value": "slider",
-          "label": "Slider"
-        },
-        {
-          "value": "grid",
-          "label": "Grid"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "rv_max_display",
-      "label": "Products limit",
-      "min": 3,
-      "max": 12,
-      "step": 1,
-      "default": 4
-    },
-    {
-      "type": "range",
-      "id": "rv_per",
-      "label": "Products per row",
-      "min": 3,
-      "max": 5,
-      "step": 1,
-      "default": 4
-    },
-    {
-      "type": "header",
       "content": "Sidebar"
     },
     {
@@ -570,6 +497,20 @@
       "id": "toggle",
       "label": "Toggle sidebar content",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Plants"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_plant",
+      "label": "Left plant"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_plant",
+      "label": "Right plant"
     }
   ],
   "blocks": [

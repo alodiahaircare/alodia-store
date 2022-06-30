@@ -24,6 +24,7 @@
         >
     {% form 'product', product %}
 
+    <div class="selectors-form">
     {% if product.options.size > 1 %}
       <div class="select">
         <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" class="multi_select">
@@ -53,6 +54,18 @@
       </div>
     {% endif %}
 
+    {% if settings.display_product_quantity %}
+        <div class="purchase-details__quantity product-quantity-box">
+          <label for="quantity">{{ 'products.product.quantity' | t }}</label>
+          <div>
+          <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
+          <input type="number" min="1" size="2" class="quantity" name="quantity" id="quantity" value="1" {% if settings.limit_quantity and variant.inventory_management != blank and variant.inventory_policy == "deny" %}max="{{ variant.inventory_quantity }}"{% endif %} />
+          <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
+        </div>
+        </div>
+    {% endif %}
+  </div>
+
     {% if settings.display_inventory_left %}
       <div class="items_left">
         {% if variant.inventory_management != blank and variant.inventory_quantity > 0 %}
@@ -71,14 +84,6 @@
     {% endif %}
 
     <div class="purchase-details">
-      {% if settings.display_product_quantity %}
-        <div class="purchase-details__quantity product-quantity-box">
-          <label for="quantity">{{ 'products.product.quantity' | t }}</label>
-          <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-          <input type="number" min="1" size="2" class="quantity" name="quantity" id="quantity" value="1" {% if settings.limit_quantity and variant.inventory_management != blank and variant.inventory_policy == "deny" %}max="{{ variant.inventory_quantity }}"{% endif %} />
-          <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
-        </div>
-      {% endif %}
       <div class="purchase-details__buttons">
         {% if settings.cart_action == 'reload_page' %}
           <input type="hidden" name="return_to" value="back" />
@@ -96,18 +101,20 @@
         </button>
         
        <div class="purchase-details__buttons_sticky"> 
-         <div class="purchase-details__product-info">
-           <div class="purchase-details__product-image">
-             <img src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}">
-           </div>
-           <p>{{ product.title }}</p>
-         </div>
-         <button type="submit" name="add" class="addtocart action_button add_to_cart {% if show_payment_button %} action_button--secondary {% endif %}" data-label={{ add_to_cart_label | json }}>
-          <span class="text">{{ add_to_cart_label }}</span>
-          <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
-            <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
-          </svg>
-        </button>
+        <div class="container">
+          <div class="purchase-details__product-info column">
+            <div class="purchase-details__product-image">
+              <img src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}">
+            </div>
+            <p>{{ product.title }}</p>
+          </div>
+          <button type="submit" name="add" class="column addtocart action_button add_to_cart {% if show_payment_button %} action_button--secondary {% endif %}" data-label={{ add_to_cart_label | json }}>
+            <span class="text">{{ add_to_cart_label }}</span>
+            <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
+              <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+            </svg>
+          </button>
+        </div>
        </div>
         
 <!-- bold-ro-liquid --><div class="bold_add_to_orders" style="display: inline-block;"></div><!-- bold-ro-liquid -->

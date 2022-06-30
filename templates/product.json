@@ -21,16 +21,9 @@
         "display_tags": false,
         "display_social_buttons": true,
         "product_description_position": "top",
-        "display_related_products": true,
-        "related_products_style": "grid",
-        "related_products_limit": 12,
-        "products_per": 3,
-        "display_recently_viewed": false,
-        "rv_title": "Recently Viewed Items",
-        "rv_products_style": "grid",
-        "rv_max_display": 4,
-        "rv_per": 4,
-        "toggle": false
+        "toggle": false,
+        "left_plant": "shopify:\/\/shop_images\/image_21.png",
+        "right_plant": "shopify:\/\/shop_images\/image_20.png"
       }
     },
     "1656092815729f1831": {
@@ -135,7 +128,7 @@
             "color": "#e6d0b3",
             "image": "shopify:\/\/shop_images\/1.jpg",
             "description": "LOCS",
-            "link": ""
+            "link": "shopify:\/\/collections\/locs-1"
           }
         },
         "9dab047f-45dd-409b-a5e9-e6de661a487f": {
@@ -144,7 +137,7 @@
             "color": "#cbbfdd",
             "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
             "description": "RELAXED",
-            "link": ""
+            "link": "shopify:\/\/collections\/relaxed-hair"
           }
         },
         "4c451ab9-0433-4817-a035-9c106527fd4e": {
@@ -153,7 +146,7 @@
             "color": "#78aab3",
             "image": "shopify:\/\/shop_images\/3.jpg",
             "description": "PROTECTIVE STYLES",
-            "link": ""
+            "link": "shopify:\/\/collections\/protective-styles"
           }
         },
         "71525199-7ed1-403d-9398-6ca62b296c0f": {
@@ -162,7 +155,7 @@
             "color": "#a3d2b4",
             "image": "shopify:\/\/shop_images\/4.jpg",
             "description": "STRAIGHT HAIR",
-            "link": ""
+            "link": "shopify:\/\/collections\/straight-hair"
           }
         }
       },
@@ -175,6 +168,40 @@
       "settings": {
         "title": "Our products work for all hair types",
         "background": "#faf9f7"
+      }
+    },
+    "bazaarvoice": {
+      "type": "bazaarvoice-product",
+      "settings": {
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
+      "blocks": {
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
+          }
+        },
+        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
+        "7cb0840a-c44a-4a06-9728-aaf073eda742"
+      ],
+      "settings": {
+        "title": "Made with Natural Ingredients",
+        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "founder-bio": {
@@ -205,30 +232,10 @@
         "image": "shopify:\/\/shop_images\/bio-isfahan.png"
       }
     },
-    "16560879104b95bc9e": {
-      "type": "video",
+    "16566204600b659e23": {
+      "type": "video-url",
       "settings": {
-        "aspect_ratio": "16:9",
-        "autoplay": true,
-        "autoloop": true,
-        "video_dark_overlay": false,
-        "video": "",
-        "mp4": "",
-        "ogv": "",
-        "display_text_over_video": false,
-        "pretext": "",
-        "title": "",
-        "subtitle": "",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_background": false,
-        "caption_background_transparency": false,
-        "button1_label": "Play Video",
-        "button1_link": "",
-        "button1_highlight": false,
-        "button2_label": "",
-        "button2_link": "",
-        "button2_highlight": false
+        "video": "{{ product.metafields.alodia.video.value }}"
       }
     },
     "product-materials": {
@@ -271,41 +278,6 @@
     },
     "nosto": {
       "type": "nosto-element",
-      "settings": {
-      }
-    },
-    "ingredients": {
-      "type": "ingredients",
-      "blocks": {
-        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
-          }
-        },
-        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
-        "7cb0840a-c44a-4a06-9728-aaf073eda742"
-      ],
-      "settings": {
-        "title": "Made with Natural Ingredients",
-        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
       "settings": {
       }
     },
@@ -379,12 +351,22 @@
         "color_answer": "#000000"
       }
     },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "display_related_products": true,
+        "related_products_style": "grid",
+        "related_products_limit": 4,
+        "products_per": 4
+      }
+    },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
-        "rv_title": "Recently viewed products",
+        "rv_title": "Recently viewed",
         "rv_products_style": "grid",
-        "rv_max_display": 6,
+        "rv_max_display": 4,
         "rv_per": 4
       }
     },
@@ -399,13 +381,14 @@
     "1656092815729f1831",
     "product-never-contains",
     "165609300610ca7c23",
+    "bazaarvoice",
+    "ingredients",
     "founder-bio",
-    "16560879104b95bc9e",
+    "16566204600b659e23",
     "product-materials",
     "nosto",
-    "ingredients",
-    "related-products",
     "1654606629b2de1604",
+    "related-products",
     "recently-viewed",
     "reviews"
   ]

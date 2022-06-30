@@ -1558,15 +1558,6 @@
           "display_tags": false,
           "display_social_buttons": false,
           "product_description_position": "bottom",
-          "display_related_products": true,
-          "related_products_style": "grid",
-          "related_products_limit": 3,
-          "products_per": 3,
-          "display_recently_viewed": false,
-          "rv_title": "Recently Viewed Items",
-          "rv_products_style": "grid",
-          "rv_max_display": 4,
-          "rv_per": 4,
           "toggle": false
         }
       },
