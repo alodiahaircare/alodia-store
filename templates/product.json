@@ -212,6 +212,7 @@
         "autoplay": true,
         "autoloop": true,
         "video_dark_overlay": false,
+        "video_metafield": "{{ product.metafields.alodia.video.value }}",
         "video": "",
         "mp4": "",
         "ogv": "",
