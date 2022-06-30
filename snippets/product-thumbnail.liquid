@@ -66,13 +66,13 @@
             </div>
           {% endif %}
         </a>
-      {% include "product-details", product: product %}
+      {% include "product-details" %}
     </div>
     <a class="product-info__caption {% if settings.thumbnail_hover_enabled %}hidden{% endif %}" href="{{ product.url | within: collection }}" itemprop="url">
-      {% include "product-info", product: product %}
+      {% include "product-info" %}
     </a>
   </div>
-{% include 'collection-swatch', product: product %}
+{% include 'collection-swatch' %}
     
     {% if product.available %}
 
