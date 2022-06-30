@@ -30,6 +30,7 @@
       {% assign limit = section.settings.related_products_limit %}
       <div class="related-products related-products--slider js-related-products-slider">
         {% if col and collections[col].all_products_count > 0 %}
+          {% include 'product-slider', related_products: true %}
         {% endif %}
       </div>
 
@@ -39,7 +40,6 @@
       {% if col and collections[col].all_products_count > 0 %}
         {% unless sidebar %}<div class="container related-products--grid">{% endunless %}
           <div class="{% if sidebar %}twelve{% else %}sixteen{% endif %} columns">
-            {% include 'product-loop', related_products: true %}
           </div>
         {% unless sidebar %}</div>{% endunless %}
       {% endif %}
