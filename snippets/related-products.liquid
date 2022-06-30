@@ -30,7 +30,6 @@
       {% assign limit = section.settings.related_products_limit %}
       <div class="related-products related-products--slider js-related-products-slider">
         {% if col and collections[col].all_products_count > 0 %}
-          {% include 'product-slider', related_products: true %}
         {% endif %}
       </div>
 
