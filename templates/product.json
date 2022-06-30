@@ -137,7 +137,7 @@
             "color": "#e6d0b3",
             "image": "shopify:\/\/shop_images\/1.jpg",
             "description": "LOCS",
-            "link": ""
+            "link": "shopify:\/\/collections\/locs-1"
           }
         },
         "9dab047f-45dd-409b-a5e9-e6de661a487f": {
@@ -146,7 +146,7 @@
             "color": "#cbbfdd",
             "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
             "description": "RELAXED",
-            "link": ""
+            "link": "shopify:\/\/collections\/relaxed-hair"
           }
         },
         "4c451ab9-0433-4817-a035-9c106527fd4e": {
@@ -155,7 +155,7 @@
             "color": "#78aab3",
             "image": "shopify:\/\/shop_images\/3.jpg",
             "description": "PROTECTIVE STYLES",
-            "link": ""
+            "link": "shopify:\/\/collections\/protective-styles"
           }
         },
         "71525199-7ed1-403d-9398-6ca62b296c0f": {
@@ -164,7 +164,7 @@
             "color": "#a3d2b4",
             "image": "shopify:\/\/shop_images\/4.jpg",
             "description": "STRAIGHT HAIR",
-            "link": ""
+            "link": "shopify:\/\/collections\/straight-hair"
           }
         }
       },
@@ -177,6 +177,35 @@
       "settings": {
         "title": "Our products work for all hair types",
         "background": "#faf9f7"
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
+      "blocks": {
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
+          }
+        },
+        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
+        "7cb0840a-c44a-4a06-9728-aaf073eda742"
+      ],
+      "settings": {
+        "title": "Made with Natural Ingredients",
+        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "founder-bio": {
@@ -277,35 +306,6 @@
       "settings": {
       }
     },
-    "ingredients": {
-      "type": "ingredients",
-      "blocks": {
-        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
-          }
-        },
-        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
-          "type": "ingredients",
-          "settings": {
-            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
-            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
-            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
-        "7cb0840a-c44a-4a06-9728-aaf073eda742"
-      ],
-      "settings": {
-        "title": "Made with Natural Ingredients",
-        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
-      }
-    },
     "1654606629b2de1604": {
       "type": "faq",
       "blocks": {
@@ -402,11 +402,11 @@
     "1656092815729f1831",
     "product-never-contains",
     "165609300610ca7c23",
+    "ingredients",
     "founder-bio",
     "16560879104b95bc9e",
     "product-materials",
     "nosto",
-    "ingredients",
     "1654606629b2de1604",
     "related-products",
     "recently-viewed",
