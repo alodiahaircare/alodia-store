@@ -422,3 +422,9 @@ h1.product_name {
   font-weight: 500;
   font-size: 1.3em;
 }
+
+.product .selectors-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
