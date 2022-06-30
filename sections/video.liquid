@@ -5,14 +5,14 @@
 
 {% if section.settings.video_metafields != blank or section.settings.video_url != blank
   or section.settings.mp4 != blank or section.settings.ogv != blank %}
-<div class="container main content video-section margin-bottom-50">
-{% if section.settings.video_metafields != blank %}
-{% include 'include-video-metafields' %}
-
-{% else %}
-{% include 'include-video' %}
-{% endif %}
-</div>
+  <div class="container main content video-section margin-bottom-50">
+    <p>holiholi</p>
+    {% if section.settings.video_metafields != blank %}
+    {% include 'include-video-metafields' %}
+    {% else %}
+    {% include 'include-video' %}
+    {% endif %}
+  </div>
 {% endif %}
 
 {% schema %}
