@@ -3,10 +3,10 @@
 - Draggable section
 {% endcomment %}
 {% if section.settings.video contains 'youtu' %}
-  {% if metafields contains 'youtu.' %}
-    {% assign video_id = metafields | split: '/' | last %}
-  {% elsif metafields contains 'youtube' %}
-      {% assign video_id = metafields | split: '=' | last %}
+  {% if section.settings.video contains 'youtu.' %}
+    {% assign video_id = section.settings.video | split: '/' | last %}
+  {% elsif section.settings.video contains 'youtube' %}
+      {% assign video_id = section.settings.video | split: '=' | last %}
   {% endif %}
 
 {{ video_id }}
