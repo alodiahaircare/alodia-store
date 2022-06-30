@@ -197,6 +197,12 @@
   }
 }
 
+.related-products--grid button.addtocart {
+  width: fit-content;
+  margin: auto;
+  text-transform: inherit;
+}
+
 @media (min-width: 768px) and (max-width: 959px){
   .related-products--grid .image__container{
     min-height: 230px;
