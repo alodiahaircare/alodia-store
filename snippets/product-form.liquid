@@ -101,18 +101,20 @@
         </button>
         
        <div class="purchase-details__buttons_sticky"> 
-         <div class="purchase-details__product-info">
-           <div class="purchase-details__product-image">
-             <img src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}">
-           </div>
-           <p>{{ product.title }}</p>
-         </div>
-         <button type="submit" name="add" class="addtocart action_button add_to_cart {% if show_payment_button %} action_button--secondary {% endif %}" data-label={{ add_to_cart_label | json }}>
-          <span class="text">{{ add_to_cart_label }}</span>
-          <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
-            <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
-          </svg>
-        </button>
+        <div class="container">
+          <div class="purchase-details__product-info">
+            <div class="purchase-details__product-image">
+              <img src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}">
+            </div>
+            <p>{{ product.title }}</p>
+          </div>
+          <button type="submit" name="add" class="addtocart action_button add_to_cart {% if show_payment_button %} action_button--secondary {% endif %}" data-label={{ add_to_cart_label | json }}>
+            <span class="text">{{ add_to_cart_label }}</span>
+            <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
+              <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+            </svg>
+          </button>
+        </div>
        </div>
         
 <!-- bold-ro-liquid --><div class="bold_add_to_orders" style="display: inline-block;"></div><!-- bold-ro-liquid -->
