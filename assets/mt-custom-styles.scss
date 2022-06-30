@@ -426,6 +426,13 @@ h1.product_name {
   line-height: 1.2em;
 }
 
+@media (max-width: 798px) {
+  h1.product_name {
+    font-size: 1.6em;
+  }
+  
+}
+
 .product .product_section span[itemprop="price"] {
   color: #5d8a6d;
   font-weight: 500;
