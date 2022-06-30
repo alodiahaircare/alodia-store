@@ -202,12 +202,12 @@
   .related-products--grid [data-bv-show=inline_rating] .bv_main_container .bv_numReviews_component_container{
     display: none !important;
   }
+  .related-products--grid .title{
+    font-size: 14px;
+    min-height: 50px;
+  }
 }
 
-.related-products--grid .title{
-  font-size: 14px;
-  min-height: 50px;
-}
 
 .related-products--grid .product-list .thumbnail .product-info__caption{
   margin-top: 0px;
