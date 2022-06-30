@@ -442,18 +442,20 @@ h1.product_name {
 
 .plant-pdp {
   position: absolute;
-  height: 200px
-}
-
-.plant-pdp.left-plant {
-  left: 0;
-}
-
-.plant-pdp.right-plant {
-  right: 0;
+  height: 300px;
 }
 
 .plant-pdp img{
   height: 100%;
   object-fit: cover;
+}
+
+.plant-pdp.left-plant {
+  left: 0;
+  bottom: -100px;
+}
+
+.plant-pdp.right-plant {
+  right: 0;
+  top: -20px;
 }
