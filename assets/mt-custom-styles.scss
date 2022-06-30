@@ -429,12 +429,12 @@ h1.product_name {
   flex-wrap: wrap;
 }
 
-.purchase-details__quantity.product-quantity-box{
+.product .product_section .purchase-details__quantity.product-quantity-box{
   display: flex;
   flex-direction: column;
-width: 40%;
+  width: 40%;
 }
 
-.selectors-form .select{
+.product .product_section .selectors-form .select{
   width: 50%;
 }
