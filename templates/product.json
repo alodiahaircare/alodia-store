@@ -212,7 +212,7 @@
         "autoplay": true,
         "autoloop": true,
         "video_dark_overlay": false,
-        "video_metafield": "{{ product.metafields.alodia.video.value }}",
+        "video_metafield": "",
         "video": "https:\/\/www.youtube.com\/watch?v=qz8aOdyIAr0",
         "mp4": "",
         "ogv": "",
