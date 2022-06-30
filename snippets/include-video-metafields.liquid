@@ -69,13 +69,15 @@
     {% assign video_type = 'youtube' %}
 {% endif %}
 
-<h2>{{ video_type }}</h2>
 
 {% if metafields contains 'youtu.' or  metafields contains 'vimeo' %}
 {% assign video_id = metafields | split: '/' | last %}
 {% elsif metafields contains 'youtube' %}
     {% assign video_id = metafields | split: '=' | last %}
 {% endif %}
+
+<h2>{{ video_id }}</h2>
+
 <section  class="homepage-video darken-video-{{ video_dark_overlay }}  placeholder-image--{% if image %}true{% else %}false{% endif %}"
       data-video-id="video-{{id}}"
       data-autoplay="{{ autoplay }}"
