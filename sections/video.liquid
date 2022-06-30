@@ -7,7 +7,11 @@
   or section.settings.mp4 != blank or section.settings.ogv != blank %}
 
   <div class="container main content video-section margin-bottom-50">
+    {% if section.settings.video_metafield != blank %}
+    {% include 'include-video-metafields' %}
+    {% else %}
     {% include 'include-video' %}
+    {% endif %}
   </div>
 {% endif %}
 
