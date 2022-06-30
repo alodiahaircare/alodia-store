@@ -496,6 +496,7 @@ h1.product_name {
 .bold-ro__radio-div {
   width: calc(50% - 20px);
   display: flex;
+  flex-direction: column;
 }
 
 .bold-ro__product {
