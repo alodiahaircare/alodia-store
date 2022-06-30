@@ -39,7 +39,6 @@
  .accordion-item {
 	 border-bottom: 1px solid #e5e5e5;
    list-style: none !important; 
-   margin-bottom: 0;
 }
 /* Thumb */
  .accordion-thumb {
@@ -54,13 +53,17 @@
    font-size: 1em;
 }
  .accordion-thumb::after {
-  content: "+";
+	 content: '';
 	 display: inline-block;
 	 height: 7px;
 	 width: 7px;
 	 margin-right: 1rem;
 	 margin-left: 0.5rem;
 	 vertical-align: middle;
+	 border-right: 1px solid;
+	 border-bottom: 1px solid;
+	 transform: rotate(-45deg);
+	 transition: transform 0.2s ease-out;
    opacity: .7;
    
 }
@@ -73,7 +76,6 @@
 /* Active */
  .accordion-item.is-active .accordion-thumb::after {
 	 transform: rotate(45deg);
-   content: "-";
 }
 
 
