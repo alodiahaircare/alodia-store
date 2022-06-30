@@ -442,4 +442,18 @@ h1.product_name {
 
 .plant-pdp {
   position: absolute;
+  height: 200px
+}
+
+.plant-pdp.left-plant {
+  left: 0;
+}
+
+.plant-pdp.right-plant {
+  right: 0;
+}
+
+.plant-pdp img{
+  width: 100%;
+  object-fit: cover;
 }
