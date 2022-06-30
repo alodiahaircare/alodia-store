@@ -33,6 +33,25 @@
         "toggle": false
       }
     },
+    "1656092815729f1831": {
+      "type": "bundle",
+      "settings": {
+        "title": "Clinically proven",
+        "subtitle": "After 4 weeks of use:",
+        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "button_bundle": "Add bundle to cart",
+        "bundle": "curl-enhancing-butter-creme",
+        "product_list": [
+          "family-healthy-hair-holiday-bundle",
+          "curl-enhancing-butter-creme",
+          "flourish-hair-scalp-herbal-infusion",
+          "healthy-hair-kit",
+          "heat-style-kit"
+        ]
+      }
+    },
     "product-never-contains": {
       "type": "product-never-contains",
       "blocks": {
@@ -107,6 +126,57 @@
         "title": "Alodia's Products never Contain:"
       }
     },
+    "165609300610ca7c23": {
+      "type": "images-blocks",
+      "blocks": {
+        "9fa1fe00-a569-42ad-9372-c576c240ca56": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "description": "LOCS",
+            "link": ""
+          }
+        },
+        "9dab047f-45dd-409b-a5e9-e6de661a487f": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbfdd",
+            "image": "shopify:\/\/shop_images\/2_203e3475-402b-4593-883b-d1c2b2b679fb.jpg",
+            "description": "RELAXED",
+            "link": ""
+          }
+        },
+        "4c451ab9-0433-4817-a035-9c106527fd4e": {
+          "type": "image",
+          "settings": {
+            "color": "#78aab3",
+            "image": "shopify:\/\/shop_images\/3.jpg",
+            "description": "PROTECTIVE STYLES",
+            "link": ""
+          }
+        },
+        "71525199-7ed1-403d-9398-6ca62b296c0f": {
+          "type": "image",
+          "settings": {
+            "color": "#a3d2b4",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "description": "STRAIGHT HAIR",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "9fa1fe00-a569-42ad-9372-c576c240ca56",
+        "9dab047f-45dd-409b-a5e9-e6de661a487f",
+        "4c451ab9-0433-4817-a035-9c106527fd4e",
+        "71525199-7ed1-403d-9398-6ca62b296c0f"
+      ],
+      "settings": {
+        "title": "Our products work for all hair types",
+        "background": "#faf9f7"
+      }
+    },
     "founder-bio": {
       "type": "founder-bio",
       "blocks": {
@@ -133,6 +203,32 @@
         "title": "Alodia is so very passionate about empowering and educating women all around the globe to Learn, Love and Grow their hair",
         "description": "<p>Our founder, Dr. Isfahan Chambers-Harris is committed to educating women on holistic health approaches to textured hair care. As a Black woman, mother, Medical scientist, and Trichology practitioner, Dr. Isfahan understands first-hand the misperceptions and misinformation that exists around textured hair. Alodia Hair Care was created with the primary goal of educating and empowering women around the globe.<\/p><p>Alodia Hair Care was birthed out of Dr. Isfahan’s’ personal experiences with unnatural, toxic hair care products. Facing excessive hair damage, she turned to her expertise in biology and chemistry. Over a 3-year period filled with countless research and experimentation, she developed transformative products made with organic and natural ingredients.<\/p><p>Alodia is a clinically proven hair and scalp care line that uses virtual hair and scalp consultations and personalized regimens to help resolve chronic scalp conditions and help with hair care styling. We also provide organic plant based products that use scientifically proven ingredients to provide a healthy scalp and length retention.<\/p>",
         "image": "shopify:\/\/shop_images\/bio-isfahan.png"
+      }
+    },
+    "16560879104b95bc9e": {
+      "type": "video",
+      "settings": {
+        "aspect_ratio": "16:9",
+        "autoplay": true,
+        "autoloop": true,
+        "video_dark_overlay": false,
+        "video": "",
+        "mp4": "",
+        "ogv": "",
+        "display_text_over_video": false,
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "caption_background": false,
+        "caption_background_transparency": false,
+        "button1_label": "Play Video",
+        "button1_link": "",
+        "button1_highlight": false,
+        "button2_label": "",
+        "button2_link": "",
+        "button2_highlight": false
       }
     },
     "product-materials": {
@@ -176,6 +272,35 @@
     "nosto": {
       "type": "nosto-element",
       "settings": {
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
+      "blocks": {
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_1.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_1 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_1.value }}"
+          }
+        },
+        "7cb0840a-c44a-4a06-9728-aaf073eda742": {
+          "type": "ingredients",
+          "settings": {
+            "name": "{{ product.metafields.alodia.ingredients_ingredient_2.value }}",
+            "content": "<p>{{ product.metafields.alodia.ingredients_description_2 | metafield_tag }}<\/p>",
+            "image": "{{ product.metafields.alodia.ingredients_image_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "313ac7fc-33de-4b2d-bb38-5dada9aefd0f",
+        "7cb0840a-c44a-4a06-9728-aaf073eda742"
+      ],
+      "settings": {
+        "title": "Made with Natural Ingredients",
+        "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
     "related-products": {
@@ -249,7 +374,9 @@
       "settings": {
         "title": "Frequently Asked Questions",
         "bg": "#faf9f7",
-        "color": "#000"
+        "color": "#000000",
+        "color_question": "#000000",
+        "color_answer": "#000000"
       }
     },
     "recently-viewed": {
@@ -265,17 +392,15 @@
       "type": "reviews",
       "settings": {
       }
-    },
-    "ingredients": {
-      "type": "ingredients",
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
+    "1656092815729f1831",
     "product-never-contains",
+    "165609300610ca7c23",
     "founder-bio",
+    "16560879104b95bc9e",
     "product-materials",
     "nosto",
     "ingredients",
