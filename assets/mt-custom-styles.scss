@@ -502,6 +502,12 @@ h1.product_name {
   height: moz-fit-content;
 }
 
+@media (max-width: 798px) {
+  .ro_widget .bold-ro__radio-div {
+    width: 100%;
+  }
+}
+
 .bold-ro__product {
   display: flex;
   justify-content: space-between;
