@@ -174,13 +174,14 @@
             {% include 'product-form' with 'product' %}
           {% endunless %}
 
-          {% if section.settings.product_description_position == "bottom" %}
-            {% if product.description != blank %}
-             <div class="description bottom" itemprop="description">
-              {{ product.description | split: '<!-- split -->' | first }}
-             </div>
-            {% endif %}
-          {% endif %}
+          {% if product.description contains "<!-- split -->"  %}
+          <br class="clear" />
+          <div class="section clearfix">
+            <div class="description">
+              {{ product.description | split: '<!-- split -->' | last }}
+            </div>
+          </div>
+        {% endif %}
 
           {% if settings.enable_shopify_review_comments and settings.review_position == "next_to_gallery" %}
             <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
@@ -223,17 +224,7 @@
               {% endif %}
             </div>
           {% endif %}
-
-
         </div>
-        {% if product.description contains "<!-- split -->"  %}
-        <br class="clear" />
-        <div class="section clearfix">
-          <div class="description">
-            {{ product.description | split: '<!-- split -->' | last }}
-          </div>
-        </div>
-      {% endif %}
       </div>
 
 
