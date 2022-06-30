@@ -441,7 +441,11 @@ h1.product_name {
 .product .product_section .purchase-details__quantity.product-quantity-box{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
+}
+
+.product .product_section .purchase-details__quantity.product-quantity-box .quantity{
+  width: 50%;
 }
 
 .product .product_section .selectors-form .select{
