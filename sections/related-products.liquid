@@ -86,7 +86,7 @@
     <div class="grid__item">
         <div class="container bottom-fix">
             <div class="related-products__title {% unless section.settings.rv_products_style == 'slider' %}sixteen columns{% endunless %}">
-              <h2 class="title center">{{ section.settings.rv_title }}</h2>
+              <h2 class="title center">{{ section.settings.title }}</h2>
               <div class="feature_divider"></div>
             </div>
         </div>
@@ -107,16 +107,10 @@
   "name": "Related products",
   "settings": [
     {
-      "id": "related_title",
+      "id": "title",
       "type": "text",
       "label": "Section title",
       "default": "Other fine products"
-    },
-    {
-      "type": "checkbox",
-      "id": "border_section",
-      "label": "Border section",
-      "default": true
     },
     {
       "type": "select",
@@ -137,24 +131,6 @@
           "label": "4"
         }
       ]
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "label": "Top spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "margin_bottom",
-      "label": "Bottom spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
     }
   ]
 }
