@@ -193,13 +193,11 @@
               {% include 'product-form' with 'product' %}
               {% endunless %}
 
-              {% if product.description contains "
-              <!-- split -->" %}
+              {% if product.description contains "<!-- split -->" %}
               <br class="clear" />
               <div class="section clearfix">
                 <div class="description">
-                  {{ product.description | split: '
-                  <!-- split -->' | last }}
+                  {{ product.description | split: '<!-- split -->' | last }}
                 </div>
               </div>
               {% endif %}
