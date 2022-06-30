@@ -428,3 +428,8 @@ h1.product_name {
   justify-content: space-between;
   align-items: center;
 }
+
+.purchase-details__quantity.product-quantity-box{
+  display: flex;
+  flex-direction: column;
+}
