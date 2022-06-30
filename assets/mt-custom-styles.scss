@@ -492,3 +492,13 @@ h1.product_name {
 .ro_widget {
   width: 100%;
 }
+
+.bold-ro__radio-div {
+  width: 50%;
+}
+
+.bold-ro__product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
