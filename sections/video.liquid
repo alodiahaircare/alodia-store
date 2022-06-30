@@ -5,11 +5,12 @@
 
 {% if section.settings.video_metafield != blank or section.settings.video_url != blank
   or section.settings.mp4 != blank or section.settings.ogv != blank %}
+  <h2>holaaa</h2>
+
   <div class="container main content video-section margin-bottom-50">
     {% if section.settings.video_metafield != blank %}
     {% include 'include-video-metafields' %}
     {% else %}
-    <h2>holaaa</h2>
     {% include 'include-video' %}
     {% endif %}
   </div>
