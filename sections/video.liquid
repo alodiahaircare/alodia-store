@@ -3,9 +3,16 @@
 - Draggable section
 {% endcomment %}
 
+{% if section.settings.video_metafields != blank or section.settings.video_url != blank
+  or section.settings.mp4 != blank or section.settings.ogv != blank %}
 <div class="container main content video-section margin-bottom-50">
-  {% include 'include-video' %}
+{% if section.settings.video_metafields != blank %}
+
+{% else %}
+{% include 'include-video' %}
+{% endif %}
 </div>
+{% endif %}
 
 {% schema %}
 {
