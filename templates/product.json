@@ -304,12 +304,6 @@
         "image": "{{ product.metafields.alodia.ingredients_section_image.value }}"
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "1654606629b2de1604": {
       "type": "faq",
       "blocks": {
@@ -380,8 +374,14 @@
         "color_answer": "#000000"
       }
     },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+      }
+    },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
@@ -432,8 +432,8 @@
     "product-materials",
     "nosto",
     "ingredients",
-    "related-products",
     "1654606629b2de1604",
+    "related-products",
     "recently-viewed",
     "reviews",
     "1656564118411ef180"
