@@ -21,15 +21,6 @@
         "display_tags": false,
         "display_social_buttons": true,
         "product_description_position": "top",
-        "display_related_products": true,
-        "related_products_style": "grid",
-        "related_products_limit": 12,
-        "products_per": 3,
-        "display_recently_viewed": false,
-        "rv_title": "Recently Viewed Items",
-        "rv_products_style": "grid",
-        "rv_max_display": 4,
-        "rv_per": 4,
         "toggle": false,
         "left_plant": "shopify:\/\/shop_images\/image_21.png",
         "right_plant": "shopify:\/\/shop_images\/image_20.png"
@@ -357,14 +348,18 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
+        "display_related_products": true,
+        "related_products_style": "grid",
+        "related_products_limit": 4,
+        "products_per": 3
       }
     },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
-        "rv_title": "Other products you might like",
+        "rv_title": "Recently viewed",
         "rv_products_style": "grid",
         "rv_max_display": 4,
         "rv_per": 4
