@@ -185,6 +185,13 @@
 .related-products--grid .thumbnail:nth-child(2) .image__container { background: #CBBEDD; }
 .related-products--grid .thumbnail:nth-child(3) .image__container { background: #A3D2B4; }
 
+.related-products--grid .addtocart {
+  width: fit-content;
+  margin: auto;
+  text-transform: inherit;
+  padding: 5px 15%;
+}
+
 @media (max-width: 767px) {
   .related-products--grid .image__container{
     min-height: 200px;
@@ -197,11 +204,9 @@
   }
 }
 
-.related-products--grid .addtocart {
-  width: fit-content;
-  margin: auto;
-  text-transform: inherit;
-  padding: 5px 15%;
+.related-products--grid .title{
+  font-size: 14px;
+  min-height: 50px;
 }
 
 .related-products--grid .product-list .thumbnail .product-info__caption{
