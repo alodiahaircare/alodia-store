@@ -357,6 +357,7 @@
     },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
         "rv_title": "Recently viewed",
         "rv_products_style": "grid",
