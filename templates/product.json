@@ -217,7 +217,7 @@
         "mp4": "",
         "ogv": "",
         "display_text_over_video": false,
-        "pretext": "",
+        "pretext": "<p>video<\/p>",
         "title": "",
         "subtitle": "",
         "text_position": "center",
