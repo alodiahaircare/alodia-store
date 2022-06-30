@@ -3,15 +3,9 @@
 - Draggable section
 {% endcomment %}
 
-{% if section.settings.video_metafield != blank or section.settings.video != blank
-  or section.settings.mp4 != blank or section.settings.ogv != blank %}
-
+{% if section.settings.video != blank or section.settings.mp4 != blank or section.settings.ogv != blank %}
   <div class="container main content video-section margin-bottom-50">
-    {% if section.settings.video_metafield != blank %}
-    {% include 'include-video-metafields' %}
-    {% else %}
     {% include 'include-video' %}
-    {% endif %}
   </div>
 {% endif %}
 
@@ -52,11 +46,6 @@
       "type": "checkbox",
       "id": "video_dark_overlay",
       "label": "Darken video"
-    },
-    {
-      "type": "url",
-      "id": "video_metafield",
-      "label": "Video metafield"
     },
     {
       "type": "video_url",
