@@ -445,11 +445,11 @@ h1.product_name {
 }
 
 .product .product_section .purchase-details__quantity.product-quantity-box .quantity{
-  width: calc(50% - 20px);
+  width: 50%;
 }
 
 .product .product_section .selectors-form .select{
-  width: 50%;
+  width: calc(50% - 20px);
 }
 
 .plant-pdp {
