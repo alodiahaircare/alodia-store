@@ -46,8 +46,12 @@
 	 padding: 0.8rem 0;
 	 cursor: pointer;
 	 font-weight: normal;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: black;
 }
- .accordion-thumb::before {
+ .accordion-thumb::after {
 	 content: '';
 	 display: inline-block;
 	 height: 7px;
