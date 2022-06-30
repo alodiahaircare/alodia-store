@@ -444,6 +444,12 @@ h1.product_name {
   width: calc(50% - 20px);
 }
 
+@media (max-width: 798px) {
+  .product .product_section .selectors-form .select{
+    width: 100%;
+  }
+}
+
 .product .product_section .purchase-details__quantity.product-quantity-box .quantity{
   width: 50%;
 }
