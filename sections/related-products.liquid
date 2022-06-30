@@ -55,13 +55,13 @@
   <div class="grid grid--uniform{% if collection.products_count > 0 %} container{% endif %}
   is-flex is-align-center text-align-center is-justify-space-between is-flex-wrap">
 
-  {% for product in collection.products %}
-  {% unless product.handle == current_product.handle %}
-  {% unless same_vendor and current_product.vendor != product.vendor %}
-  {% unless same_type and current_product.type != product.type %}
+  {% for product_related in collection.products %}
+  {% unless product_related.handle == current_product.handle %}
+  {% unless same_vendor and current_product.vendor != product_related.vendor %}
+  {% unless same_type and current_product.type != product_related.type %}
   <div class="grid__item {{ grid_item_width }}">
     {% render 'product-thumbnail',
-    product: product
+    product: product_related
 %}
   </div>
   {% assign counter = counter | plus: 1 %}
