@@ -508,7 +508,8 @@ h1.product_name {
   flex-wrap: wrap;
 }
 
-.bold-ro__frequency-div select.bold-ro__frequency-num {
+.bold-ro__frequency-div select.bold-ro__frequency-num,
+.bold-ro__frequency-div select.bold-ro__frequency-type.bold-ro__order-interval {
   width: 100%;
   margin-left: 0;
 }
