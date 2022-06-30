@@ -30,7 +30,9 @@
         "rv_products_style": "grid",
         "rv_max_display": 4,
         "rv_per": 4,
-        "toggle": false
+        "toggle": false,
+        "left_plant": "shopify:\/\/shop_images\/image_21.png",
+        "right_plant": "shopify:\/\/shop_images\/image_20.png"
       }
     },
     "1656092815729f1831": {
