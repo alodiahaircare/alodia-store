@@ -226,9 +226,7 @@
 
 
         </div>
-      </div>
-
-      {% if product.description contains "<!-- split -->"  %}
+        {% if product.description contains "<!-- split -->"  %}
         <br class="clear" />
         <div class="section clearfix">
           <div class="description">
@@ -236,6 +234,9 @@
           </div>
         </div>
       {% endif %}
+      </div>
+
+
       {% include 'nosto-element' with 'productpage-nosto-1' %}
       <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
       
