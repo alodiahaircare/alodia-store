@@ -170,6 +170,11 @@
         "background": "#faf9f7"
       }
     },
+    "bazaarvoice": {
+      "type": "bazaarvoice-product",
+      "settings": {
+      }
+    },
     "ingredients": {
       "type": "ingredients",
       "blocks": {
@@ -369,11 +374,6 @@
       "type": "reviews",
       "settings": {
       }
-    },
-    "bazaarvoice": {
-      "type": "bazaarvoice-product",
-      "settings": {
-      }
     }
   },
   "order": [
@@ -381,6 +381,7 @@
     "1656092815729f1831",
     "product-never-contains",
     "165609300610ca7c23",
+    "bazaarvoice",
     "ingredients",
     "founder-bio",
     "16566204600b659e23",
@@ -389,7 +390,6 @@
     "1654606629b2de1604",
     "related-products",
     "recently-viewed",
-    "bazaarvoice",
     "reviews"
   ]
 }
