@@ -472,7 +472,7 @@ h1.product_name {
 }
 
 @media (max-width: 1399px) {
-  .plant-pdp.right-plant {
-    display: none;
+  .plant-pdp {
+    height: 20vh;
   }
 }
