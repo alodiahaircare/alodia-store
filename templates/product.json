@@ -385,7 +385,7 @@
       "settings": {
         "rv_title": "Recently viewed products",
         "rv_products_style": "grid",
-        "rv_max_display": 6,
+        "rv_max_display": 4,
         "rv_per": 4
       }
     },
