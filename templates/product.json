@@ -174,7 +174,7 @@
     "bazaarvoice": {
       "type": "bazaarvoice-product",
       "settings": {
-        "title": "Follow us!",
+        "title": "Follow us! <a href=\"https:\/\/instagram.com\/alodiahaircare\">@alodiahaircare<\/a>",
         "bg": "#b7dcc4"
       }
     },
