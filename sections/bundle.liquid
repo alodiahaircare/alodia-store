@@ -4,7 +4,7 @@
 
 {% for product_link in section.settings.product_list %}
   {% assign qty = qty | plus: 1 %}
-  {% if product_list.url == product.url %}
+  {% if product_link.url == product.url %}
       {% assign show = true %}
   {% endif %}
 {% endfor %}
