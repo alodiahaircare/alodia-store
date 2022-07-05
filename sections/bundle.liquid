@@ -1,8 +1,16 @@
 {% if section.settings.product_list != blank and section.settings.bundle != blank %}
 {% assign qty = 0 %}
-{% for product in section.settings.product_list %}
+{% assign show = false %}
+
+{% for product_link in section.settings.product_list %}
   {% assign qty = qty | plus: 1 %}
+  {% if product_list.url == product.url %}
+      {% assign show = true %}
+  {% endif %}
 {% endfor %}
+
+
+{% if show %}
 <div class="container main content padding-50">
   {% if section.settings.title != blank %}
   <h4 class="title center">{{  section.settings.title }}</h4>
@@ -63,7 +71,7 @@
 
   </div>
 </div>
-  
+{% endif %}
 {% endif %}
 
   
