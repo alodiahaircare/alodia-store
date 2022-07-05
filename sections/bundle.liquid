@@ -1,6 +1,10 @@
 {% if section.settings.product_list != blank and section.settings.bundle != blank %}
 {% assign qty = 0 %}
-{% assign show = false %}
+{% if section.settings.show_only %}
+  {% assign show = false %}
+{% else %}
+  {% assign show = true %}
+{% endif %}
 
 {% for product_link in section.settings.product_list %}
   {% assign qty = qty | plus: 1 %}
@@ -128,6 +132,12 @@
           "id": "product_list",
           "label": "Products",
           "limit": 5
+      },
+      {
+        "type": "checkbox",
+        "id": "show_only",
+        "label": "Show only on bundle products",
+        "default": false
       }
     ],
     "presets": [
