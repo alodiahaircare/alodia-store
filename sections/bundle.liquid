@@ -1,6 +1,6 @@
 {% if section.settings.product_list != blank and section.settings.bundle != blank %}
 {% assign qty = 0 %}
-{% assign show = false %}
+{% assign show = true %}
 
 {% for product_link in section.settings.product_list %}
   {% assign qty = qty | plus: 1 %}
