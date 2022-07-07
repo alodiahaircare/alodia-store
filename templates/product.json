@@ -42,7 +42,8 @@
           "flourish-hair-scalp-herbal-infusion",
           "healthy-hair-kit",
           "heat-style-kit"
-        ]
+        ],
+        "show_only": true
       }
     },
     "product-never-contains": {
@@ -173,8 +174,8 @@
     "bazaarvoice": {
       "type": "bazaarvoice-product",
       "settings": {
-        "title": "Follow us!",
-        "bg": "#B7DCC4"
+        "title": "Follow us!<br><a href=\"https:\/\/instagram.com\/alodiahaircare\" target=\"_blank\">@alodiahaircare<\/a>",
+        "bg": "#b7dcc4"
       }
     },
     "ingredients": {
@@ -371,6 +372,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
+        "bg": "#faf9f7",
         "display_related_products": true,
         "related_products_style": "grid",
         "related_products_limit": 4,
