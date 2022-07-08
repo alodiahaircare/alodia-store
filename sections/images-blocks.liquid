@@ -38,22 +38,24 @@
   </div>
 
 <script>
-  var options = {
-    wrapAround: false,
-    draggable: true,
-    freeScroll: false,
-    prevNextButtons: true,
-    groupCells: '100%',
-    pageDots: false,
-    cellAlign: 'left'
-  };
-
-  if ( matchMedia('screen and (max-width: 749px)').matches ) {
-    options.prevNextButtons = false;
-    options.groupCells = '100%';
-  }
-
-  $('#image-grid').flickity( options );
+$( document ).ready(function() {
+    var options = {
+      wrapAround: false,
+      draggable: true,
+      freeScroll: false,
+      prevNextButtons: true,
+      groupCells: '100%',
+      pageDots: false,
+      cellAlign: 'left'
+    };
+  
+    if ( matchMedia('screen and (max-width: 749px)').matches ) {
+      options.prevNextButtons = false;
+      options.groupCells = '100%';
+    }
+  
+    $('#image-grid').flickity( options );
+});
 </script>
   
   
