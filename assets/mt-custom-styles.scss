@@ -300,7 +300,6 @@
 @media (max-width: 798px) {
   .image-box{
     width: 100%;
-    padding: 35px 30px;
     margin: 0;
   }
 }
@@ -308,8 +307,7 @@
 @media (min-width: 798px) and (max-width: 1024px){
   .image-box{
     width: calc(50% - 20px);
-    margin-right: 0;
-    padding: 20px;
+    margin-right: 20px;
   }
 }
 
