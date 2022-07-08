@@ -279,6 +279,7 @@
   width: calc(25% - 20px);
   padding: 35px 30px;
   margin-right: 20px;
+  height: inherit;
 }
 
 .text-box {
@@ -295,6 +296,7 @@
 .image-text-content-box{
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 @media (max-width: 798px) {
@@ -314,6 +316,7 @@
 .image-box img{
   max-width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 
 /*Slide Nav */
