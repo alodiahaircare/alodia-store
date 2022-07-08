@@ -158,13 +158,23 @@
             "description": "STRAIGHT HAIR",
             "link": "shopify:\/\/collections\/straight-hair"
           }
+        },
+        "eebb5c3a-0e31-467a-a177-014d263d7f8e": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "description": "Locs",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "9fa1fe00-a569-42ad-9372-c576c240ca56",
         "9dab047f-45dd-409b-a5e9-e6de661a487f",
         "4c451ab9-0433-4817-a035-9c106527fd4e",
-        "71525199-7ed1-403d-9398-6ca62b296c0f"
+        "71525199-7ed1-403d-9398-6ca62b296c0f",
+        "eebb5c3a-0e31-467a-a177-014d263d7f8e"
       ],
       "settings": {
         "title": "Our products work for all hair types",
