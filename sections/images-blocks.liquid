@@ -4,7 +4,7 @@
     {% endif %}
     {% if section.blocks.size > 0 %}
     <div class="sixteen columns">
-      <div class="image-grid">
+      <div class="image-grid" id="image-grid">
         {% for block in section.blocks %}  
           {% if block.settings.image != blank or block.settings.description != blank %}
             
@@ -37,6 +37,37 @@
     {% endif %}
   </div>
   
+
+
+<script>
+  (function(){
+    window.addEventListener('DOMContentLoaded', () => {
+
+      //Desktop
+        var flkty1 = new Flickity( '#image-grid', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: true,
+          groupCells: '100%',
+          pageDots: false,
+          cellAlign: 'left'
+        });
+
+
+      //Mobile
+        var flkty1 = new Flickity( '#image-grid', {
+          wrapAround: false,
+          draggable: true,
+          freeScroll: false,
+          prevNextButtons: false,
+          pageDots: false,
+          groupCells: '100%',
+          cellAlign: 'left'
+        });
+    });
+  }());
+</script>
   
   
   {% schema %}
