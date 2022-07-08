@@ -275,6 +275,14 @@
 //   flex-wrap: wrap;
 // }
 
+.image-grid{
+  display: none;
+}
+
+.image-grid.flickity-enabled {
+  display: block;
+}
+
 .image-box{
   width: calc(25% - 20px);
   padding: 35px 30px;
@@ -316,6 +324,7 @@
 .image-box img{
   max-width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 
 /*Slide Nav */
