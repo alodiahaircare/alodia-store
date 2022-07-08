@@ -158,13 +158,73 @@
             "description": "STRAIGHT HAIR",
             "link": "shopify:\/\/collections\/straight-hair"
           }
+        },
+        "7a75aa61-de39-47c1-9668-7c157a2ad337": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/Transitioning_2x_f11178eb-713d-4e50-8bb1-5331698c3ca4.webp",
+            "description": "TRANSITIONING",
+            "link": "shopify:\/\/collections\/transitioning-hair"
+          }
+        },
+        "df511c33-fa48-4d46-a5a1-7a4deb10f7b4": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbedd",
+            "image": "shopify:\/\/shop_images\/Type_2_2x_8c1fdef5-8d54-403f-bace-2361686de7c3.webp",
+            "description": "TYPE 2",
+            "link": "shopify:\/\/collections\/type-2-wavy-hair"
+          }
+        },
+        "00a07319-e651-4296-bd2a-3a02a4584115": {
+          "type": "image",
+          "settings": {
+            "color": "#78aab3",
+            "image": "shopify:\/\/shop_images\/Type_3_2x_fc3bce04-859c-4f86-a401-0381392185f7.webp",
+            "description": "TYPE 3",
+            "link": "shopify:\/\/collections\/type-3-wavy-to-curly-hair"
+          }
+        },
+        "163e86fb-db69-447b-9647-1a58e19af1df": {
+          "type": "image",
+          "settings": {
+            "color": "#a3d2b4",
+            "image": "shopify:\/\/shop_images\/Type_4_2x_14845313-2917-4fda-948f-176493ecc8f8.webp",
+            "description": "TYPE 4",
+            "link": "shopify:\/\/collections\/type-4-curly-to-coily-hair"
+          }
+        },
+        "3b5c7444-e8bd-43c3-bc37-96500029bd92": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/Kids_2x_b395b009-9373-46f6-a758-bcd5ed2b35fa.webp",
+            "description": "KIDS",
+            "link": "shopify:\/\/collections\/children"
+          }
+        },
+        "3e61959d-fe8d-47af-b77b-cb07b88b5784": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbedd",
+            "image": "shopify:\/\/shop_images\/Mens_2x_c9ca9ea6-7e16-4df2-a0ce-bee1d4ab7723.webp",
+            "description": "MEN",
+            "link": "shopify:\/\/collections\/men"
+          }
         }
       },
       "block_order": [
         "9fa1fe00-a569-42ad-9372-c576c240ca56",
         "9dab047f-45dd-409b-a5e9-e6de661a487f",
         "4c451ab9-0433-4817-a035-9c106527fd4e",
-        "71525199-7ed1-403d-9398-6ca62b296c0f"
+        "71525199-7ed1-403d-9398-6ca62b296c0f",
+        "7a75aa61-de39-47c1-9668-7c157a2ad337",
+        "df511c33-fa48-4d46-a5a1-7a4deb10f7b4",
+        "00a07319-e651-4296-bd2a-3a02a4584115",
+        "163e86fb-db69-447b-9647-1a58e19af1df",
+        "3b5c7444-e8bd-43c3-bc37-96500029bd92",
+        "3e61959d-fe8d-47af-b77b-cb07b88b5784"
       ],
       "settings": {
         "title": "Our products work for all hair types",
