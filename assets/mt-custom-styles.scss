@@ -316,6 +316,24 @@
   object-fit: cover;
 }
 
+/*Slide Nav */
+.image-grid .flickity-prev-next-button {
+  opacity: 1;
+  background: #222222;
+}
+.image-grid .flickity-prev-next-button svg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%; height: 95%;
+}
+.image-grid .flickity-prev-next-button:disabled {
+  opacity: .3;
+}
+.image-grid .flickity-prev-next-button .arrow { 
+  fill: #fff
+}
+
 /* Bundle section */
 
 .product-bundle-section {
