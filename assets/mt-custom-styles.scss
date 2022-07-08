@@ -269,15 +269,25 @@
 }
 /* Image blocks */
 
-.image-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+// .image-grid {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
+
+.image-grid{
+  display: none;
+}
+
+.image-grid.flickity-enabled {
+  display: block;
 }
 
 .image-box{
-  width: 24%;
+  width: calc(25% - 20px);
   padding: 35px 30px;
+  margin-right: 20px;
+  height: 400px;
 }
 
 .text-box {
@@ -293,27 +303,46 @@
 
 .image-text-content-box{
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 @media (max-width: 798px) {
   .image-box{
-    width:48%;
-    margin-bottom: 20px;
-    padding: 15px 10px;
+    width: 100%;
+    margin: 0;
   }
 }
 
-@media (min-width: 798px) and (max-width: 1024){
+@media (min-width: 798px) and (max-width: 1024px){
   .image-box{
-    padding: 20px;
+    width: calc(50% - 20px);
+    margin-right: 20px;
   }
 }
 
 .image-box img{
   max-width: 100%;
-  height: 100%;
   object-fit: cover;
+  height: 100%;
+}
+
+/*Slide Nav */
+.image-grid .flickity-prev-next-button {
+  opacity: 1;
+  background: #222222;
+}
+.image-grid .flickity-prev-next-button svg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%; height: 95%;
+}
+.image-grid .flickity-prev-next-button:disabled {
+  opacity: .3;
+}
+.image-grid .flickity-prev-next-button .arrow { 
+  fill: #fff
 }
 
 /* Bundle section */
@@ -352,6 +381,7 @@
 .product .bundle-subtitle{
   color: #0E1511;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .bundle-buy {

@@ -31,18 +31,18 @@
       "settings": {
         "title": "Clinically proven",
         "subtitle": "After 4 weeks of use:",
-        "content": "<p>97% reported thicker hair 81% had reduced flaking, dryness and irritation 100% reported less breakage and overall a healthy scalp and hair Products used in study: Organic Black Soap Wash, Butter Creme, Flourish OIl, Deep Conidtioning masque ( these are all clinically proven and tested)<\/p>",
+        "content": "<p>- 97% reported thicker hair<br\/>- 81% had reduced flaking, dryness and irritation<br\/>- 100% reported less breakage and overall a healthy scalp and hair<br\/><br\/><strong>All products used in study are all clinically proven and tested<\/strong><\/p>",
         "background": "#faf9f7",
         "title_bundle": "Shop Bundle",
         "button_bundle": "Add bundle to cart",
         "bundle": "curl-enhancing-butter-creme",
         "product_list": [
-          "family-healthy-hair-holiday-bundle",
+          "black-soap-wash",
           "curl-enhancing-butter-creme",
           "flourish-hair-scalp-herbal-infusion",
-          "healthy-hair-kit",
-          "heat-style-kit"
-        ]
+          "deep-conditioning-treatment"
+        ],
+        "show_only": true
       }
     },
     "product-never-contains": {
@@ -157,13 +157,73 @@
             "description": "STRAIGHT HAIR",
             "link": "shopify:\/\/collections\/straight-hair"
           }
+        },
+        "7a75aa61-de39-47c1-9668-7c157a2ad337": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/Transitioning_2x_f11178eb-713d-4e50-8bb1-5331698c3ca4.webp",
+            "description": "TRANSITIONING",
+            "link": "shopify:\/\/collections\/transitioning-hair"
+          }
+        },
+        "df511c33-fa48-4d46-a5a1-7a4deb10f7b4": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbedd",
+            "image": "shopify:\/\/shop_images\/Type_2_2x_8c1fdef5-8d54-403f-bace-2361686de7c3.webp",
+            "description": "TYPE 2",
+            "link": "shopify:\/\/collections\/type-2-wavy-hair"
+          }
+        },
+        "00a07319-e651-4296-bd2a-3a02a4584115": {
+          "type": "image",
+          "settings": {
+            "color": "#78aab3",
+            "image": "shopify:\/\/shop_images\/Type_3_2x_fc3bce04-859c-4f86-a401-0381392185f7.webp",
+            "description": "TYPE 3",
+            "link": "shopify:\/\/collections\/type-3-wavy-to-curly-hair"
+          }
+        },
+        "163e86fb-db69-447b-9647-1a58e19af1df": {
+          "type": "image",
+          "settings": {
+            "color": "#a3d2b4",
+            "image": "shopify:\/\/shop_images\/Type_4_2x_14845313-2917-4fda-948f-176493ecc8f8.webp",
+            "description": "TYPE 4",
+            "link": "shopify:\/\/collections\/type-4-curly-to-coily-hair"
+          }
+        },
+        "3b5c7444-e8bd-43c3-bc37-96500029bd92": {
+          "type": "image",
+          "settings": {
+            "color": "#e6d0b3",
+            "image": "shopify:\/\/shop_images\/Kids_2x_b395b009-9373-46f6-a758-bcd5ed2b35fa.webp",
+            "description": "KIDS",
+            "link": "shopify:\/\/collections\/children"
+          }
+        },
+        "3e61959d-fe8d-47af-b77b-cb07b88b5784": {
+          "type": "image",
+          "settings": {
+            "color": "#cbbedd",
+            "image": "shopify:\/\/shop_images\/Mens_2x_c9ca9ea6-7e16-4df2-a0ce-bee1d4ab7723.webp",
+            "description": "MEN",
+            "link": "shopify:\/\/collections\/men"
+          }
         }
       },
       "block_order": [
         "9fa1fe00-a569-42ad-9372-c576c240ca56",
         "9dab047f-45dd-409b-a5e9-e6de661a487f",
         "4c451ab9-0433-4817-a035-9c106527fd4e",
-        "71525199-7ed1-403d-9398-6ca62b296c0f"
+        "71525199-7ed1-403d-9398-6ca62b296c0f",
+        "7a75aa61-de39-47c1-9668-7c157a2ad337",
+        "df511c33-fa48-4d46-a5a1-7a4deb10f7b4",
+        "00a07319-e651-4296-bd2a-3a02a4584115",
+        "163e86fb-db69-447b-9647-1a58e19af1df",
+        "3b5c7444-e8bd-43c3-bc37-96500029bd92",
+        "3e61959d-fe8d-47af-b77b-cb07b88b5784"
       ],
       "settings": {
         "title": "Our products work for all hair types",
@@ -173,7 +233,7 @@
     "bazaarvoice": {
       "type": "bazaarvoice-product",
       "settings": {
-        "title": "Follow us!@alodiahaircare",
+        "title": "Follow us!<br><a href=\"https:\/\/instagram.com\/alodiahaircare\" target=\"_blank\">@alodiahaircare<\/a>",
         "bg": "#b7dcc4"
       }
     },
@@ -289,22 +349,29 @@
         "20b5cb4f-5de0-4a98-8099-05da71e464eb": {
           "type": "Content",
           "settings": {
-            "title": "FAQ for all products",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
             "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
           }
         },
         "8a016c50-9fac-4597-ade0-bccc75dede90": {
           "type": "Content",
           "settings": {
-            "title": "FAQ for all products",
+            "title": "Consectetur adipiscing elit, sed do eiusmod",
             "subtitle": "<p>Suspendisse feugiat. Fusce  commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
           }
         },
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5": {
           "type": "Content",
           "settings": {
-            "title": "FAQ for all products",
+            "title": "Dolore magna aliqua. Ut enim ad minim veniam",
             "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+          }
+        },
+        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9": {
+          "type": "Content",
+          "settings": {
+            "title": "Title",
+            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Suspendisse feugiat. Fusce commoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoddo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
           }
         },
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62": {
@@ -333,6 +400,7 @@
         "20b5cb4f-5de0-4a98-8099-05da71e464eb",
         "8a016c50-9fac-4597-ade0-bccc75dede90",
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5",
+        "65dc9529-e43d-486a-a9b0-7ccb3d2929d9",
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62",
         "4f5e670f-7619-4d48-a384-c608443957db",
         "f75dab6b-c607-44ab-9628-e57bf803a510"
