@@ -17,9 +17,9 @@
             {% if block.settings.title != blank %}
               <dt><button type="button" aria-controls="panel-01" class="faq-section-button"
                 aria-expanded="true" style="color: {{ section.settings.color_question }}">{{ block.settings.title }}</button></dt>
-              <div id="panel-01" aria-hidden="false" style="color: {{ section.settings.color_answer }}">
+              <dd id="panel-01" aria-hidden="false" style="color: {{ section.settings.color_answer }}">
                 {{ block.settings.subtitle }}
-              </div>
+              </dd>
             {% endif %}
           {% endfor %}
         </dl>
@@ -91,10 +91,9 @@
           "default": "Title"
         },
         {
-          "type": "richtext",
+          "type": "textarea",
           "id": "subtitle",
-          "label": "Answer",
-          "default": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>"
+          "label": "Answer"
         }
       ]
     }
