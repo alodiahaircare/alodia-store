@@ -349,29 +349,92 @@
         "20b5cb4f-5de0-4a98-8099-05da71e464eb": {
           "type": "Content",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+            "title": "What are Alodia products made of are they natural ingredients?",
+            "subtitle": "<p>All product ingredients are listed on each and every product page.<\/p>"
           }
         },
         "8a016c50-9fac-4597-ade0-bccc75dede90": {
           "type": "Content",
           "settings": {
-            "title": "Consectetur adipiscing elit, sed do eiusmod",
-            "subtitle": "<p>Suspendisse feugiat. Fusce  commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+            "title": "Which product will make my hair grow?",
+            "subtitle": "<p>All of our products nourish the scalp and moisturize and strengthen the strands providing the perfect environment for length retention.<\/p>"
           }
         },
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5": {
           "type": "Content",
           "settings": {
-            "title": "Dolore magna aliqua. Ut enim ad minim veniam",
-            "subtitle": "<p>Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Suspendisse feugiat. Fusce commodo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+            "title": "Are your products good for alopecia?",
+            "subtitle": "<p>Please visit a dermatologist or your doctor to understand the type of alopecia you have. This is extremely important so that we have a better understanding of the treatments that can work for you. Alopecia is in general hair loss but there are over 10 different types of hair loss and even more subtypes. With alopecia,  visiting your doctor, diet and  consistently using a healthy Alodia routine all play a part so you will need to focus on  both things to get your hair and scalp health on track. <\/p>"
           }
         },
         "65dc9529-e43d-486a-a9b0-7ccb3d2929d9": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Suspendisse feugiat. Fusce commoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoddo aliquam arcu. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.<\/p>"
+            "title": "Do your products help with psoriasis, eczema, dandruff and overall scalp dermatitis?",
+            "subtitle": "<p>Yes, our Organic Black Soap Wash and Deep Conditioning masque when used on a weekly basis is clinically proven to reduce dryness and irritation of the scalp by 87% after 4 weeks of use. Keep in mind that with dermatitis, diet and hair care practices all play a part so you will need to focus on  both things to get your hair and scalp health on track.<\/p>"
+          }
+        },
+        "b73e7505-2891-4498-9bc1-1e0f498699a1": {
+          "type": "Content",
+          "settings": {
+            "title": "Do your oils cause build up?",
+            "subtitle": "<p>We were  very intentional  about the oils we used when creating our products and they cause no build up  and are light weight.<\/p>"
+          }
+        },
+        "5d41f4bb-b01f-40e8-989c-625d3ce68ba1": {
+          "type": "Content",
+          "settings": {
+            "title": "Do these products work for children?",
+            "subtitle": "<p>Yes our products work for children as long as they can properly close their eyes during the shampoo process.<\/p>"
+          }
+        },
+        "5e990e06-d194-4798-afdf-3e46c795aa9b": {
+          "type": "Content",
+          "settings": {
+            "title": "Do your products only work for natural hair?",
+            "subtitle": "<p>No our products work for all hair types. On each product page you will see our recommendations for which products work best on which hair type.<\/p>"
+          }
+        },
+        "d8087ef0-5415-4516-a5c8-499efc1bc3b4": {
+          "type": "Content",
+          "settings": {
+            "title": "Do you offer in-person consultations if I live in your MD area?",
+            "subtitle": "<p>We currently do not offer in person consultations.<\/p>"
+          }
+        },
+        "31011447-f555-4aee-a772-c9d3961344bf": {
+          "type": "Content",
+          "settings": {
+            "title": "Do these products work on Sisterlocks? What is recommended?",
+            "subtitle": "<p>Yes they do! We recommend the Organic Black Soap Wash and Nourish and Grow Oil.<\/p>"
+          }
+        },
+        "0cbc24db-2ddd-4479-915e-20fdf6ed6f32": {
+          "type": "Content",
+          "settings": {
+            "title": "Oils seem to irritate my dermatitis. Can I use yours?",
+            "subtitle": "<p>If you find that your scalp is sensitive to oils and that they cause irritation, we do not recommend using our oils on your scalp (You can use on your strands but not directly on your scalp).<\/p>"
+          }
+        },
+        "24c35e4c-0c42-4ddb-bf89-a79f1ee88035": {
+          "type": "Content",
+          "settings": {
+            "title": "If I have a question how can I contact Alodia?",
+            "subtitle": "<p>You can contact us via our customer service email: &lt;a href=\"mailto:hello@alodiahaircare.com\"&gt;hello@alodiahaircare.com&lt;\/a&gt;.<\/p>"
+          }
+        },
+        "a7913c82-9adb-40db-a19f-d760ed590390": {
+          "type": "Content",
+          "settings": {
+            "title": "What retail stores carry your products?",
+            "subtitle": "<p>We are sold in select Target stores nationwide (find the nearest location here) and Amazon.<\/p>"
+          }
+        },
+        "76f4f261-38bb-4683-a690-101f4574d3f9": {
+          "type": "Content",
+          "settings": {
+            "title": "How can I become a retailer of Alodia:",
+            "subtitle": "<p>Email us at: &lt;a href=\"mailto:hello@alodiahaircare.com\"&gt;hello@alodiahaircare.com&lt;\/a&gt;.<\/p>"
           }
         },
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62": {
@@ -401,6 +464,15 @@
         "8a016c50-9fac-4597-ade0-bccc75dede90",
         "af2efd9b-8a54-4a4d-adba-b0e2cbe0f9e5",
         "65dc9529-e43d-486a-a9b0-7ccb3d2929d9",
+        "b73e7505-2891-4498-9bc1-1e0f498699a1",
+        "5d41f4bb-b01f-40e8-989c-625d3ce68ba1",
+        "5e990e06-d194-4798-afdf-3e46c795aa9b",
+        "d8087ef0-5415-4516-a5c8-499efc1bc3b4",
+        "31011447-f555-4aee-a772-c9d3961344bf",
+        "0cbc24db-2ddd-4479-915e-20fdf6ed6f32",
+        "24c35e4c-0c42-4ddb-bf89-a79f1ee88035",
+        "a7913c82-9adb-40db-a19f-d760ed590390",
+        "76f4f261-38bb-4683-a690-101f4574d3f9",
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62",
         "4f5e670f-7619-4d48-a384-c608443957db",
         "f75dab6b-c607-44ab-9628-e57bf803a510"
