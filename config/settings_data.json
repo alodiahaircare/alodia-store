@@ -733,7 +733,7 @@
     "mega_text_font_size": 14,
     "mega_text_letter_spacing": 0,
     "headline_font": "Google_Montserrat",
-    "headline_weight": "normal",
+    "headline_weight": "lighter",
     "headline_font_style": "none",
     "headline_font_text": "normal",
     "headline_font_size": 32,
@@ -1564,7 +1564,7 @@
       "newsletter": {
         "type": "newsletter",
         "settings": {
-          "newsletter_title": "Join our VIP list",
+          "newsletter_title": "JOIN OUR VIP LIST",
           "newsletter_text": "<p>Sign up to receive updates on discounts, special offers, new product releases, and much more!<\/p>",
           "display_first_name": true,
           "display_last_name": true,
@@ -2000,9 +2000,9 @@
         ],
         "settings": {
           "hero-type": "banner",
-          "url": "shopify:\/\/products\/scalp-therapy-kit",
-          "banner-image": "shopify:\/\/shop_images\/030522_ALODIA_GRAPHIC_WEB.jpg",
-          "banner-image-mobile": "shopify:\/\/shop_images\/030522_ALODIA_GRAPHIC_IG_STORY.jpg",
+          "url": "shopify:\/\/products\/flourish-hair-scalp-herbal-infusion",
+          "banner-image": "shopify:\/\/shop_images\/040121_ALODIA_BACK_IN_STOCK_WEB_BAN.jpg",
+          "banner-image-mobile": "shopify:\/\/shop_images\/040121_ALODIA_BACK_IN_STOCK_WEB_BAN.jpg",
           "split-view-image": "shopify:\/\/shop_images\/3A0A5882_SCALPTHERAPY_copy_c02d2985-f34e-45d5-9ae6-36bdb206da11.jpg",
           "split-view-mobile-image": "shopify:\/\/shop_images\/3A0A5882_SCALPTHERAPY_copy_c02d2985-f34e-45d5-9ae6-36bdb206da11.jpg",
           "title": "Give the Gift of Healthy Hair + Scalp",
@@ -2326,6 +2326,14 @@
       "1591281415368",
       "1591281495255",
       "1591281596842"
-    ]
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }
