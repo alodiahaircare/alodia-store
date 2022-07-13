@@ -420,7 +420,7 @@
           "type": "Content",
           "settings": {
             "title": "If I have a question how can I contact Alodia?",
-            "subtitle": "<p>You can contact us via our customer service email: &lt;a href=\"mailto:hello@alodiahaircare.com\"&gt;hello@alodiahaircare.com&lt;\/a&gt;.<\/p>"
+            "subtitle": "<p>You can contact us via our customer service email: <a href=\"mailto:hello@alodiahaircare.com\" title=\"mailto:hello@alodiahaircare.com\">hello@alodiahaircare.com<\/a>.<\/p>"
           }
         },
         "a7913c82-9adb-40db-a19f-d760ed590390": {
@@ -434,7 +434,7 @@
           "type": "Content",
           "settings": {
             "title": "How can I become a retailer of Alodia:",
-            "subtitle": "<p>Email us at: &lt;a href=\"mailto:hello@alodiahaircare.com\"&gt;hello@alodiahaircare.com&lt;\/a&gt;.<\/p>"
+            "subtitle": "<p>Email us at: <a href=\"mailto:hello@alodiahaircare.com\" title=\"mailto:hello@alodiahaircare.com\">hello@alodiahaircare.com<\/a>.<\/p>"
           }
         },
         "ed37f264-ab0b-4aa5-aaeb-1762234dfb62": {
