@@ -18,6 +18,8 @@ This file can be re-written at any time.
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="VEd_8tOw_aBJCfj-lE5iOhRIYPpor9gcAExhyaCRBxM" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{ 'jquery.accordion.js' | asset_url | script_tag }}
 
     <!-- Custom Fonts -->
     {% if settings.logo_font contains 'Google' or settings.headline_font contains 'Google' or settings.nav_font contains 'Google' or settings.slideshow_subtitle_font contains 'Google' or settings.slideshow_headline_font contains 'Google' or settings.regular_font contains 'Google' %}
@@ -190,6 +192,7 @@ var CRL8_SITENAME = 'alodia-2wav5t'; !function(){var e=window.crl8=window.crl8||
       }
     </style>
   </noscript>
+
 
   
 <body class="{{ template | replace: '.', '-' | handle }}"
