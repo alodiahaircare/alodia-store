@@ -308,24 +308,24 @@
           "type": "materials",
           "settings": {
             "svg": "<svg width=\"42\" height=\"42\" viewbox=\"0 0 42 42\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M29.695 14.9131L16.6515 27.087L12.3037 22.7392\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21 41C32.0457 41 41 32.0457 41 21C41 9.9543 32.0457 1 21 1C9.9543 1 1 9.9543 1 21C1 32.0457 9.9543 41 21 41Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-            "title": "Lorem ipsum",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+            "title": "Packaging",
+            "description": "<p>All of our packaging is made from 100% recyclable plastic or glass<\/p>"
           }
         },
         "dfe60752-15fe-4bed-8fe6-bd19ce8cfdc6": {
           "type": "materials",
           "settings": {
-            "svg": "<svg width=\"46\" height=\"44\" viewbox=\"0 0 46 44\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5445 11.2984L38.4302 9.09302L32.5445 6.88363L30.3372 1L28.1298 6.88363L22.2441 9.09302L28.1298 11.2984L30.3372 17.186L32.5445 11.2984Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M41.5564 22.3352L44.5002 21.2325L41.5564 20.1279L40.4537 17.186L39.3511 20.1279L36.4072 21.2325L39.3511 22.3352L40.4537 25.2791L41.5564 22.3352Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M34.3837 30.3369C22.8107 30.3369 14.5599 19.1342 17.9427 8.09326C8.56293 8.23084 1 15.8666 1 25.2788C1 34.7739 8.70051 42.4765 18.1977 42.4765C25.9387 42.4765 32.4839 37.3597 34.6387 30.3228C34.5537 30.3248 34.4707 30.3369 34.3837 30.3369Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-            "title": "Lorem ipsum",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+            "svg": "<svg width=\"42\" height=\"42\" viewbox=\"0 0 42 42\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M29.695 14.9131L16.6515 27.087L12.3037 22.7392\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21 41C32.0457 41 41 32.0457 41 21C41 9.9543 32.0457 1 21 1C9.9543 1 1 9.9543 1 21C1 32.0457 9.9543 41 21 41Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Cruelty Free",
+            "description": "<p>None of our products are tested on animals<\/p>"
           }
         },
         "5c6002d1-8092-41e6-b879-38d2a75a7b5d": {
           "type": "materials",
           "settings": {
             "svg": "<svg width=\"42\" height=\"42\" viewbox=\"0 0 42 42\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M29.695 14.9131L16.6515 27.087L12.3037 22.7392\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21 41C32.0457 41 41 32.0457 41 21C41 9.9543 32.0457 1 21 1C9.9543 1 1 9.9543 1 21C1 32.0457 9.9543 41 21 41Z\" stroke=\"#0E1511\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-            "title": "Lorem ipsum",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<\/p>"
+            "title": "Ingredients",
+            "description": "<p>Most of our products are nut foil and butter free<\/p>"
           }
         }
       },
