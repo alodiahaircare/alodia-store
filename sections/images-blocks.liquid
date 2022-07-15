@@ -44,6 +44,7 @@ $( document ).ready(function() {
       draggable: true,
       freeScroll: false,
       prevNextButtons: true,
+      pageDots: false,
       groupCells: '100%',
       pageDots: false,
       cellAlign: 'left'
@@ -52,6 +53,7 @@ $( document ).ready(function() {
     if ( matchMedia('screen and (max-width: 749px)').matches ) {
       options.prevNextButtons = false;
       options.groupCells = '100%';
+      options.pageDots = true;
     }
   
     $('#image-grid').flickity( options );

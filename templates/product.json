@@ -33,9 +33,9 @@
         "subtitle": "After 4 weeks of use:",
         "content": "<p>- 97% reported thicker hair<br\/>- 81% had reduced flaking, dryness and irritation<br\/>- 100% reported less breakage and overall a healthy scalp and hair<br\/><br\/><strong>All products used in study are all clinically proven and tested<\/strong><\/p>",
         "background": "#faf9f7",
-        "title_bundle": "Shop Bundle",
-        "button_bundle": "Add bundle to cart",
-        "bundle": "curl-enhancing-butter-creme",
+        "title_bundle": "Shop our Clinically Proven Bundle",
+        "button_bundle": "Add to cart",
+        "bundle": "family-healthy-hair-holiday-bundle",
         "product_list": [
           "black-soap-wash",
           "curl-enhancing-butter-creme",
@@ -99,6 +99,7 @@
         },
         "3adc4d2f-ca64-4a12-8b79-5372009e22eb": {
           "type": "icon",
+          "disabled": true,
           "settings": {
             "svg": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12.501 14C3.88079 18.0653 0.48959 26.497 5.03453 32.2532C16.1318 43.3237 25.3674 35.9855 27.501 27.5C29.6347 19.0144 34.5471 21.7423 38.501 12C41.9156 3.58634 30.7341 -1.19373 25.501 3.99999C19.7561 9.70163 21.8908 9.57175 12.501 14Z\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M27.8066 6.12681C30.7944 4.35554 31.9896 5.24116 33.3554 5.24116\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M22.5354 29.1537C19.7373 33.288 17.693 32.9004 15.944 33.7534\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M10.3066 29.1537C11.4448 27.2348 14.831 22.8656 19.27 20.7401C24.8188 18.0831 26.5261 10.1123 31.2212 8.78381\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M9.45312 24.7255C10.8759 25.0207 13.9775 26.1425 15.0019 28.2681\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M12.0137 22.0685C13.4364 22.3637 16.538 23.4855 17.5624 25.6111\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M16.2832 19.4115C17.706 19.7067 20.8076 20.8285 21.832 22.9541\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M20.5508 16.7546C21.9735 17.0499 25.0752 18.1717 26.0995 20.2972\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M23.1113 13.212C24.4246 13.5073 27.2877 14.6291 28.2333 16.7546\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.5273 10.5551C27.6218 10.7765 30.0076 11.6178 30.7956 13.212\" stroke=\"black\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
             "description": "Nut Free"
@@ -291,7 +292,7 @@
       "settings": {
         "title": "Alodia is so very passionate about empowering and educating women all around the globe to Learn, Love and Grow their hair",
         "description": "<p>Our founder, Dr. Isfahan Chambers-Harris is committed to educating women on holistic health approaches to textured hair care. As a Black woman, mother, Medical scientist, and Trichology practitioner, Dr. Isfahan understands first-hand the misperceptions and misinformation that exists around textured hair. Alodia Hair Care was created with the primary goal of educating and empowering women around the globe.<\/p><p>Alodia Hair Care was birthed out of Dr. Isfahan’s’ personal experiences with unnatural, toxic hair care products. Facing excessive hair damage, she turned to her expertise in biology and chemistry. Over a 3-year period filled with countless research and experimentation, she developed transformative products made with organic and natural ingredients.<\/p><p>Alodia is a clinically proven hair and scalp care line that uses virtual hair and scalp consultations and personalized regimens to help resolve chronic scalp conditions and help with hair care styling. We also provide organic plant based products that use scientifically proven ingredients to provide a healthy scalp and length retention.<\/p>",
-        "image": "shopify:\/\/shop_images\/bio-isfahan.png"
+        "image": "shopify:\/\/shop_images\/3_07fa8a4d-96bf-49fd-8fb8-9bda6a72a76c.jpg"
       }
     },
     "16566204600b659e23": {

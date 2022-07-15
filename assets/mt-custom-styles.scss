@@ -18,7 +18,13 @@
 .bg-gray { background: #FAF9F7; }
 
 
-.padding-50 { padding: 50px 0 !important }
+@media (min-width: 799px) {
+  .padding-50 { padding: 50px 0 }
+}
+
+@media (max-width: 798px) {
+  .padding-50 { padding: 30px 0 }
+}
 
 .flickity-slider img {
   background: white;
@@ -288,6 +294,9 @@
   padding: 35px 30px;
   margin-right: 20px;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-box {
@@ -305,6 +314,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 798px) {
@@ -325,6 +335,8 @@
   max-width: 100%;
   object-fit: cover;
   height: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 /*Slide Nav */
@@ -343,6 +355,12 @@
 }
 .image-grid .flickity-prev-next-button .arrow { 
   fill: #fff
+}
+
+.image-grid .flickity-page-dots { 
+  position: relative;
+  bottom: 0;
+  margin-top: 10px;
 }
 
 /* Bundle section */
