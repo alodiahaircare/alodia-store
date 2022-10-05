@@ -24,10 +24,43 @@
         ],
         "show_only": false
       }
+    },
+    "3a20e8fa-ad76-4c02-b560-5944bb14d55d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-0": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": ""
+          }
+        },
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-1": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": ""
+          }
+        },
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-2": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-0",
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-1",
+        "template--16616610463962__3a20e8fa-ad76-4c02-b560-5944bb14d55d-166499362795539af6-2"
+      ],
+      "settings": {
+        "title": "Collection list",
+        "frontpage_collections_per_row": 3
+      }
     }
   },
   "order": [
     "main",
-    "c0251ad2-108f-453c-b333-b977f83a4ff3"
+    "c0251ad2-108f-453c-b333-b977f83a4ff3",
+    "3a20e8fa-ad76-4c02-b560-5944bb14d55d"
   ]
 }
