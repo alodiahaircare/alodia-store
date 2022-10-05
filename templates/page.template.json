@@ -4,9 +4,30 @@
       "type": "page-template",
       "settings": {
       }
+    },
+    "c0251ad2-108f-453c-b333-b977f83a4ff3": {
+      "type": "bundle",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "content": "",
+        "background": "#faf9f7",
+        "title_bundle": "Shop Bundle",
+        "button_bundle": "Add bundle to cart",
+        "bundle": "family-healthy-hair-holiday-bundle",
+        "product_list": [
+          "clinically-proven-length-retention-scalp-health-bundle",
+          "detox-restore-moroccan-lava-clay-masque-1",
+          "curl-enhancing-butter-creme",
+          "flourish-hair-scalp-herbal-infusion",
+          "family-healthy-hair-holiday-bundle"
+        ],
+        "show_only": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "c0251ad2-108f-453c-b333-b977f83a4ff3"
   ]
 }
