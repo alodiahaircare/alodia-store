@@ -3011,7 +3011,7 @@ $(function() {
   var shogunCartButton = document.querySelectorAll(".shg-btn.shg-cse");
 
   shogunCartButton.forEach((button) => {
-    button.addEventListener("click", refreshCartAfterShogun);
+    button.addEventListener("click", setTimeout(function(){ refreshCartAfterShogun() }, 1000););
   });
   
   function refreshCartAfterShogun() {
