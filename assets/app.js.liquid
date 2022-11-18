@@ -3011,11 +3011,11 @@ $(function() {
   var shogunCartButton = document.querySelectorAll(".shg-btn.shg-cse");
 
   shogunCartButton.forEach((button) => {
-    button.addEventListener("click", setTimeout(function(){ refreshCartAfterShogun() }, 1000););
+    button.addEventListener("click", refreshCartAfterShogun);
   });
   
   function refreshCartAfterShogun() {
-    $.ajax({
+    setTimeout(function(){ $.ajax({
         url: "/cart.js",
         dataType: "json",
         cache: false,
@@ -3023,7 +3023,7 @@ $(function() {
         success: function (data) {
             refreshCart(data);
         },
-    });
+    }); }, 1000);
   }
 
   function refreshCart(cart) {
