@@ -3008,6 +3008,24 @@ $(function() {
     });
   }
 
+  var shogunCartButton = document.querySelectorAll(".shg-btn.shg-cse");
+
+  shogunCartButton.forEach((button) => {
+    button.addEventListener("click", refreshCartAfterShogun);
+  });
+  
+  function refreshCartAfterShogun() {
+    $.ajax({
+        url: "/cart.js",
+        dataType: "json",
+        cache: false,
+        type: "GET",
+        success: function (data) {
+            refreshCart(data);
+        },
+    });
+  }
+
   function refreshCart(cart) {
     //Bold: Ensure the cart's line items have been updated with their option information
   if(typeof(BOLD) === 'object' && BOLD.common && BOLD.common.cartDoctor && typeof(BOLD.common.cartDoctor.fix) === 'function' ){
