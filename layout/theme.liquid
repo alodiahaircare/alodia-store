@@ -424,6 +424,89 @@ x.parentNode.insertBefore(s, x);
         }
         });
         </script> 
+
+    <!-- VIRTUAL CONSULTATIONS CODE --> 
+    <script type="text/javascript">
+
+          function openChatWidget() {
+          
+            console.log('openChatWidget');
+          
+            if (localStorage.getItem("MAGNET_WIDGET_STATE") && localStorage.getItem("MAGNET_WIDGET_STATE") === "OPEN" && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          
+              return;
+          
+            }
+          
+            document.querySelector(".hiro-chat-widget-toggle").click();
+          
+          }
+          
+          function getMutationObserver(className, func) {
+          
+            return new MutationObserver(function(mutations, o) {
+          
+              mutations.forEach((element) => {
+          
+                element.addedNodes.forEach(node => {
+          
+                  if (node.className === className) {
+          
+                    func();
+          
+                    console.log(`${className} is now appended.`);
+          
+                    o.disconnect();
+          
+                  }
+          
+                });
+          
+              });
+          
+            });
+          
+          }
+          
+          const search = window.location.search;
+          
+          if (search.indexOf('chat=on') > -1) {
+          
+            gtag('event','ChatOpenURL',{"event_category":"Chat Engagement","event_action":"ChatOpenURL"});
+          
+            const observer = getMutationObserver('hiro-chat-widget-toggle', openChatWidget);
+          
+            observer.observe(document.body, { childList: true });
+          
+          } 
+          
+          function startDirectChat() {
+          
+            const getWindowMagnetFunc = setInterval(()=> {
+          
+              if(window.$$magnet) {
+          
+                  window.$$magnet.openWithDirectChat();
+          
+                  clearInterval(getWindowMagnetFunc);
+          
+              }
+          
+            },1000);
+          
+          }
+          
+          if (search.indexOf('chat=start') > -1) {
+          
+            gtag('event','ChatStartURL',{"event_category":"Chat Engagement","event_action":"ChatStartURL"});
+          
+            const observer = getMutationObserver('hiro-chat-widget-toggle', startDirectChat);
+          
+            observer.observe(document.body, { childList: true });
+          
+          }
+
+</script>
     
 </body>
 </html>
