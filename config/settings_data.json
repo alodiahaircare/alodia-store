@@ -1458,7 +1458,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "",
+          "promo_text": "<p><\/p>",
           "social_icons_header": true,
           "phone_number": "",
           "top_bar_menu": "new-top-menu",
@@ -1578,7 +1578,7 @@
           "1534386592983": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "shop-products",
@@ -1591,13 +1591,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-1-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "hair-type",
@@ -1610,13 +1610,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-1-1": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "style-kits",
@@ -1629,13 +1629,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-1-2": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_top": "shopify:\/\/shop_images\/callout_alodia_tv.png",
               "image_caption_top": "",
               "image_link_top": "https:\/\/alodiahaircare.com\/pages\/alodia-tv",
@@ -1649,7 +1649,7 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           }
         },
@@ -1669,7 +1669,7 @@
           "mega-menu-2-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_top": "shopify:\/\/shop_images\/Healthy-Hair-Starter-Kit_Products-nav.jpg",
               "image_caption_top": "<strong>Healthy Hair Starter Kit<\/strong><br>for straight hair types, naturally wavy or curly hair",
               "image_link_top": "https:\/\/alodiahaircare.com\/products\/healthy-hair-starter-kit",
@@ -1683,13 +1683,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-2-1": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_top": "shopify:\/\/shop_images\/Twist_Braidout-Style-Kit_Products-nav.jpg",
               "image_caption_top": "<strong>Twist and Braid Out Style Kit<\/strong><br>for children, natural hair or transitioning to natural styles",
               "image_link_top": "https:\/\/alodiahaircare.com\/products\/twist-or-braid-out-style-kit",
@@ -1703,13 +1703,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-2-2": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_top": "shopify:\/\/shop_images\/Heat-Style-Kit_Products-nav.jpg",
               "image_caption_top": "<strong>Heat Style Kit<\/strong><br>for relaxed hair, natural hair or transitioning to natural hair",
               "image_link_top": "https:\/\/alodiahaircare.com\/products\/heat-style-kit",
@@ -1723,13 +1723,13 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           },
           "mega-menu-2-3": {
             "type": "column",
             "settings": {
-              "richtext_top": "",
+              "richtext_top": "<p><\/p>",
               "image_top": "shopify:\/\/shop_images\/Wash-_n_Go-Style-Kit_Products-nav.jpg",
               "image_caption_top": "<strong>Wash n Go Style Kit<\/strong><br>for naturally curly or coily hair",
               "image_link_top": "https:\/\/alodiahaircare.com\/products\/wash-n-go-style-kit",
@@ -1743,7 +1743,7 @@
               "menu_4_link": "",
               "image_caption_bottom": "",
               "image_link_bottom": "",
-              "richtext_bottom": ""
+              "richtext_bottom": "<p><\/p>"
             }
           }
         },
@@ -2001,8 +2001,8 @@
         "settings": {
           "hero-type": "banner",
           "url": "shopify:\/\/collections\/all",
-          "banner-image": "shopify:\/\/shop_images\/031222_ALODIA_CS_WEB.jpg",
-          "banner-image-mobile": "shopify:\/\/shop_images\/031222_ALODIA_CS_IG-STORY.jpg",
+          "banner-image": "shopify:\/\/shop_images\/071222_ALODIA_HS_WEB.jpg",
+          "banner-image-mobile": "shopify:\/\/shop_images\/071222_ALODIA_HS_IG_STORY.jpg",
           "split-view-image": "shopify:\/\/shop_images\/3A0A5882_SCALPTHERAPY_copy_c02d2985-f34e-45d5-9ae6-36bdb206da11.jpg",
           "split-view-mobile-image": "shopify:\/\/shop_images\/3A0A5882_SCALPTHERAPY_copy_c02d2985-f34e-45d5-9ae6-36bdb206da11.jpg",
           "title": "Give the Gift of Healthy Hair + Scalp",
@@ -2268,9 +2268,9 @@
         "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/020620_ALODIA_FDS_WEBBANNER.jpg",
-          "pretext": "",
+          "pretext": "<p><\/p>",
           "title": "",
-          "subtitle": "",
+          "subtitle": "<p><\/p>",
           "caption_background": false,
           "caption_background_transparency": false,
           "text_position": "center",
