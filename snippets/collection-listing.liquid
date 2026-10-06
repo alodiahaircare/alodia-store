@@ -2,7 +2,7 @@
 
 {% if settings.collection_banner_enabled %}
   <header class="banner center page_banner">
-    <img  src="{{ 'collection_banner.jpg' | asset_img_url: 100x }}"
+    <img  src="{{ 'collection_banner.jpg' | asset_img_url: renamed_variable_100x }}"
           alt="{{ collection.title | escape }}"
           class="lazyload js-image-loaded {{ settings.image_loading_style }}"
           data-sizes="auto"
@@ -131,3 +131,13 @@
 {% endfor %}
 
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{ 'collection_banner.jpg' | asset_img_url: 100x }}"
+  to: "{{ 'collection_banner.jpg' | asset_img_url: renamed_variable_100x }}"
+  position: 166..234
+{% endcomment %}
